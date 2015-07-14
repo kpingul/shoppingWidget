@@ -61,7 +61,6 @@
 				else if(name && total > 0){
 
 
-					alert('Order Submitted. Thank you for shopping with us ' + name + '!');
 					$scope.orderSubmit = true;
 					userData.clearUsersData();
 					$scope.usersData = [];
