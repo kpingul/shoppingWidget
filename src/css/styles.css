@@ -272,7 +272,6 @@ a.remove {
   color: #fff;
   background: #EB3030;
   font-weight: bold;
-  border-radius: 50px;
   float: right;
   text-align: right;
   -webkit-transition: all 0.25s linear;
@@ -295,7 +294,9 @@ a.remove {
 /* TOTAL AND CHECKOUT  */
 .subtotal {
   float: right;
-  width: 35%; }
+  width: 100%; 
+  margin-top: 8%;
+}
   .subtotal .totalRow {
     padding: .5em;
     text-align: right;
@@ -306,7 +307,7 @@ a.remove {
     .subtotal .totalRow span {
       display: inline-block;
       padding: 0 0 0 1em;
-      text-align: right; }
+}
     .subtotal .totalRow .label {
       font-family: "Montserrat", sans-serif;
       font-size: .85em;
@@ -315,7 +316,7 @@ a.remove {
       background: none; }
     .subtotal .totalRow .value {
       letter-spacing: -.025em;
-      width: 35%; }
+      }
 
 
 
@@ -323,6 +324,31 @@ a.remove {
 .removeSmall{
   display: none;
 }
+
+
+.subtotal-total{
+        width: 40%;
+        float: right;
+        padding: 0;
+      }
+      .subtotal-user{
+        width: 40%;
+        float: left;
+        padding: 0;
+        text-align: left;
+        list-style-type: none;
+   line-height: 4em;
+        
+      }
+      .subtotal-user-desc{
+          font-family: "Montserrat", sans-serif;
+        font-size: .85em;
+        text-transform: uppercase;
+        
+        color: #777;
+      }
+
+
 
 @media only screen and (max-width: 43em) {
    .wrap {
@@ -358,6 +384,8 @@ a.remove {
         text-align: center;
         padding: 0;
         margin: 0;
+        float: none;
+  
       }
     .heading{
       text-align: center;
@@ -381,6 +409,11 @@ a.remove {
         padding: 0.5em 0 0 3em;
 
      }
+    
+
+
+
+
     }
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {

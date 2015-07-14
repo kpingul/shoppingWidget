@@ -16,6 +16,7 @@
 			$scope.usersData = userData.getListItems();
 			$scope.disabledNext = true;
 			$scope.disabledForm = true;
+			$scope.profileValid = false;
 			
 			$scope.deleteAllFruit = function(fruitName, fruitCount, fruitPrice){
 
@@ -34,10 +35,10 @@
 			}
 
 			$scope.processForm = function(isValid){
+				
 				if(isValid){
-
-					alert('form submitted');
-					$scope.disabledForm = false;
+				$scope.disabledForm = false;
+					$scope.profileValid = true;
 				}
 				
 			}

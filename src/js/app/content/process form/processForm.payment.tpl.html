@@ -2,7 +2,16 @@
   
 <div class="wrap cf">
   <div class="subtotal cf">
-    <ul>
+    <ul class="subtotal-user">
+      
+
+      <li ><span class="subtotal-user-desc">{{formData.name}}</span></li>
+      <li ><span class="subtotal-user-desc">{{formData.email}}</span></li>
+      <li ><span class="subtotal-user-desc">{{formData.city}}</span></li>
+    </ul>
+
+
+    <ul class="subtotal-total">
       <li class="totalRow"><span class="label">Subtotal</span><span class="value">{{total | currency}}</span></li>
       
           <li class="totalRow"><span class="label">Shipping</span><span class="value">$7.00</span></li>
