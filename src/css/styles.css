@@ -143,7 +143,7 @@ img {
   .heading h1 {
     font-family: "Droid Serif", serif;
     font-size: 2em;
-    float: left; }
+     }
   .heading a.continue:link, .heading a.continue:visited {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -154,7 +154,6 @@ img {
     background: #82B1CA;
     font-weight: bold;
     border-radius: 50px;
-    float: right;
 
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;

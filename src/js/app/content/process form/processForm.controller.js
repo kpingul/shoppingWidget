@@ -11,7 +11,7 @@
 
 			//default since option selected isn't working
 
-			$scope.formData.city = "San Francisco";
+			
 		
 			$scope.usersData = userData.getListItems();
 			$scope.disabledNext = true;
