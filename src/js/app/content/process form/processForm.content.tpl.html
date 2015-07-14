@@ -1,0 +1,62 @@
+			
+<div class="wrap cf">
+
+  <div class="cart">
+
+
+
+    <ul class="cartWrap">
+	
+
+	<!-- Checks to see if total is not empty and if it's not, then it shows the fruit list items-->
+
+      <li class="items odd" ng-repeat="data in usersData"   ng-init="editCount = data.fruitCount" ng-if="checkForTotal()">
+		    
+
+			<userlistitems list="data"></userlistitems>
+
+
+      </li>
+
+
+	
+		<!-- Checks to see if total is  empty and if it is, then it shows the empty cart sign to user-->
+
+		<li class="items even" ng-if="!checkForTotal()">
+			
+
+	            <div class="wrap cf">
+
+	              <h1 class="projTitle" style="border-bottom: 0">Your shopping cart is<span style="color: red;text-transform: uppercase"> empty </span> </h1>              
+	         
+
+	            </div>
+    
+    	</li>
+    	
+    </ul><!-- end of list -->
+	
+
+     <center ng-hide="!checkForTotal()">
+
+		
+		   <h2 class="text-center">SubTotal: {{total | currency}}</h2>
+
+		<!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
+
+       	<button ui-sref="processForm.profile" ng-disabled="disabledNext"  class="small">Next</button>
+       	
+	</center>
+
+
+
+
+    
+  </div>
+
+</div>
+
+
+
+
+

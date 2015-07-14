@@ -1,0 +1,389 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
+/* Must refactor CSS into types or features for maintainability */
+/* _____________________________________________________________ */
+input.ng-invalid {
+  border: 1px solid red;
+}
+input.ng-valid {
+  border: 1px solid green;
+}
+
+
+body {
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Droid Serif", serif; }
+img {
+  max-width: 100%; }
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.cf {
+  *zoom: 1; }
+
+.wrap {
+  width: 75%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: 5em; }
+
+
+
+
+.fi-x {
+  font-size: 1.7em;
+  cursor: pointer;
+  color: #CC0000; }
+
+.fi-shopping-cart {
+  font-size: 1.1em;
+  color: #2D2D2D; }
+
+.container {
+  padding: 40px 0; }
+
+/* Place order Button */
+.checkout {
+  text-align: center;
+  display: block;
+  font-size: 2em; }
+/*_____________________________*/
+/*       Navigation            */
+/*_____________________________*/
+
+
+
+/*_____________________________*/
+/* Fruit list Section Home Page*/
+/*_____________________________*/
+.images {
+  float: left;
+  max-width: 100%;
+  display: inline; }
+
+.fruitContainer {
+  border-bottom: 1px solid #E4E4E4;
+  width: 100%; }
+
+.fruitList {
+  list-style-type: none; }
+
+.fruit-image {
+  width: 20%; }
+
+.fruit-description {
+  margin-top: 3%;
+  margin-right: 30%;
+  float: right;
+  display: inline;
+  width: 50%; }
+
+.fruit-description ul li {
+  list-style-type: none;
+  line-height: 1.2em;
+  font-size: 1em; }
+
+.fruit-price-description {
+  color: #FF550A;
+  font-size: 0.9em;
+  font-weight: bold; }
+
+.fruit-weight-description {
+  color: #747474;
+  font-size: 0.8em;
+  font-weight: bold; }
+
+.fruit-free-shipping-description {
+  font-size: 0.8em;
+  color: #6C6C6C; }
+
+.fruit-description-description {
+  color: #3769E7;
+  font-size: 0.9em; }
+
+.custom-process-button {
+  background: #004994;
+  text-decoration: none; }
+
+.edit-update-fruit-list{
+   list-style-type: none;
+}
+
+#signup-form{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 3%;
+}
+
+
+.projTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  padding: 1em 0;
+  border-bottom: 1px solid #dadada;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+  .projTitle span {
+    font-family: "Droid Serif", serif;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #777; }
+
+.heading {
+  padding: 1em 0;
+  border-bottom: 1px solid #D0D0D0; }
+  .heading h1 {
+    font-family: "Droid Serif", serif;
+    font-size: 2em;
+    float: left; }
+  .heading a.continue:link, .heading a.continue:visited {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -.015em;
+    font-size: .75em;
+    padding: 1em;
+    color: #fff;
+    background: #82B1CA;
+    font-weight: bold;
+    border-radius: 50px;
+    float: right;
+
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+    transition: all 0.25s linear; }
+
+  .heading a.continue:hover, .heading a.continue:focus, .heading a.continue:active {
+    background: #638FA7; }
+   
+
+.cart {
+  padding: 1em 0; }
+  .cart .items {
+    display: block;
+    width: 100%;
+    vertical-align: middle;
+    padding: 1.5em;
+    border-bottom: 1px solid #E4E4E4; }
+    .cart .items.even {
+      background: #fafafa; }
+    .cart .items .infoWrap {
+      display: table;
+      width: 100%; }
+    .cart .items .cartSection {
+      display: table-cell;
+      vertical-align: middle; }
+      .cart .items .cartSection .itemNumber {
+        font-size: .75em;
+        color: #777;
+        margin-bottom: .5em; }
+      .cart .items .cartSection h3 {
+        font-size: 1em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .025em; }
+      .cart .items .cartSection p {
+        display: inline-block;
+        font-size: .85em;
+        color: #777777;
+        font-family: "Montserrat", sans-serif; }
+        .cart .items .cartSection p .quantity {
+          font-weight: bold;
+          color: #333; }
+        .cart .items .cartSection p.stockStatus {
+          color: #82CA9C;
+          font-weight: bold;
+          padding: 0.5em 0 0 1em;
+          text-transform: uppercase; }
+          .cart .items .cartSection p.stockStatus.out {
+            color: #F69679; }
+      .cart .items .cartSection .itemImg {
+        width: 4em;
+        float: left; }
+      .cart .items .cartSection.qtyWrap, .cart .items .cartSection.prodTotal {
+        text-align: center; }
+        .cart .items .cartSection.qtyWrap p, .cart .items .cartSection.prodTotal p {
+          font-weight: bold;
+          font-size: 1.25em; }
+      .cart .items .cartSection input.qty {
+        width: 2em;
+        text-align: center;
+        font-size: 1em;
+        padding: .25em;
+        margin: 1em 0.5em 0 0; }
+      .cart .items .cartSection .itemImg {
+        width: 8em;
+        display: inline;
+        padding-right: 1em; }
+
+.special {
+  display: block;
+  font-family: "Montserrat", sans-serif; }
+  .special .specialContent {
+    padding: 1em 1em 0;
+    display: block;
+    margin-top: .5em;
+    border-top: 1px solid #dadada; }
+    .special .specialContent:before {
+      content: "\21b3";
+      font-size: 1.5em;
+      margin-right: 1em;
+      color: #6f6f6f;
+      font-family: helvetica, arial, sans-serif; }
+
+a.remove {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #e0e0e0;
+  padding: .5em;
+  font-size: .75em;
+  display: inline-block;
+  border-radius: 100%;
+  line-height: .85;
+  margin-left: 5%;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
+  a.remove:hover {
+    background: #f30; }
+
+
+
+.btn:link, .btn:visited {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -.015em;
+  font-size: 1em;
+  padding: 1em 3em;
+  color: #fff;
+  background: #EB3030;
+  font-weight: bold;
+  border-radius: 50px;
+  float: right;
+  text-align: right;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -ms-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear; }
+
+
+
+.btn:hover, .btn:focus, .btn:active {
+  background: #EA0303; }
+  .btn:hover:after, .btn:focus:after, .btn:active:after {
+    right: -10px; }
+
+.promoCode .btn {
+  font-size: .85em;
+  paddding: 0.5em 2em; }
+
+/* TOTAL AND CHECKOUT  */
+.subtotal {
+  float: right;
+  width: 35%; }
+  .subtotal .totalRow {
+    padding: .5em;
+    text-align: right;
+    list-style: none; }
+    .subtotal .totalRow.final {
+      font-size: 1.25em;
+      font-weight: bold; }
+    .subtotal .totalRow span {
+      display: inline-block;
+      padding: 0 0 0 1em;
+      text-align: right; }
+    .subtotal .totalRow .label {
+      font-family: "Montserrat", sans-serif;
+      font-size: .85em;
+      text-transform: uppercase;
+      color: #777;
+      background: none; }
+    .subtotal .totalRow .value {
+      letter-spacing: -.025em;
+      width: 35%; }
+
+
+
+
+.removeSmall{
+  display: none;
+}
+
+@media only screen and (max-width: 43em) {
+   .wrap {
+    width: 100%;
+   }
+  .projTitle {
+    font-size: 1.5em;
+    padding: 10% 5%; }
+  .heading {
+    padding: 1em;
+    font-size: 90%; }
+  .cart .items .cartSection {
+     display: block;
+ }
+    .cart .items .cartSection.qtyWrap {
+      width: 10%;
+      text-align: center;
+      padding: .5em 0;
+      float: right; }
+      .cart .items .cartSection.qtyWrap:before {
+        content: "QTY";
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        padding: .25em;
+        font-size: .75em; }
+    .cart .items .cartSection.prodTotal, .cart .items .cartSection.removeWrap {
+      display: none; }
+    .cart .items .cartSection .itemImg {
+      width: 32%; }
+
+      .subtotal {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+    .heading{
+      text-align: center;
+    }
+    a.continue{
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+      .removeSmall{
+       display: inline-block;
+      padding: 3px 8px;
+      }
+    
+      .edit-update-fruit-list li{
+        display: inline;
+        padding-right: 10px;
+
+      }
+     .cart .items .cartSection p.stockStatus {
+        padding: 0.5em 0 0 3em;
+
+     }
+    }
+/*Media breakpoint for process form checkout because of image not resizing properly*/
+@media (max-width: 560px) {
+  #editCount-sizing {
+    width: 40px; } }
+

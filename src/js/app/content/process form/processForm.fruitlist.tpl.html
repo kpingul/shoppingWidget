@@ -1,0 +1,49 @@
+
+		    <div class="infoWrap"> 
+
+		        <div class="cartSection">
+
+		       <img  id="image-removal" src="{{data.image}}" alt="{{data.fruit}}" class="itemImg">
+
+		          <p class="itemNumber">{{data.description}}</p>
+		          <h3>{{data.fruit}}</h3>
+		        
+		           <select style="width: 50px" ng-model="editCount" >
+
+
+					          <option value="1">1</option>
+
+					          <option value="2">2</option>
+
+					          <option value="3">3</option>
+					          
+					          <option value="4">4</option>
+				       	  </select> 
+		        
+		         		 <p class="stockStatus"> In Stock</p>
+
+						<ul class="edit-update-fruit-list">
+							
+							<li>     
+								 <a href="" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall" >Update</a>
+							</li>
+
+							<li>
+		          					<a href="" ng-click="deleteAllFruit(data.fruit, data.fruitCount, data.fruitPrice)" class="removeSmall">Remove</a>
+		          			</li>
+						</ul>
+		          		        
+		        </div>  
+		    
+		        
+		        <div class="prodTotal cartSection">
+		          <p>{{data.fruitPrice | currency}}</p>
+		        </div>
+		        
+		         <div class="cartSection removeWrap">
+
+			           	<button class="tiny success" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)">Update</button>
+
+			           <a href="" class="remove" ng-click="deleteAllFruit(data.fruit, data.fruitCount, data.fruitPrice)">x</a>
+		        	</div>
+		      </div>

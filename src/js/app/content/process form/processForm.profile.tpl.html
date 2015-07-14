@@ -1,0 +1,41 @@
+<!-- form-profile.html -->
+
+<!-- ******** Reminder to never do inline css (SOC) -->
+<form id="signup-form" name="myForm" ng-submit="processForm(myForm.$valid)" novalidate>
+ 
+        <label  for="name">Name</label>
+        <input type="text" name="name"  ng-model="formData.name" placeholder="type in full name here..." required  >
+
+      <p style="color: red" ng-show="myForm.name.$invalid">Name Required</p>
+
+        <label  for="address">Email</label>
+        <input type="email" class="form-control input-sm" name="email" ng-model="formData.email" placeholder="type in email address here..." required>
+
+     <p style="color: red" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email</p>
+
+        <label  for="phone">City</label>
+
+      	<select name="city" ng-model="formData.city" required >
+      		<option value="San Francisco">San Francisco</option>
+      		<option value="Oakland">Oakland</option>
+      		<option value="Hayward">Hayward</option>
+      	</select>
+
+
+
+        <center><button type="submit" class="success tiny">Submit</button></center>
+</form>
+   
+
+
+   
+        <!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
+
+        <center>
+          <button ui-sref="processForm.content" class="small">Back </button>
+
+    			<button ui-sref="processForm.payment"class="small" ng-disabled="disabledForm">Next</button>
+    	     	
+    	  </center>
+
+  </div>

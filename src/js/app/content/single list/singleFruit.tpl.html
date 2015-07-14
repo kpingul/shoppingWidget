@@ -1,0 +1,76 @@
+
+<center><div class="single-fruit-layout clearfix small-7 small-centered medium-4 medium-centered  large-3 large-centered columns">
+						
+	<ul class="pricing-table">
+
+		  <li class="title">{{ name }}</li>
+
+		  <li class="single-image"><img  class="images img-responsive" src="{{image}}" alt="{{name}}"></li>
+		  
+		  
+		  <li class="description">{{ description }}</li>
+
+		  <li class="price">{{ price  | currency}} / lb</li>
+		 
+	
+	  	  <li class="cta-button">
+
+				<div class="row">  	
+
+					<div class="small-6 small-centered columns">
+
+						<label>Amount
+						<!-- ng model fruitCount helps us keep track of how many fruits are reuqested by
+							user -->
+				      	  <select ng-model="fruitCount" ng-disabled="selectable">
+
+					          <option value="0">0</option>
+
+					          <option value="1">1</option>
+
+					          <option value="2">2</option>
+
+					          <option value="3">3</option>
+					          
+					          <option value="4">4</option>
+
+				       	  </select>
+
+				    	 </label>
+
+					 </div>
+
+				</div>
+
+
+				<!-- when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT -->		
+				
+				<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount <= 1" >You added {{fruitCount}} {{name}} to your cart! </div>
+
+				<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount > 1">You added {{fruitCount}} {{name}}'s' to your cart! </div>
+				
+					<button  class="small" ng-click="addToCart(name, image, fruitCount, price, description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
+
+	  		</li><!-- end of li -->
+
+
+	</ul><!-- end of ul -->
+
+
+
+	<!-- checkout order -->
+	<!-- checkout template -->
+						
+
+
+<div class="heading cf" >
+	
+
+
+    <a ui-sref="home" class="continue" style="float: none">Continue Shopping</a>
+  </div>
+
+
+
+</div><!-- end of div -->
+

@@ -1,0 +1,22 @@
+
+  
+<div class="wrap cf">
+  <div class="subtotal cf">
+    <ul>
+      <li class="totalRow"><span class="label">Subtotal</span><span class="value">{{total | currency}}</span></li>
+      
+          <li class="totalRow"><span class="label">Shipping</span><span class="value">$7.00</span></li>
+      
+            <li class="totalRow"><span class="label">Tax</span><span class="value">$3.00</span></li>
+            <li class="totalRow final"><span class="label">Total</span>
+            
+              <span class="value" ng-if="!checkForTotal()">{{total| currency}}</span>
+              <span class="value" ng-if="checkForTotal()">{{total + 10| currency}}</span>
+
+
+            </li>
+      <li class="totalRow"><a href="" class="btn"  type="submit" ng-click="submitOrder(formData.name, total)">Checkout</a>
+	</li>
+    </ul>
+  </div>
+</div>
