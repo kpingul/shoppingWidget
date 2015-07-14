@@ -17,6 +17,7 @@
 			$scope.disabledNext = true;
 			$scope.disabledForm = true;
 			$scope.profileValid = false;
+			$scope.orderSubmit = false;
 			
 			$scope.deleteAllFruit = function(fruitName, fruitCount, fruitPrice){
 
@@ -37,7 +38,7 @@
 			$scope.processForm = function(isValid){
 				
 				if(isValid){
-				$scope.disabledForm = false;
+					$scope.disabledForm = false;
 					$scope.profileValid = true;
 				}
 				
@@ -61,8 +62,8 @@
 
 
 					alert('Order Submitted. Thank you for shopping with us ' + name + '!');
+					$scope.orderSubmit = true;
 					userData.clearUsersData();
-					$scope.formData = {}
 					$scope.usersData = [];
 			
 				}

@@ -1,8 +1,8 @@
 
   
 <div class="wrap cf">
-  <div class="subtotal cf">
-    <ul class="subtotal-user">
+  <div class="subtotal cf" ng-if="!orderSubmit">
+    <ul class="subtotal-user"> 
       
 
       <li ><span class="subtotal-user-desc">{{formData.name}}</span></li>
@@ -27,5 +27,10 @@
       <li class="totalRow"><a href="" class="btn"  type="submit" ng-click="submitOrder(formData.name, total)">Checkout</a>
 	</li>
     </ul>
+  
+           
+
+
   </div>
+       <h1 ng-if="orderSubmit" class="projTitle" style="border-bottom: 0">Thank you for shopping with us <span style="color: red;text-transform: uppercase"> {{formData.name}} <b>!</b></span> </h1>              
 </div>
