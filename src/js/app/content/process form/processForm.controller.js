@@ -19,19 +19,20 @@
 			$scope.profileValid = false;
 			$scope.orderSubmit = false;
 			
-			$scope.deleteAllFruit = function(fruitName, fruitCount, fruitPrice){
+			$scope.deleteAllFruit = function(fruits, fruit, id){
+			
 
-				userData.deleteUsersFruit(fruitName, fruitCount, fruitPrice);
+				userData.deleteUsersFruit(fruit, id);
 		
 			
 
 			}
 
 
-			$scope.updateEditedCheckoutOrder = function(fruitName, newFruitCount, newFruitPrice) {
+			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
 				//communicate with user data service to update the uers total checkout price and count
-				console.log(fruitName, newFruitCount);
-				userData.setNewUserData(fruitName, newFruitCount, newFruitPrice);
+				console.log(fruit, newFruitCount, id);
+				userData.setNewUserData(fruit, newFruitCount, id);
 
 			}
 
@@ -45,7 +46,7 @@
 			}
 
 			
-			$scope.submitOrder = function(name,total ){
+			$scope.submitOrder = function(fruits, name,total ){
 				
 				//separate business logic into service (abstraction)
 
@@ -60,10 +61,11 @@
 				}
 				else if(name && total > 0){
 
+					fruits.splice(0, fruits.length - 1);
 
 					$scope.orderSubmit = true;
 					userData.clearUsersData();
-					$scope.usersData = [];
+					
 			
 				}
 				

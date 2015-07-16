@@ -29,7 +29,7 @@
 							</li>
 
 							<li>
-		          					<a href="" ng-click="deleteAllFruit(data.fruit, data.fruitCount, data.fruitPrice)" class="removeSmall">Remove</a>
+		          					<a href="" ng-click="deleteAllFruit(usersData, data, $index)" class="removeSmall">Remove</a>
 		          			</li>
 						</ul>
 		          		        
@@ -44,6 +44,6 @@
 
 			           	<button class="tiny success" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)">Update</button>
 
-			           <a href="" class="remove" ng-click="deleteAllFruit(data.fruit, data.fruitCount, data.fruitPrice)">x</a>
+			           <a href="" class="remove" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
 		        	</div>
 		      </div>

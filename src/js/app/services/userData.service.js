@@ -136,31 +136,19 @@
 
 
 
-				usersData.deleteUsersFruit = function(fruitName, fruitCount, fruitPrice){
-
-					//removes that specific fruit within users items array
-					for (var i =0; i < usersData.items.length; i++) {
-
-							//checks if the fruit within the usersData items array 
-							//is the same as the fruit that was requested to be
-							//deleted
-						   if (usersData.items[i].fruit === fruitName) {
-
-						   	//removes the fruit within the array at the index
-						   	//it is within and only removes that specific fruit
-						      usersData.items.splice(i,1);
-						     
-						   }
-					}
-
+				usersData.deleteUsersFruit = function(fruit , id){
+   
+			
 					//update total price and count after an item has been removed
 					//from the users array of fruits
 
-					this.totalItemCount -= fruitCount;
+					usersData.items.splice(id, 1);
+					
+					 this.totalItemCount -= fruit.fruitCount;
 
-					this.totalPrice -= fruitPrice;
+					 this.totalPrice -= fruit.fruitPrice;
 
-					this.broadCast();
+					 this.broadCast();
 
 				}
 
@@ -238,6 +226,22 @@
 				}
 
 
+				usersData.clearUsersData = function(){
+						
+
+					
+					for( var i = 0; i < usersData.items.length; i++){
+						usersData.items.splice(i, 1);
+
+					}
+
+					usersData.totalItemCount = 0;
+					usersData.totalPrice = 0;
+					this.broadCast();
+
+				}
+
+
 
 				/* Getter Methods */
 				
@@ -278,16 +282,7 @@
 					return usersData.items;
 				}
 
-				usersData.clearUsersData = function(){
-						
-					usersData.totalItemCount = 0;
-					usersData.totalPrice = 0;
-					usersData.items = [];	
-					this.broadCast();
 
-					console.log(usersData);
-				
-				}
 
 				usersData.broadCast = function(){
 

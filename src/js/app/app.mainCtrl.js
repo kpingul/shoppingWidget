@@ -13,13 +13,17 @@
 
 				//listens for any updates within users data and is imediately updated
 				//when data is changed for two way binding across controllers
-				$scope.$on('handleBroadCast', function(){
+				var cancel = $scope.$on('handleBroadCast', function(){
 
 					$scope.items = userData.totalItemCount;
 					$scope.total = userData.totalPrice;
 
 				})
 
+				$scope.$on('$destroy', function(){
+
+					cancel();
+				});
 
 			}]);
 }());
