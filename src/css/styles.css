@@ -42,7 +42,7 @@ img {
 
 
 .container {
-  padding: 40px 0; }
+  padding: 15px 0; }
 
 /* Place order Button */
 .checkout {
@@ -72,14 +72,20 @@ img {
 .images {
   float: left;
   max-width: 100%;
-  display: inline; }
+  display: inline;
+}
 
 .fruitContainer {
   border-bottom: 1px solid #E4E4E4;
   width: 100%; }
 
 .fruitList {
-  list-style-type: none; }
+  list-style-type: none;
+      width: 100%; 
+      margin: 0 auto;}
+  .fruitList li{
+
+  }
 
 .fruit-image {
   width: 20%; }
@@ -134,7 +140,6 @@ img {
   font-weight: bold;
   text-align: center;
   font-size: 2em;
-  padding: 1em 0;
   border-bottom: 1px solid #dadada;
   letter-spacing: 3px;
 }
@@ -146,7 +151,7 @@ img {
     color: #777; }
 
 .heading {
-  padding: 2em 0;
+  padding: 0.1em 0;
  }
   .heading h1 {
     font-family: "Droid Serif", serif;
