@@ -364,13 +364,16 @@ a.remove {
   font-size: 0.5em;
  background: #EB0000;
  border-radius: 50%;
- padding: 5px;
+ padding: 4px;
 
 }
 
 .fa-shopping-cart{
   font-size: 1.9em;
   padding-top: 6px;
+  position: relative;
+  left: 13px;
+  top: 6px;
 
 }
 
@@ -453,8 +456,9 @@ a.remove {
   .fa-shopping-cart
   {
     font-size: 2.2em;
+  position: relative;
+  left: 29px;
 
-    padding-top: 10px;
 
   }
 
@@ -463,19 +467,20 @@ a.remove {
     position: relative;
     bottom: 17px;
     right: 18px;
-   padding: 6px 8px;
-
+   padding: 6px 4px;
+  
 
   }
   .fa-chevron-up{
    font-size: 1.6em;
   }
-#scrollUp {
+  #scrollUp {
     bottom: 60px;
     right: 5px;
-        padding:17px;
 
-}
+     padding:17px;
+
+  }
 
 
 }
