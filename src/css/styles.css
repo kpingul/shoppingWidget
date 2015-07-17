@@ -52,10 +52,20 @@ img {
   display: block;
   font-size: 2em; }
 /*_____________________________*/
-/*       Navigation            */
+/*       Plugins            */
 /*_____________________________*/
-
-
+#scrollUp {
+    bottom: 100px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+.fa-chevron-up{
+  font-size: 1.8em;
+}
 
 /*_____________________________*/
 /* Fruit list Section Home Page*/
@@ -455,6 +465,15 @@ a.remove {
    padding: 5px;
 
   }
+  .fa-chevron-up{
+   font-size: 1.2em;
+  }
+#scrollUp {
+    bottom: 60px;
+    right: 5px;
+
+}
+
 
 }
 

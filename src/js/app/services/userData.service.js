@@ -249,8 +249,11 @@
 
 					}
 
-					usersData.totalItemCount = 0;
-					usersData.totalPrice = 0;
+					this.totalItemCount = 0;
+					this.totalPrice = 0;
+					this.name = '';
+					this.email = '';
+					this.city = '';
 					this.broadCast();
 
 				}
