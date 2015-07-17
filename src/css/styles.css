@@ -349,15 +349,23 @@ a.remove {
 .custom-shopping-count{
   position: relative;
   bottom: 13px;
-  right: 7px;
+  right: 8px;
   font-weight: 900;
   color: #FFFFFF;
   font-size: 0.5em;
  background: #FC0000;
  border-radius: 50%;
- padding: 4px;
+ padding: 4.5px;
 
 }
+
+.fa-shopping-cart{
+  font-size: 1.9em;
+  padding-top: 5px;
+
+}
+
+
 
 @media only screen and (max-width: 43em) {
    .wrap {
@@ -426,6 +434,27 @@ a.remove {
     }
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {
-  #editCount-sizing {
-    width: 40px; } }
+
+  #editCount-sizing 
+  {
+    width: 40px; 
+
+    } 
+
+  .fa-shopping-cart
+  {
+    font-size: 1.9em;
+
+    padding-top: 10px;
+
+  }
+
+  .custom-shopping-count
+  {
+
+   padding: 5px;
+
+  }
+
+}
 

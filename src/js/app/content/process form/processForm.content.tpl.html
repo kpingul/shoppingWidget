@@ -1,21 +1,19 @@
+<!-- Content Template / Users Current Items -->
 			
 <div class="wrap cf">
 
   <div class="cart">
 
 
-
     <ul class="cartWrap">
-
 
 
 	<!-- Checks to see if total is not empty and if it's not, then it shows the fruit list items-->
 
       <li class="items odd" ng-repeat="data in usersData track by $index"   ng-init="editCount = data.fruitCount" ng-if="checkForTotal()">
 		    
-
+			
 			<userlistitems list="data"></userlistitems>
-
 
       </li>
 
@@ -32,8 +30,8 @@
 	         
 
 	            </div>
-    
-    	</li>
+
+		</li>
     	
     </ul><!-- end of list -->
 	
@@ -41,7 +39,7 @@
      <center ng-hide="!checkForTotal()">
 
 		
-		   <h2 class="text-center">SubTotal: {{total | currency}}</h2>
+		<h2 class="text-center">SubTotal: {{total | currency}}</h2>
 
 		<!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
 
@@ -53,9 +51,9 @@
 
 
     
-  </div>
+  </div><!-- end of cart -->
 
-</div>
+</div><!-- end of wrapper -->
 
 
 

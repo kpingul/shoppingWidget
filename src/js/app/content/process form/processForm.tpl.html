@@ -1,25 +1,27 @@
-<!-- processForm.html -->
+<!-- Main Checkout Template  -->
 
-     
-              <div class="heading cf" ng-if="!orderSubmit" >
-              <h1 class="projTitle" >Let's get your<span> groceries </span>on the way</h1>
-                <h1>Items in cart ({{items}}) </h1>
+<div class="heading cf" ng-if="!orderSubmit" >
+
+  <h1 class="projTitle" >Let's get your<span> groceries </span>on the way</h1>
+
+  <h1>Items in cart ({{items}}) </h1>
 
 
-                <a ui-sref="home" class="continue">Continue Shopping</a>
-              </div>
- 
+  <a ui-sref="home" class="continue">Continue Shopping</a>
 
- 
-    
+</div><!-- end of heading -->
 
-                <div id="form-views">
 
-                  <ui-view>
-                                <!-- our nested state views will be injected here -->
-                  </ui-view>
 
-                </div>
+
+
+<div id="form-views">
+
+  <ui-view>
+                <!-- our nested checkout views will be injected here -->
+  </ui-view>
+
+</div><!-- end of form views -->
 
       
 

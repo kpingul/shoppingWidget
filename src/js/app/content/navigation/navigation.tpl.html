@@ -1,24 +1,52 @@
-
-
+<!-- Navigation Template -->
 
 <nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1><a ui-sref="home">ShopWidget</a></h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar"><a ui-sref="processForm"><span class="fa fa-shopping-cart fa-2x"</span><span class="custom-shopping-count">{{items}}</span> </a></li>
-  </ul>
+
+    <ul class="title-area">
+
+      <li class="name">
+
+        <h1><a ui-sref="home">ShopWidget</a></h1>
+
+      </li>
+
+   
+      <li class="toggle-topbar ss">
+
+        <a class="dd"  ui-sref="processForm">
+
+          <span class="fa fa-shopping-cart"</span>
+
+            <span class="custom-shopping-count">{{items}}</span>
+
+        </a>
+
+     </li>
+
+   </ul>
 
   <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li><a ui-sref="processForm"><span class="fa fa-shopping-cart fa-2x"</span><span class="custom-shopping-count">{{items}}</span>  </a></li>
 
-    
+    <!-- Right Nav Section -->
+
+    <ul class="right">
+
+       <li class="ss">
+
+            <a class="dd" ui-sref="processForm">
+
+            <span class="fa fa-shopping-cart"</span>
+
+              <span class="custom-shopping-count">{{items}}</span> 
+
+             </a>
+
+        </li>
+
+        
     </ul>
 
 
-  </section>
+   </section>
 
 </nav>

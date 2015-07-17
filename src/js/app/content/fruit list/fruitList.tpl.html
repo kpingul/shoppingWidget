@@ -1,3 +1,5 @@
+<!-- Main Home Template for list of entire fruit items -->
+
 <center> <h1 class="projTitle">Weclome to the<span> shopping </span>network!</h1></center>
 
 <!-- ng model search.name communicates with the ng repeat fruits object to search for the fruit.name properties via filter search strict -->
@@ -40,9 +42,12 @@
 
 	</li>
 	
-</ul>
+</ul><!-- end of fruit list-->
 
-		<!-- checkout order -->
-				<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
-					
-				<br/><a ui-sref="processForm"  class="button large alert round">Place Order </a></span>
+
+<!-- checkout order -->
+<!-- items and total are broadcasted from user data service and main controller -->
+
+<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
+			
+<br/><a ui-sref="processForm"  class="button large alert round">Place Order </a></span>
