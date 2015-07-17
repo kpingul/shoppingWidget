@@ -6,21 +6,21 @@
  
         <label  for="name">Name</label>
 
-        <input type="text" name="name"  ng-model="formData.name" placeholder="type in full name here..." required  >
+        <input type="text" name="name"  ng-model="formData.userName" placeholder="type in full name here..." required  >
 
 
         <p style="color: red" ng-show="myForm.name.$invalid">Name Required</p>
 
         <label  for="address">Email</label>
 
-        <input type="email" class="form-control input-sm" name="email" ng-model="formData.email" placeholder="type in email address here..." required>
+        <input type="email" class="form-control input-sm" name="email" ng-model="formData.userEmail" placeholder="type in email address here..." required>
 
 
         <p style="color: red" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email</p>
 
         <label  for="phone">City</label>
 
-      	<select name="city" ng-model="formData.city" required >
+      	<select name="city" ng-model="formData.userCity" required >
 
       		<option value="San Francisco">San Francisco</option>
 
@@ -31,7 +31,7 @@
       	</select>
 
 
-        <center><span style="color: green" ng-show="profileValid"><b>Valid!</b><span style="color: #6A6A6A">Click next to advance to checkout</span></span></center>
+        <center><span style="color: green" ng-show="profileValid"><b>Valid!</b><span style="color: #6A6A6A"> Click next to advance to checkout</span></span></center>
 
         <center><button type="submit" class="success tiny">Submit</button></center>
 

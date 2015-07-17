@@ -7,8 +7,10 @@
 	angular.module('myApp')
 
 		.controller('processFormCtrl', ['$scope','userData', function($scope, userData) {
-			$scope.formData = {};
-
+			$scope.formData = {}
+			$scope.formData.userName = userData.getName();
+			$scope.formData.userEmail = userData.getEmail();
+			$scope.formData.userCity = userData.getCity();
 			//default since option selected isn't working
 
 			
@@ -40,6 +42,9 @@
 			$scope.processForm = function(isValid){
 				
 				if(isValid){
+				
+
+					userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
 					$scope.disabledForm = false;
 					$scope.profileValid = true;
 				}

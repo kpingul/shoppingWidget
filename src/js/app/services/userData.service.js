@@ -12,6 +12,12 @@
 				//object to hold the users checkout total data inlcluding all items added to shopping cart
 				var usersData = {
 
+					name: '',
+
+					email: '',
+
+					city: '',
+
 					totalItemCount: 0,
 
 					totalPrice:  0,
@@ -226,6 +232,14 @@
 				}
 
 
+				usersData.setUserInformation = function(name, email, city){
+
+					this.name = name;
+					this.email = email;
+					this.city = city;
+				}
+
+
 				usersData.clearUsersData = function(){
 						
 
@@ -278,9 +292,23 @@
 
 				usersData.getListItems = function(){
 
-					return usersData.items;
+					return this.items;
 				}
 
+				usersData.getName = function(){
+
+					return this.name;
+				}
+
+				usersData.getEmail = function(){
+
+					return this.email;
+				}
+
+				usersData.getCity = function(){
+
+					return this.city;
+				}
 
 
 				usersData.broadCast = function(){
