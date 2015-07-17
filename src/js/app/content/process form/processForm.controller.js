@@ -46,6 +46,7 @@
 				
 			}
 
+	
 			
 			$scope.submitOrder = function(fruits, name,total ){
 				

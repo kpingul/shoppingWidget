@@ -241,8 +241,7 @@
 
 				}
 
-
-
+		
 				/* Getter Methods */
 				
 				usersData.getTotalPrice = function(){
