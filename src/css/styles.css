@@ -346,6 +346,18 @@ a.remove {
       }
 
 
+.custom-shopping-count{
+  position: relative;
+  bottom: 13px;
+  right: 7px;
+  font-weight: 900;
+  color: #FFFFFF;
+  font-size: 0.5em;
+ background: #FC0000;
+ border-radius: 50%;
+ padding: 4px;
+
+}
 
 @media only screen and (max-width: 43em) {
    .wrap {

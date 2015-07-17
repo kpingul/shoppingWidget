@@ -33,12 +33,12 @@ gulp.task('express', function(){
 
 	var express 	= require('express'),
 		app 		= express(), 
-		port 		= 9000;
+		port 		= 3000;
 
 
 	app.use(express.static(__dirname + "/"));
 
-	app.listen(9000, function() {
+	app.listen(port, function() {
 		console.log('Server running on port' + port);
 	});
 
