@@ -1,6 +1,122 @@
+
+
+
+	<div class="row single-fruit-main-row ">
+	
+		<div class="large-9   medium-6 columns">
+			
+			<div class="img-cont">
+
+				<img  class="images img-responsive " src="{{image}}" alt="{{name}}">
+				
+			</div>
+	
+	
+		</div>
+
+
+		<div class="large-3 columns medium-4 " >
+	
+		
+	
+	
+			<h6 class="subheader">{{description}}</h6>
+			
+				<h3>{{name}}</h3>
+	
+	
+	
+			<p ><span class="fruit-price-description">{{ price  | currency}}</span> / lb</p>
+
+			<p>
+
+				<label for="amount">QTY</label>
+
+				<select ng-model="fruitCount" ng-disabled="selectable" >
+	
+						          <option value="0">0</option>
+	
+						          <option value="1">1</option>
+	
+						          <option value="2">2</option>
+	
+						          <option value="3">3</option>
+						          
+						          <option value="4">4</option>
+	
+			  </select>
+
+			</p>
+	
+			<!-- 		       	  
+			when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
+			
+			<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount <= 1" >You added {{fruitCount}} {{name}} to your cart! </div>
+
+			<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount > 1">You added {{fruitCount}} {{name}}'s' to your cart! </div>
+					
+						
+				
+		
+				
+
+					
+					
+			<button class="small " style="width: 100%"ng-click="addToCart(name, image, fruitCount, price, description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
+	
+
+
+	<!-- 
+	checkout order
+	checkout template
+						
+ -->
+
+	<div class="heading cf" >
+	
+    	<center><a ui-sref="home" class="continue" style="float: none">Continue Shopping</a></center>
+	
+<!--  	</div> --><!-- end of heading -->
+					
+				
+		
+		</div>
+	
+	
+	
+	</div>
+	
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Single Fruit Template -->
 
-<center><div class="single-fruit-layout clearfix small-7 small-centered medium-4 medium-centered  large-3 large-centered columns">
+<!-- <center><div class="single-fruit-layout clearfix small-7 small-centered medium-4 medium-centered  large-3 large-centered columns">
 						
 	<ul class="pricing-table">
 
@@ -9,7 +125,7 @@
 		  <li class="single-image"><img  class="images img-responsive" src="{{image}}" alt="{{name}}"></li>
 		  
 		  
-		  <li class="description">{{ description }}</li>
+		  <li class="description"></li>
 
 		  <li class="price">{{ price  | currency}} / lb</li>
 		 
@@ -20,10 +136,10 @@
 
 					<div class="small-6 small-centered columns">
 
-						<label>Amount
-						<!-- ng model fruitCount helps us keep track of how many fruits are reuqested by
+						<label>Amount -->
+					<!-- 	ng model fruitCount helps us keep track of how many fruits are reuqested by
 							user -->
-				      	  <select ng-model="fruitCount" ng-disabled="selectable">
+				      <!-- 	  <select ng-model="fruitCount" ng-disabled="selectable">
 
 					          <option value="0">0</option>
 
@@ -42,35 +158,25 @@
 					 </div>
 
 				</div>
-
-
-				<!-- when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT -->		
+ -->
+<!-- 
+				when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
 				
-				<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount <= 1" >You added {{fruitCount}} {{name}} to your cart! </div>
+				<!-- <div data-alert class="alert-box alert radius" ng-if="alert && fruitCount <= 1" >You added {{fruitCount}} {{name}} to your cart! </div>
 
 				<div data-alert class="alert-box alert radius" ng-if="alert && fruitCount > 1">You added {{fruitCount}} {{name}}'s' to your cart! </div>
 				
-				<button  class="small" ng-click="addToCart(name, image, fruitCount, price, description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
+				<button  class="small" ng-click="addToCart(name, image, fruitCount, price, description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button> -->
 
-	  		</li><!-- end of li -->
+	  		<!-- </li> --><!-- end of li
+ -->
 
-
-	</ul><!-- end of ul -->
-
-
-
-	<!-- checkout order -->
-	<!-- checkout template -->
-						
-
-
-	<div class="heading cf" >
-	
-    	<a ui-sref="home" class="continue" style="float: none">Continue Shopping</a>
-	
- 	</div><!-- end of heading -->
+<!-- 	</ul> --><!-- end of ul -->
 
 
 
-</div><!-- end of div -->
+
+
+
+<!-- </div> --><!-- end of div -->
 

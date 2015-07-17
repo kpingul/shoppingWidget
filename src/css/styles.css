@@ -42,7 +42,7 @@ img {
 
 
 .container {
-  padding: 15px 0; }
+  padding: 30px 0; }
 
 /* Place order Button */
 .checkout {
@@ -162,11 +162,11 @@ img {
     font-family: "Montserrat", sans-serif;
     letter-spacing: -.015em;
     font-size: .75em;
-    padding: 1em;
+    padding: 1em 3em;
     color: #fff;
-    background: #82B1CA;
+    background: #FF871D;
     font-weight: bold;
-
+    
     -webkit-transition: all 0.25s linear;
     -moz-transition: all 0.25s linear;
     -ms-transition: all 0.25s linear;
@@ -174,7 +174,7 @@ img {
     transition: all 0.25s linear; }
 
   .heading a.continue:hover, .heading a.continue:focus, .heading a.continue:active {
-    background: #638FA7; }
+    background: #E86D00; }
    
 
 .cart {
@@ -366,10 +366,12 @@ a.remove {
   right: 14px;
   font-weight: 900;
   color: #FFFFFF;
-  font-size: 0.5em;
+  font-size: 0.4em;
  background: #EB0000;
  border-radius: 50%;
- padding: 4px;
+ padding: 3px 8px;
+ font-family: Helvetica;  
+
 
 }
 
@@ -445,7 +447,9 @@ a.remove {
      }
     
 
-
+  .container{
+    padding: 0;
+  }
 
 
     }
@@ -471,9 +475,9 @@ a.remove {
   {
     position: relative;
     bottom: 17px;
-    right: 14px;
-   padding: 6px 4px;
-  
+    right: 16px;
+   font-weight: bold;
+  padding: 1px 8px;
 
   }
   .fa-chevron-up{
@@ -488,5 +492,23 @@ a.remove {
   }
 
 
+}
+
+
+
+
+}
+.vcard{
+  border: 0;
+
+}
+.img-cont{
+  margin-left: 14%;
+  margin-top: 9%;
+}
+
+.single-fruit-main-row{
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 50px;
 }
 

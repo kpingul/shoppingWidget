@@ -1,53 +1,56 @@
 <!-- Main Home Template for list of entire fruit items -->
-
-<center> <h1 class="projTitle">Weclome to the<span> shopping </span>network!</h1></center>
-
-<!-- ng model search.name communicates with the ng repeat fruits object to search for the fruit.name properties via filter search strict -->
-<input type="text" ng-model="search.name" placeholder="type in fruit name..." style="border: 1px solid #D2D2D2">
-
-
-<ul class="fruitList">
-
-	<li ng-repeat='fruit in fruits | filter:search:strict'>
-
-		<a ui-sref="singleFruit({ fruitName: fruit.name, fruitImg : fruit.image, fruitPrice: fruit.price, fruitDescription: fruit.description})">
-						
-			<div class="fruitContainer clearfix ">
-
-				<div class="fruit-image">	
-
-				  <img  class="images fruit-desc img-responsive" src="{{fruit.image}}" alt="{{fruit.name}}" />
-
-				</div>
-				
-				<div class="fruit-description clearfix">		
-
-					<ul >
-
-						<li><span class="fruit-price-description">{{ fruit.price  | currency}}</span> <span class="fruit-weight-description">/ lb</span></li>
-
-						<li><b>{{ fruit.name }}	</b></li>
-
-						<li><span class="fruit-description-description">{{ fruit.description }}</span<</li>
-
-						<li><span class="fruit-free-shipping-description">Free shipping on orders more than <b>$15.00</b></span></li>
-
-					</ul><!-- end of ul -->
-
-				  </div><!-- end of div -->
-					
-			</div><!-- end of div -->
-			
-		</a>
-
-	</li>
+<div class="row">
 	
-</ul><!-- end of fruit list-->
+		<center> <h1 class="projTitle">Weclome to the<span> shopping </span>network!</h1></center>
+
+		<!-- ng model search.name communicates with the ng repeat fruits object to search for the fruit.name properties via filter search strict -->
+		<input type="text" ng-model="search.name" placeholder="type in fruit name..." style="border: 1px solid #D2D2D2">
 
 
-<!-- checkout order -->
-<!-- items and total are broadcasted from user data service and main controller -->
+		<ul class="fruitList">
 
-<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
+			<li ng-repeat='fruit in fruits | filter:search:strict'>
+
+				<a ui-sref="singleFruit({ fruitName: fruit.name, fruitImg : fruit.image, fruitPrice: fruit.price, fruitDescription: fruit.description})">
+								
+					<div class="fruitContainer clearfix ">
+
+						<div class="fruit-image">	
+
+						  <img  class="images fruit-desc img-responsive" src="{{fruit.image}}" alt="{{fruit.name}}" />
+
+						</div>
+						
+						<div class="fruit-description clearfix">		
+
+							<ul >
+
+								<li><span class="fruit-price-description">{{ fruit.price  | currency}}</span> <span class="fruit-weight-description">/ lb</span></li>
+
+								<li><b>{{ fruit.name }}	</b></li>
+
+								<li><span class="fruit-description-description">{{ fruit.description }}</span<</li>
+
+								<li><span class="fruit-free-shipping-description">Free shipping on orders more than <b>$15.00</b></span></li>
+
+							</ul><!-- end of ul -->
+
+						  </div><!-- end of div -->
+							
+					</div><!-- end of div -->
+					
+				</a>
+
+			</li>
 			
-<br/><a ui-sref="processForm"  class="button large alert round">Place Order </a></span>
+		</ul><!-- end of fruit list-->
+
+
+		<!-- checkout order -->
+		<!-- items and total are broadcasted from user data service and main controller -->
+
+		<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
+					
+		<br/><a ui-sref="processForm"  class="button large alert round">Place Order </a></span>
+	
+</div>

@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 	  $.scrollUp({
         scrollName: 'scrollUp',      // Element ID
-        scrollDistance: 300,         // Distance from top/bottom before showing element (px)
+        scrollDistance: 500,         // Distance from top/bottom before showing element (px)
         scrollFrom: 'top',           // 'top' or 'bottom'
         scrollSpeed: 600,            // Speed back to top (ms)
         easingType: 'swing',        // Scroll to top easing (see http://easings.net/)
