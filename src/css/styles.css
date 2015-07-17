@@ -39,9 +39,7 @@ img {
   cursor: pointer;
   color: #CC0000; }
 
-.fi-shopping-cart {
-  font-size: 1.1em;
-  color: #2D2D2D; }
+
 
 .container {
   padding: 40px 0; }
@@ -57,12 +55,12 @@ img {
 #scrollUp {
     bottom: 100px;
     right: 20px;
-    padding: 10px 20px;
+    padding: 25px;
     background-color: #555;
     color: #fff;
     border-radius: 50%;
-    opacity: 0.6;
-    
+    opacity: 0.4;
+    font-size: 1.3em;
 }
 .fa-chevron-up{
   font-size: 1.8em;
@@ -345,7 +343,7 @@ a.remove {
         padding: 0;
         text-align: left;
         list-style-type: none;
-   line-height: 4em;
+       line-height: 4em;
         
       }
       .subtotal-user-desc{
@@ -359,20 +357,20 @@ a.remove {
 
 .custom-shopping-count{
   position: relative;
-  bottom: 13px;
-  right: 8px;
+  bottom: 14px;
+  right: 14px;
   font-weight: 900;
   color: #FFFFFF;
   font-size: 0.5em;
- background: #FC0000;
+ background: #EB0000;
  border-radius: 50%;
- padding: 4.5px;
+ padding: 5px;
 
 }
 
 .fa-shopping-cart{
   font-size: 1.9em;
-  padding-top: 5px;
+  padding-top: 6px;
 
 }
 
@@ -454,7 +452,7 @@ a.remove {
 
   .fa-shopping-cart
   {
-    font-size: 1.9em;
+    font-size: 2.2em;
 
     padding-top: 10px;
 
@@ -462,8 +460,11 @@ a.remove {
 
   .custom-shopping-count
   {
+    position: relative;
+    bottom: 17px;
+    right: 18px;
+   padding: 6px 8px;
 
-   padding: 5px;
 
   }
   .fa-chevron-up{
@@ -472,6 +473,7 @@ a.remove {
 #scrollUp {
     bottom: 60px;
     right: 5px;
+        padding:17px;
 
 }
 
