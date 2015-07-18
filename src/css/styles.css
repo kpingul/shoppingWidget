@@ -42,7 +42,7 @@ img {
 
 
 .container {
-  padding: 30px 0; }
+  padding: 80px 0; }
 
 /* Place order Button */
 .checkout {
@@ -448,7 +448,7 @@ a.remove {
     
 
   .container{
-    padding: 0;
+    padding-top: 50px;
   }
 
 
