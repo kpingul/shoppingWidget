@@ -1,8 +1,9 @@
-$(document).ready(function(){
+(function($){
 
 	$(document).foundation();
 
 	  $.scrollUp({
+        
         scrollName: 'scrollUp',      // Element ID
         scrollDistance: 500,         // Distance from top/bottom before showing element (px)
         scrollFrom: 'top',           // 'top' or 'bottom'
@@ -19,4 +20,8 @@ $(document).ready(function(){
         zIndex: 2147483647           // Z-Index for the overlay
     });
 
-});
+
+
+}(jQuery));
+
+

@@ -69,7 +69,7 @@
 
 
 
-<!-- checkout ordercheckout template -->
+		<!-- checkout ordercheckout template -->
 
 		<div class="heading cf" >
 
@@ -79,7 +79,7 @@
 				
 			
 	
-	</div><!-- end of columns -->
+</div><!-- end of columns -->
 
 
 
@@ -89,43 +89,27 @@
 		
 		<div class="large-12 columns large-centered">
 
+			  <accordion close-others="oneAtATime">
+				 <accordion-group heading="Reviews" >
 
+				 		<ul class="customer-review-list">
+				 			<li ng-repeat="review in singleFruit.reviews">
+				 				<h5>{{review.title}} </h5>
+				 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.9em">by {{review.name}}</span></h6>
+				 				<p>{{review.review}}</p>
 
-
-  <accordion close-others="oneAtATime">
-  
-
-	 <accordion-group heading="Reviews" >
-	 		<ul class="customer-review-list">
-	 			<li ng-repeat="review in singleFruit.reviews">
-	 				<h5>{{review.title}} </h5>
-	 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.9em">by {{review.name}}</span></h6>
-	 				<p>{{review.review}}</p>
-
-	 			</li>
-	 		</ul>
-
-
-
-
-  	</accordion-group>
-	    </accordion>
-
-
-
-
-
-
-
-			
+				 			</li>
+				 		</ul>
+			  	</accordion-group>
+			 </accordion>
 	
-		</div>
+		</div><!-- end of column -->
 
 
 
 
 
-</div>
+</div><!-- end of row -->
 
 
 
