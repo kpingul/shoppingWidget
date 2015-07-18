@@ -1,13 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
 /* Must refactor CSS into types or features for maintainability */
 /* _____________________________________________________________ */
-input.ng-invalid {
-  border: 1px solid red;
-}
-input.ng-valid {
-  border: 1px solid green;
-}
-
 
 body {
   color: #333;
@@ -83,9 +76,7 @@ img {
   list-style-type: none;
       width: 100%; 
       margin: 0 auto;}
-  .fruitList li{
 
-  }
 
 .fruit-image {
   width: 20%; }
@@ -142,6 +133,7 @@ img {
   font-size: 2em;
   border-bottom: 1px solid #dadada;
   letter-spacing: 3px;
+  padding-bottom: 10px;
 }
   .projTitle span {
     font-family: "Droid Serif", serif;
@@ -384,7 +376,43 @@ a.remove {
 
 }
 
+.img-cont{
+  margin-left: 14%;
+  margin-top: 9%;
+}
 
+.single-fruit-main-row{
+  border-bottom: 1px solid #DFDFDF;
+  padding-bottom: 50px;
+}
+
+
+.rating{
+  color: #FFCC00;
+}
+.customer-rating{
+  font-size: 0.8em;
+}
+.customer-review-list{
+  list-style-type: none;
+}
+
+
+input.ng-invalid {
+  border: 1px solid red;
+}
+input.ng-valid {
+  border: 1px solid green;
+}
+
+.search-icon{
+
+  color: #FF871D;
+  font-size: 1.7em;
+}
+.has-form{
+  width: 420px;
+}
 
 @media only screen and (max-width: 43em) {
    .wrap {
@@ -450,6 +478,9 @@ a.remove {
   .container{
     padding-top: 50px;
   }
+   .img-cont{
+    margin-left: 15%;
+  }
 
 
     }
@@ -483,13 +514,21 @@ a.remove {
   .fa-chevron-up{
    font-size: 1.6em;
   }
-  #scrollUp {
+  #scrollUp 
+  {
     bottom: 60px;
     right: 5px;
 
      padding:17px;
 
   }
+   .img-cont
+   {
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 10%;
+  }
+ 
 
 
 }
@@ -497,28 +536,3 @@ a.remove {
 
 
 
-}
-.vcard{
-  border: 0;
-
-}
-.img-cont{
-  margin-left: 14%;
-  margin-top: 9%;
-}
-
-.single-fruit-main-row{
-  border-bottom: 1px solid #DFDFDF;
-  padding-bottom: 50px;
-}
-
-
-.rating{
-  color: #FFCC00;
-}
-.customer-rating{
-  font-size: 0.8em;
-}
-.customer-review-list{
-  list-style-type: none;
-}

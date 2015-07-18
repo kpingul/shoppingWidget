@@ -16,58 +16,69 @@
 
 
 	<div class="large-3 columns medium-4 " >
-
-
-		<h6 class="subheader">{{singleFruit.description}}</h6>
 		
-		<h3>{{singleFruit.name}}</h3>
-		<p><rating value="singleFruit.rating" max="5" readonly="true" class="rating"></rating> <a href="#">{{singleFruit.reviews.length}} reviews</a></p>
+		<header>
 
-	
-		<p ><span class="fruit-price-description">{{singleFruit.price  | currency}}</span> / lb</p>
+			<h6 class="subheader">{{singleFruit.description}}</h6>
+			
+			<h3>{{singleFruit.name}}</h3>
 
-		<p>
+			<p>
+				<span class="fruit-price-description">{{singleFruit.price  | currency}}</span> / <small>lb</small>
 
+			</p>
+		</header>
 
-			<select ng-model="singleFruit.fruitCount" ng-disabled="selectable" >
+		<section>
+				<p>
 
-		          <option value="QTY">QTY</option>
+					<rating value="singleFruit.rating" max="5" readonly="true" class="rating"></rating> 
 
-		          <option value="1">1</option>
+					<a href="#">{{singleFruit.reviews.length}} reviews</a>
 
-		          <option value="2">2</option>
+				</p>
 
-		          <option value="3">3</option>
-		          
-		          <option value="4">4</option>
+			
+				<p>
+					<select ng-model="singleFruit.fruitCount" ng-disabled="selectable" >
 
-		          <option value="5">5</option>
+				          <option value="QTY">QTY</option>
 
-		          <option value="6">6</option>
+				          <option value="1">1</option>
 
-		          <option value="7">7</option>
+				          <option value="2">2</option>
 
-		          <option value="8">8</option>
+				          <option value="3">3</option>
+				          
+				          <option value="4">4</option>
 
-		          <option value="9">9</option>
+				          <option value="5">5</option>
 
-		          <option value="10">10</option>
+				          <option value="6">6</option>
 
-		  </select>
+				          <option value="7">7</option>
 
-		</p>
+				          <option value="8">8</option>
 
-		<!-- 		       	  
-		when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
-		
-		<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount <= 1" >You added {{singleFruit.fruitCount}} {{singleFruit.name}} to your cart! </div>
+				          <option value="9">9</option>
 
-		<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div>
+				          <option value="10">10</option>
+
+				  </select>
+
+				</p>
+
+				<!-- 		       	  
+				when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
 				
-				
-		<button class="small " style="width: 100%"ng-click="addToCart(singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
+				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount <= 1" >You added {{singleFruit.fruitCount}} {{singleFruit.name}} to your cart! </div>
 
+				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div>
+						
+						
+				<button class="small " style="width: 100%"ng-click="addToCart(singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
 
+		</section><!-- end of section -->
 
 		<!-- checkout ordercheckout template -->
 

@@ -11,8 +11,9 @@
 
             </li>
 
+
          
-            <li class="toggle-topbar ss">
+            <li class="toggle-topbar">
 
               <a class="dd"  ui-sref="processForm">
                
@@ -24,15 +25,40 @@
 
            </li>
 
+
          </ul>
 
         <section class="top-bar-section">
 
           <!-- Right Nav Section -->
 
+          <ul class="left">
+
+
+            <li class="has-form">
+                  <div class="row collapse">
+
+                      <div class="large-10 small-10 columns">
+
+                        <input type="text" placeholder="type fruit name..." ng-model="search.name"  style="border: 0"> 
+
+                      </div>
+
+                       <div class="large-2 small-2 columns">
+
+                         <a href="" class="secondary button expand"><span class="fa fa-search"></span></a>
+
+                      </div> 
+
+                  </div>
+            </li><!-- end of form -->
+           
+           
+          </ul><!-- end of left section of nav -->
+
           <ul class="right">
 
-             <li class="ss">
+             <li>
 
                   <a class="dd" ui-sref="processForm">
 
@@ -45,10 +71,11 @@
               </li>
 
               
-          </ul>
+          </ul><!-- end of right section of nav -->
 
 
-         </section>
+         </section><!-- end of top bar section -->
 
-      </nav>
+      </nav><!-- end of nav -->
+      
 </div>

@@ -3,10 +3,7 @@
 	
 		<center> <h1 class="projTitle">Weclome to the<span> shopping </span>network!</h1></center>
 
-		<!-- ng model search.name communicates with the ng repeat fruits object to search for the fruit.name properties via filter search strict -->
-		<input type="text" ng-model="search.name" placeholder="type in fruit name..." style="border: 1px solid #D2D2D2">
-
-
+		
 		<ul class="fruitList">
 
 			<li ng-repeat='fruit in fruits | filter:search:strict track by $index '>
@@ -51,6 +48,6 @@
 
 		<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
 					
-		<br/><a ui-sref="processForm"  class="button large alert round">Place Order </a></span>
+		<br/><a ui-sref="processForm"  class="button large alert round">Proceed to checkout </a></span>
 	
 </div>

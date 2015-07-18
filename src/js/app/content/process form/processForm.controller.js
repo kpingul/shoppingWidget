@@ -7,6 +7,7 @@
 	angular.module('myApp')
 
 		.controller('processFormCtrl', ['$scope','userData', function($scope, userData) {
+			
 			$scope.formData = {}
 			$scope.formData.userName = userData.getName();
 			$scope.formData.userEmail = userData.getEmail();
@@ -14,7 +15,7 @@
 			//default since option selected isn't working
 
 			
-		
+			$scope.counts = 1;
 			$scope.usersData = userData.getListItems();
 			$scope.disabledNext = true;
 			$scope.disabledForm = true;
@@ -27,14 +28,12 @@
 
 				userData.deleteUsersFruit(fruit, id);
 		
-			
-
+		
 			}
 
 
 			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
-				//communicate with user data service to update the uers total checkout price and count
-				console.log(fruit, newFruitCount, id);
+	
 				userData.setNewUserData(fruit, newFruitCount, id);
 
 			}
@@ -51,10 +50,19 @@
 				
 			}
 
-	
-			
+
+			$scope.checkForTotal = function(){
+				if( userData.checkTotalPriceAndCount() ){
+
+					$scope.disabledNext = false;
+					return true; 
+				}
+			}
+
+
+
 			$scope.submitOrder = function(fruits, name,total ){
-				
+			
 				//separate business logic into service (abstraction)
 
 				if(!name && total <= 0){
@@ -76,19 +84,10 @@
 			
 				}
 				
-				
-				
-			
 
 
 			}
-			$scope.checkForTotal = function(){
-				if( userData.checkTotalPriceAndCount() ){
 
-					$scope.disabledNext = false;
-					return true; 
-				}
-			}
 
 
 		}]);
