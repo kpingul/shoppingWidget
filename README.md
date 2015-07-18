@@ -2,10 +2,6 @@
 
 #Update
 
--Still need to setup Gulp tasks and compress files.
-
--Use Angular's out of the box validation form
-
 
 -Using <a href="https://github.com/johnpapa/angular-styleguide">John Papa's Style Guide</a> for creating a maintainable Angular codebase.
 
