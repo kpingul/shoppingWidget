@@ -23,6 +23,7 @@
   "devDependencies": {
     "foundation": "~5.5.2",
     "jquery": "~2.1.4",
-    "scrollup": "~2.4.1"
+    "scrollup": "~2.4.1",
+    "angular-foundation": "~0.6.0"
   }
 }

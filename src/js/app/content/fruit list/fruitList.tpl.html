@@ -9,9 +9,9 @@
 
 		<ul class="fruitList">
 
-			<li ng-repeat='fruit in fruits | filter:search:strict'>
+			<li ng-repeat='fruit in fruits | filter:search:strict track by $index '>
 
-				<a ui-sref="singleFruit({ fruitName: fruit.name, fruitImg : fruit.image, fruitPrice: fruit.price, fruitDescription: fruit.description})">
+				<a ui-sref="singleFruit({ id: $index})">
 								
 					<div class="fruitContainer clearfix ">
 

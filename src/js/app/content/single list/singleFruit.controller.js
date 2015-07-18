@@ -6,23 +6,19 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', function($scope, $stateParams, userData) {
+			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData', function($scope, $stateParams, userData, fruitData) {
 					
-
-					
-					$scope.fruitCount = 0;
-					$scope.name = $stateParams.fruitName;
-					$scope.image = $stateParams.fruitImg;
-					$scope.price = $stateParams.fruitPrice;
-					$scope.description = $stateParams.fruitDescription;
+					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
+					$scope.singleFruit.fruitCount = 'QTY'
+			
    					$scope.isDisabled = false;
    					$scope.alert = false;
    					$scope.selectable = false;
-
+   					$scope.id = $stateParams.id;
 
 					$scope.addToCart = function(fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
 
-						if(fruitCount <= 0){
+						if(fruitCount <= 0 || isNaN(fruitCount)){
 
 							return false;
 

@@ -28,7 +28,7 @@
 
 				.state('singleFruit', {
 
-					url: '/:fruitName/:fruitImg/:fruitPrice/:fruitDescription',
+					url: '/:id',
 
 					templateUrl: 'src/js/app/content/single list/singleFruit.tpl.html',
 
