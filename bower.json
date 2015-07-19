@@ -27,6 +27,8 @@
     "angular-foundation": "~0.6.0",
     "angular-ui-router": "~0.2.15",
     "angular-animate": "~1.4.3",
-    "angular": "~1.4.3"
+    "angular": "~1.4.3",
+    "angular-ui-view-spinner": "~1.0.0",
+    "spin": "~1.1.6"
   }
 }

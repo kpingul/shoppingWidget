@@ -71,12 +71,14 @@
 				<!-- 		       	  
 				when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
 				
-				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount <= 1" >You added {{singleFruit.fruitCount}} {{singleFruit.name}} to your cart! </div>
+		<!-- 		<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount <= 1" >You added {{singleFruit.fruitCount}} {{singleFruit.name}} to your cart! </div>
 
-				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div>
+				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div> -->
 						
 						
-				<button class="small " style="width: 100%"ng-click="addToCart(singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart</button>
+				<button class="small  secondary addCartButton"ng-click="addToCart(singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
+
+				</button>
 
 		</section><!-- end of section -->
 
@@ -101,16 +103,21 @@
 		<div class="large-12 columns large-centered">
 
 			  <accordion close-others="oneAtATime">
-				 <accordion-group heading="Reviews" >
+				 <accordion-group is-open="isopen" >
 
-				 		<ul class="customer-review-list">
-				 			<li ng-repeat="review in singleFruit.reviews">
-				 				<h5>{{review.title}} </h5>
-				 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.9em">by {{review.name}}</span></h6>
-				 				<p>{{review.review}}</p>
+					<accordion-heading>Reviews <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i> </accordion-heading>
 
-				 			</li>
-				 		</ul>
+
+					
+			 		<ul class="customer-review-list">
+			 			<li ng-repeat="review in singleFruit.reviews">
+			 				<h5>{{review.title}} </h5>
+			 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.9em">by {{review.name}}</span></h6>
+			 				<p>{{review.review}}</p>
+
+			 			</li>
+			 		</ul>
+
 			  	</accordion-group>
 			 </accordion>
 	

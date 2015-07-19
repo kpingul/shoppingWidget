@@ -39,12 +39,13 @@
 
 				.state('processForm' , {
 
-					url: '/processForm',
+					url: '/processForm', 
+
+					controller: 'ProcessFormCtrl',
 
 					templateUrl: 'src/js/app/content/process form/processForm.tpl.html',
 
-					controller: 'processFormCtrl'
-
+					
 				})
 					//Nested routing using the (.) notation 
 						//processForm/profile
@@ -52,26 +53,58 @@
 
 					.state('processForm.content', {
 
-						url: '/content',
+						url: '/content', //controller: 'ProcessFormCtrl',
+						
+						controller: 'ProcessFormCtrl',
 
-						templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html'
+						templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html', resolve: {
+								
+									load: function($timeout) {
+
+										return $timeout(angular.noop, 1200);
+
+									}
+						}
+
+
 					})
 
 					.state('processForm.profile', {
 
-						url: '/profile',
+						url: '/profile', //controller: 'ProcessFormCtrl',
+						
+						controller: 'ProcessFormCtrl',
 
-						templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html'
+						templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html', resolve: {
+								
+									load: function($timeout) {
+
+										return $timeout(angular.noop, 1200);
+
+									}
+						}
 					})
 					
 					.state('processForm.payment', {
 
-						url: '/payment',
+						url: '/payment', //controller: 'ProcessFormCtrl',
 
-						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html'
+							controller: 'ProcessFormCtrl',
+
+						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html', resolve: {
+								
+									load: function($timeout) {
+
+										return $timeout(angular.noop, 1200);
+
+									}
+						}
+
 					});
 			
 				   
 		}]);
 
 }());
+
+

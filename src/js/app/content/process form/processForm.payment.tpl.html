@@ -18,15 +18,15 @@
 
     <ul class="subtotal-total">
 
-      <li class="totalRow"><span class="label">Subtotal:</span><span class="value">{{total | currency}}</span></li>
+      <li class="totalRow"><span class="label">Subtotal:</span><span class="value">{{subTotal | currency}}</span></li>
       
       <li class="totalRow">
 
         <span class="label">Shipping:</span>
         
-        <span class="value" ng-if="total < 15">$7.00</span>
+        <span class="value" ng-if="subTotal < 15">$7.00</span>
 
-        <span class="value" ng-if="total > 15">Free</span>
+        <span class="value" ng-if="subTotal > 15">Free</span>
 
       </li>
       
@@ -34,14 +34,14 @@
 
       <li class="totalRow final"><span class="label">Total:</span>
             
-              <span class="value" ng-if="!checkForTotal()">{{total| currency}}</span>
+              <span class="value" ng-if="!checkForTotal()">{{subTotal| currency}}</span>
 
-              <span class="value" ng-if="checkForTotal() && total < 15 ">{{total + 10| currency}}</span>
+              <span class="value" ng-if="checkForTotal() && subTotal < 15 ">{{subTotal + 10| currency}}</span>
   
-               <span class="value" ng-if="checkForTotal() && total > 15 ">{{total + 3| currency}}</span>
+               <span class="value" ng-if="checkForTotal() && subTotal > 15 ">{{subTotal + 3| currency}}</span>
       </li>
 
-      <li class="totalRow"><a href="" class="btn"  type="submit" ng-click="submitOrder(usersData, formData.userName, total)">Place Order</a></li>
+      <li class="totalRow"><a href="" class="btn"  type="submit" ng-click="submitOrder(usersData, formData.userName, subTotal)">Place Order</a></li>
 
     </ul>
   

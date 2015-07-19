@@ -6,16 +6,15 @@
 
 	angular.module('myApp')
 
-		.controller('processFormCtrl', ['$scope','userData', function($scope, userData) {
+		.controller('ProcessFormCtrl', ['$scope','userData', function($scope, userData) {
 			
 			$scope.formData = {}
 			$scope.formData.userName = userData.getName();
 			$scope.formData.userEmail = userData.getEmail();
 			$scope.formData.userCity = userData.getCity();
 			//default since option selected isn't working
+			$scope.subTotal = userData.getTotalPrice();
 
-			
-			$scope.counts = 1;
 			$scope.usersData = userData.getListItems();
 			$scope.disabledNext = true;
 			$scope.disabledForm = true;

@@ -26,7 +26,6 @@ img {
 
 
 
-
 .fi-x {
   font-size: 1.7em;
   cursor: pointer;
@@ -366,6 +365,11 @@ a.remove {
 
 
 }
+.addCartButton{
+  width: 100%;
+
+  font-weight: bold;
+}
 
 .fa-shopping-cart{
   font-size: 1.9em;
@@ -374,6 +378,10 @@ a.remove {
   left: 13px;
   top: 6px;
 
+}
+.fa-cart-plus{
+  font-size: 1.6em;
+  padding-left: 10px;
 }
 
 .img-cont{
@@ -414,6 +422,13 @@ input.ng-valid {
   width: 420px;
 }
 
+
+.accordion dd > a{
+  background: #D7D7D7;
+}
+.accordion dd > a:hover{
+  background: #D7D7D7;
+}
 @media only screen and (max-width: 43em) {
    .wrap {
     width: 100%;

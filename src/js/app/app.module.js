@@ -21,7 +21,7 @@
 */
 
 
-var myApp = angular.module('myApp', ['ui.router', 'mm.foundation']);
+var myApp = angular.module('myApp', ['angularSpinner', 'ui.router', 'angular-ui-view-spinner','mm.foundation']);
 
 
 
