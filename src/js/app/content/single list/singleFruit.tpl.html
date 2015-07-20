@@ -68,15 +68,9 @@
 
 				</p>
 
-				<!-- 		       	  
-				when user clicks function, the function takes in the fruit object, fruit.name property, fruitCount model for select options value, and fruit.price property for EACH UNIQUE FRUIT	 -->	
-				
-		<!-- 		<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount <= 1" >You added {{singleFruit.fruitCount}} {{singleFruit.name}} to your cart! </div>
-
-				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div> -->
+			
 						
-						
-				<button class="small  secondary addCartButton"ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
+				<button class="small secondary addCartButton" ladda="loading"ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled"   data-spinner-color="#DF0000">Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
 
 				</button>
 
@@ -86,7 +80,7 @@
 
 		<div class="heading cf" >
 
-			<center><a ui-sref="home" class="continue" style="float: none">Continue Shopping</a></center>
+			<!--<center><a ui-sref="home" class="continue" style="float: none">Continue Shopping</a></center> -->
 
 		</div><!-- end of heading -->
 				
@@ -112,7 +106,7 @@
 			 		<ul class="customer-review-list">
 			 			<li ng-repeat="review in singleFruit.reviews">
 			 				<h5>{{review.title}} </h5>
-			 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.9em">by {{review.name}}</span></h6>
+			 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.7em">by {{review.name}}</span></h6>
 			 				<p>{{review.review}}</p>
 
 			 			</li>
@@ -123,15 +117,17 @@
 	
 		</div><!-- end of column -->
 
+		
+	<div class="large-12 columns large-centered" style="padding-top: 30px">
 
-
+			<center><h5 >Others also bought</h5></center>
+			<slicker-carousel></slicker-carousel>
+	</div>
 
 
 </div><!-- end of row -->
 
 
-
-		
 
 
 

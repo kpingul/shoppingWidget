@@ -6,7 +6,7 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData', function($scope, $stateParams, userData, fruitData) {
+			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout', function($scope, $stateParams, userData, fruitData, $timeout) {
 					
 					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
 					$scope.singleFruit.fruitCount = 'QTY'
@@ -27,16 +27,20 @@
 							return false;
 
 						}else{
+							$scope.loading = true; // start loading
 
-							$scope.selectable = true;
+							 	 $timeout(function() {
+										 	   
+										$scope.loading = false; // stop loading
 
-							$scope.alert = true;
+										$scope.selectable = true;
 
-							userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
+										$scope.isDisabled = true;
+								
 
-							$scope.isDisabled = true;
+										userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
 
-
+							  }, 2000);
 
 						}
 					}

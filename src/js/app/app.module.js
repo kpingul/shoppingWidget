@@ -27,7 +27,8 @@ var myApp = angular.module('myApp', [
 	'ui.router', 
 	'angular-ui-view-spinner',
 	'mm.foundation',
-	'slickSlider' 
+	'slickSlider',
+	'angular-ladda'
 ]);
 
 

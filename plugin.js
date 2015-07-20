@@ -23,8 +23,7 @@
 							    {
 							      breakpoint: 768,
 							      settings: {
-							        arrows: false,
-							     
+							        arrows: true,
 							        centerPadding: '40px',
 							        slidesToShow: 3
 							      }
@@ -32,8 +31,7 @@
 							    {
 							      breakpoint: 480,
 							      settings: {
-							        arrows: false,
-							       
+							        arrows: false,	       
 							        centerPadding: '40px',
 							        slidesToShow: 2
 							      }

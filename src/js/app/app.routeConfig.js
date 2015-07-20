@@ -8,7 +8,7 @@
 
 		.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 
-			var delay = 600;
+			var delay = 350;
 
 			 $urlRouterProvider.when('', '/');
 

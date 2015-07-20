@@ -30,6 +30,7 @@
     "angular": "~1.4.3",
     "angular-ui-view-spinner": "~1.0.0",
     "spin": "~1.1.6",
-    "slick-carousel": "~1.5.6"
+    "slick-carousel": "~1.5.6",
+    "angular-ladda": "~0.3.1"
   }
 }
