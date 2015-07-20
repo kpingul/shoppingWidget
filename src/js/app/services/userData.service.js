@@ -87,7 +87,7 @@
 				}
 
 				//creates a new fruit object and passes it into the allUsersData array
-				usersData.setCheckout = function(fruitName, fruitImg, fruitCount, fruitTotalPrice, fruitDescription){
+				usersData.setCheckout = function(id, fruitName, fruitImg, fruitCount, fruitTotalPrice, fruitDescription){
 						
 					console.log(usersData.items);
 						//parses fruitCount to integer because it was a string
@@ -111,6 +111,7 @@
 							//the count requested
 
 							var newUserData = {
+								id: id,
 
 								fruit: fruitName,
 

@@ -76,7 +76,7 @@
 				<div data-alert class="alert-box alert radius" ng-if="alert && singleFruit.fruitCount > 1">You added {{singleFruit.fruitCount}} {{singleFruit.name}}'s' to your cart! </div> -->
 						
 						
-				<button class="small  secondary addCartButton"ng-click="addToCart(singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
+				<button class="small  secondary addCartButton"ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled" >Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
 
 				</button>
 

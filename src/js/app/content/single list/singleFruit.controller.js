@@ -20,7 +20,7 @@
    		
 
    				
-					$scope.addToCart = function(fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
+					$scope.addToCart = function(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
 
 						if(fruitCount <= 0 || isNaN(fruitCount)){
 
@@ -32,7 +32,7 @@
 
 							$scope.alert = true;
 
-							userData.setCheckout(fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
+							userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
 
 							$scope.isDisabled = true;
 

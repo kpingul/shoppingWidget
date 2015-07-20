@@ -2,53 +2,64 @@
 
 <!-- ******** Reminder to never do inline css (SOC) -->
 
-<form id="signup-form" name="myForm" ng-submit="processForm(myForm.$valid)" novalidate>
- 
-        <label  for="name">Name</label>
+<div class="row">
+  
 
-        <input type="text" name="name"  ng-model="formData.userName" placeholder="type in full name here..." required  >
+    <div class="heading cf" ng-if="!orderSubmit" >
 
+      <h1 class="projTitle" ><span>Your personal information </span></h1>
 
-        <p style="color: red" ng-show="myForm.name.$invalid">Name Required</p>
+    </div><!-- end of heading -->
 
-        <label  for="address">Email</label>
+      <form id="signup-form" name="myForm" ng-submit="processForm(myForm.$valid)" novalidate>
+       
+              <label  for="name">Name</label>
 
-        <input type="email" class="form-control input-sm" name="email" ng-model="formData.userEmail" placeholder="type in email address here..." required>
-
-
-        <p style="color: red" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email</p>
-
-        <label  for="phone">City</label>
-
-      	<select name="city" ng-model="formData.userCity" required >
-
-      		<option value="San Francisco">San Francisco</option>
-
-      		<option value="Oakland">Oakland</option>
-
-      		<option value="Hayward">Hayward</option>
-
-      	</select>
+              <input type="text" name="name"  ng-model="formData.userName" placeholder="type in full name here..." required  >
 
 
-        <center><span style="color: green" ng-show="profileValid"><b>Valid!</b><span style="color: #6A6A6A"> Click next to advance to checkout</span></span></center>
+              <p style="color: red" ng-show="myForm.name.$invalid">Name Required</p>
 
-        <center><button type="submit" class="success tiny">Submit</button></center>
+              <label  for="address">Email</label>
 
-</form><!-- end of Form -->
-   
+              <input type="email" class="form-control input-sm" name="email" ng-model="formData.userEmail" placeholder="type in email address here..." required>
 
 
-   
-        <!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
+              <p style="color: red" ng-show="myForm.email.$invalid && !myForm.email.$pristine">Invalid email</p>
 
-        <center>
-          
-          <button ui-sref="processForm.content" class="small">Back </button>
+              <label  for="phone">City</label>
 
-    			<button ui-sref="processForm.payment"class="small" ng-disabled="disabledForm">Next</button>
+            	<select name="city" ng-model="formData.userCity" required >
 
- 
+            		<option value="San Francisco">San Francisco</option>
 
-    	     	
-    	  </center>
+            		<option value="Oakland">Oakland</option>
+
+            		<option value="Hayward">Hayward</option>
+
+            	</select>
+
+
+              <center><span style="color: green" ng-show="profileValid"><b>Valid!</b><span style="color: #6A6A6A"> Click next to advance to checkout</span></span></center>
+
+              <center><button type="submit" class="success tiny">Submit</button></center>
+
+      </form><!-- end of Form -->
+         
+
+
+         
+              <!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
+
+              <center>
+                
+                <button ui-sref="processForm.content" class="small">Back </button>
+
+          			<button ui-sref="processForm.payment"class="small" ng-disabled="disabledForm">Next</button>
+
+       
+
+          	     	
+          	  </center>
+
+<!-- end of row -->

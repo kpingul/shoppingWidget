@@ -8,6 +8,8 @@
 
 		.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 
+			var delay = 600;
+
 			 $urlRouterProvider.when('', '/');
 
 			 //when accessing process form validation, by default, it directs to profile 
@@ -61,7 +63,7 @@
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, 1200);
+										return $timeout(angular.noop, delay);
 
 									}
 						}
@@ -79,7 +81,7 @@
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, 1200);
+										return $timeout(angular.noop, delay);
 
 									}
 						}
@@ -95,7 +97,7 @@
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, 1200);
+										return $timeout(angular.noop, delay);
 
 									}
 						}

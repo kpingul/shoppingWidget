@@ -429,6 +429,27 @@ input.ng-valid {
 .accordion dd > a:hover{
   background: #D7D7D7;
 }
+
+.view-loading-spinner-container{
+  margin-top: 0;
+}
+.view-loading-spinner{
+  margin-top: 160px;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color:#888888 !important;
+}
+.carousels{
+  width: 70%;
+  margin: 0 auto;
+}
+.carousel-container{
+  margin-top: 5%;
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 43em) {
    .wrap {
     width: 100%;
@@ -547,7 +568,4 @@ input.ng-valid {
 
 
 }
-
-
-
 

@@ -10,6 +10,7 @@
 
 				fruits.fruit = [
 								{
+									id: 0,
 									name: 'Orange',
 									image: 'src/images/orange.jpg',
 									price: 1.90,
@@ -45,6 +46,7 @@
 								},
 								
 								{
+									id: 1,
 									name: 'Kiwi',
 									image: 'src/images/kiwi.jpg',
 									price: 1.20,
@@ -72,6 +74,7 @@
 								},
 								
 								{
+									id: 2,
 									name: 'Banana',
 									image: 'src/images/bananna.jpg',
 									price: 0.90,
@@ -104,6 +107,7 @@
 
 								},
 								{
+									id: 3,
 									name: 'Watermelon',
 									image: 'src/images/watermelon.jpg',
 									price: 0.98,
@@ -128,6 +132,7 @@
 
 								},
 								{
+									id: 4,
 									name: 'Pear',
 									image: 'src/images/pear.jpg',
 									price: 0.58,
@@ -156,6 +161,7 @@
 									]
 								},
 								{
+									id: 5,
 									name: 'Mango',
 									image: 'src/images/mango.jpg',
 									price: 1.32,
@@ -180,6 +186,7 @@
 
 								},	
 								{
+									id: 6,
 									name: 'Pineapple',
 									image: 'src/images/pineapple.jpg',
 									price: 2.30,
@@ -217,6 +224,7 @@
 
 								},
 								{
+									id: 7,
 									name: 'Strawberry',
 									image: 'src/images/strawberry.jpg',
 									price: 4.43,
@@ -243,6 +251,7 @@
 
 
 								{
+									id: 8,
 									name: 'blackberry',
 									image: 'src/images/blackberry.jpg',
 									price: 2.24,
@@ -279,6 +288,7 @@
 
 								},
 								{
+									id: 9,
 									name: 'Coconut',
 									image: 'src/images/coconut.jpg',
 									price: 3.15,
@@ -302,6 +312,7 @@
 									]
 								},
 								{
+									id: 10,
 									name: 'Grapefruit',
 									image: 'src/images/grapefruit.jpg',
 									price: 1.05,
@@ -326,6 +337,7 @@
 
 								},	
 								{
+									id: 11,
 									name: 'Raspberry',
 									image: 'src/images/raspberry.jpg',
 									price: 3.05,
@@ -364,6 +376,7 @@
 
 								},
 								{
+									id: 12,
 									name: 'Papaya',
 									image: 'src/images/papaya.jpg',
 									price: 3.33,
@@ -390,6 +403,7 @@
 
 
 								{
+									id: 13,
 									name: 'Cherry',
 									image: 'src/images/cherry.jpg',
 									price: 2.12,
@@ -419,6 +433,7 @@
 									]
 								},
 								{
+									id: 14,
 									name: 'Honeydew',
 									image: 'src/images/honeydew.jpg',
 									price: 3.25,
@@ -461,6 +476,7 @@
 
 								},	
 								{
+									id: 15,
 									name: 'Peach',
 									image: 'src/images/peach.jpg',
 									price: 1.50,
@@ -485,6 +501,7 @@
 
 								},
 								{
+									id: 16,
 									name: 'Passionfruit',
 									image: 'src/images/passionfruit.jpg',
 									price: 3.33,

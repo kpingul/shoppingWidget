@@ -12,9 +12,9 @@
 			$scope.formData.userName = userData.getName();
 			$scope.formData.userEmail = userData.getEmail();
 			$scope.formData.userCity = userData.getCity();
-			//default since option selected isn't working
+			
 			$scope.subTotal = userData.getTotalPrice();
-
+			$scope.totalItems = userData.getItemCount();
 			$scope.usersData = userData.getListItems();
 			$scope.disabledNext = true;
 			$scope.disabledForm = true;
@@ -62,28 +62,11 @@
 
 			$scope.submitOrder = function(fruits, name,total ){
 			
-				//separate business logic into service (abstraction)
-
-				if(!name && total <= 0){
-					alert('Must fill out information and go shopping');
-				} 
-				else if(name && total <= 0){
-					alert('Empty Cart');
-					
-				}else if(!name && total >= 0){
-					alert('Must fill out information');
-				}
-				else if(name && total > 0){
-
+				
+					$scope.orderSubmit = true;
 					fruits.splice(0, fruits.length - 1);
 
-					$scope.orderSubmit = true;
 					userData.clearUsersData();
-					
-			
-				}
-				
-
 
 			}
 
