@@ -448,7 +448,10 @@ input.ng-valid {
   margin-top: 5%;
   width: 100%;
 }
-
+.fruitList-Carousel{
+  padding-bottom: 80px;
+  padding-top: 10px;
+}
 
 @media only screen and (max-width: 43em) {
    .wrap {
