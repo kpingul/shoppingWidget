@@ -37,7 +37,7 @@
 
 						$scope.totalItems = userData.getItemCount();
 
-				}, 700);
+				}, 900);
 		
 			}
 

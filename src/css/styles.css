@@ -32,7 +32,9 @@ img {
 
 .reveal-modal{
   min-height: 100px;
+ 
 
+ 
 }
 
 .container {
@@ -355,17 +357,20 @@ a.remove {
 
 .custom-shopping-count{
   position: relative;
-  bottom: 14px;
-  right: 14px;
+  bottom: 49px;
+  left: 15px;
   font-weight: 900;
   color: #FFFFFF;
   font-size: 0.4em;
  background: #EB0000;
  border-radius: 50%;
- padding: 3px 8px;
+ padding: 0px 8px;
  font-family: Helvetica;  
 
 
+}
+.right-small{
+  border-left: 0;
 }
 .addCartButton{
   width: 100%;
@@ -374,11 +379,9 @@ a.remove {
 }
 
 .fa-shopping-cart{
-  font-size: 1.9em;
-  padding-top: 6px;
-  position: relative;
-  left: 13px;
-  top: 6px;
+  font-size: 1.8em;
+position: relative;
+top: 10px;
 
 }
 .fa-cart-plus{
@@ -522,7 +525,9 @@ input.ng-valid {
    .img-cont{
     margin-left: 15%;
   }
-
+  .shop{
+  display: none;
+}
 
     }
 
@@ -530,6 +535,8 @@ input.ng-valid {
 
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {
+
+
   .has-form{
     display: none;
   }
@@ -539,24 +546,7 @@ input.ng-valid {
 
     } 
 
-  .fa-shopping-cart
-  {
-    font-size: 2em;
-  position: relative;
-  left: 19px;
 
-
-  }
-
-  .custom-shopping-count
-  {
-    position: relative;
-    bottom: 17px;
-    right: 16px;
-   font-weight: bold;
-  padding: 1px 8px;
-
-  }
   .fa-chevron-up{
    font-size: 1.6em;
   }
