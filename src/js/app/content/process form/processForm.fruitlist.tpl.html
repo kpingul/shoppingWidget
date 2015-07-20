@@ -19,13 +19,13 @@
 			<ul class="edit-update-fruit-list">
 				
 				<li>     
-					 <a href=""  ladda="updating" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall"  data-spinner-color="#085100" >Update</a>
+					 <a href=""   ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall" >Update</a>
 
 				</li>
 
 				<li>
 
-      				 <a href="" ng-click="deleteAllFruit(usersData, data, $index)"  ladda="deleting" class="removeSmall" data-spinner-color="#FF0000">Remove</a>
+      				 <a href="" ng-click="deleteAllFruit(usersData, data, $index)" class="removeSmall" >Remove</a>
 
       			</li>
 
@@ -43,9 +43,9 @@
     
      <div class="cartSection removeWrap">
 
-       	<button class="tiny success" ladda="updating"  data-spinner-color="#085100" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" >Update</button>
+       	<button class="tiny success" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" >Update</button>
 
-       <a href="" class="remove" ladda="deleting" data-spinner-color="#FF0000" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
+       <a href="" class="remove" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
 
    	</div><!-- end of cartSection -->
 
