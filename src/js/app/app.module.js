@@ -28,7 +28,8 @@ var myApp = angular.module('myApp', [
 	'angular-ui-view-spinner',
 	'mm.foundation',
 	'slickSlider',
-	'angular-ladda'
+	'angular-ladda',
+	'shoppingModal'
 ]);
 
 

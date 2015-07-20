@@ -10,7 +10,7 @@
 
 				restrict: 'E',
 
-				templateUrl: 'src/plugins/plugin.tpl.html',
+				templateUrl: 'src/plugins/slickCarousel.tpl.html',
 
 				link: function(scope, el, attrs){
 

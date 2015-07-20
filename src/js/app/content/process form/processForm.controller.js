@@ -6,7 +6,8 @@
 
 	angular.module('myApp')
 
-		.controller('ProcessFormCtrl', ['$scope','userData', function($scope, userData) {
+		.controller('ProcessFormCtrl', ['$scope','userData','$timeout', function($scope, userData, $timeout) {
+			/*User Personal Information */
 			
 			$scope.formData = {}
 			$scope.formData.userName = userData.getName();
@@ -24,16 +25,39 @@
 			
 			$scope.deleteAllFruit = function(fruits, fruit, id){
 			
+				$scope.deleting = true; // start loading
 
-				userData.deleteUsersFruit(fruit, id);
-		
+				$timeout(function() {
+
+					 	 $scope.deleting = false; // stop loading
+
+						userData.deleteUsersFruit(fruit, id);
+
+						$scope.subTotal = userData.getTotalPrice();
+
+						$scope.totalItems = userData.getItemCount();
+
+				}, 700);
 		
 			}
 
 
 			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
-	
-				userData.setNewUserData(fruit, newFruitCount, id);
+				
+				$scope.updating = true; // start loading
+
+				$timeout(function() {
+
+				    $scope.updating = false; // stop loading
+
+					userData.setNewUserData(fruit, newFruitCount, id);
+
+				    $scope.subTotal = userData.getTotalPrice();
+
+					$scope.totalItems = userData.getItemCount();
+
+				}, 1000);
+				
 
 			}
 
@@ -43,7 +67,9 @@
 				
 
 					userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
+
 					$scope.disabledForm = false;
+
 					$scope.profileValid = true;
 				}
 				
@@ -51,10 +77,13 @@
 
 
 			$scope.checkForTotal = function(){
-				if( userData.checkTotalPriceAndCount() ){
+
+				if( userData.checkTotalPriceAndCount() ) {
 
 					$scope.disabledNext = false;
+
 					return true; 
+
 				}
 			}
 
@@ -64,6 +93,7 @@
 			
 				
 					$scope.orderSubmit = true;
+
 					fruits.splice(0, fruits.length - 1);
 
 					userData.clearUsersData();

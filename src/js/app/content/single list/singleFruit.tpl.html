@@ -1,8 +1,8 @@
 
 <!-- Single Fruit Template -->
-
 <div class="row single-fruit-main-row ">
-
+<a href="#"  data-reveal-id="myModal"></a>
+<shopping-cart-modal></shopping-cart-modal>
 	<div class="large-9   medium-6 columns">
 		
 		<div class="img-cont">
@@ -70,9 +70,9 @@
 
 			
 						
-				<button class="small secondary addCartButton" ladda="loading"ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled"   data-spinner-color="#DF0000">Add to cart <i class="fa fa-cart-plus" data-ng-show="!loading"></i>
+				<a class="button small secondary addCartButton" ladda="loading"ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" ng-disabled="isDisabled" ng-model="isDisabled"   data-spinner-color="#DF0000">Add to cart <i class="fa fa-cart-plus"></i>
 
-				</button>
+				</a>
 
 		</section><!-- end of section -->
 
@@ -121,6 +121,7 @@
 	<div class="large-12 columns large-centered" style="padding-top: 30px">
 
 			<center><h5 >Others also bought</h5></center>
+			
 			<slicker-carousel></slicker-carousel>
 	</div>
 

@@ -6,7 +6,7 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout', function($scope, $stateParams, userData, fruitData, $timeout) {
+			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$modal', function($scope, $stateParams, userData, fruitData, $timeout, $modal) {
 					
 					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
 					$scope.singleFruit.fruitCount = 'QTY'
@@ -28,7 +28,7 @@
 
 						}else{
 							$scope.loading = true; // start loading
-
+							
 							 	 $timeout(function() {
 										 	   
 										$scope.loading = false; // stop loading
@@ -39,8 +39,8 @@
 								
 
 										userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
-
-							  }, 2000);
+										$('#myModal').foundation('reveal', 'open');
+							  }, 1000);
 
 						}
 					}
