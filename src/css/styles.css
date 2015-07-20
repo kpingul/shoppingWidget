@@ -530,7 +530,9 @@ input.ng-valid {
 
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {
-
+  .has-form{
+    display: none;
+  }
   #editCount-sizing 
   {
     width: 40px; 
