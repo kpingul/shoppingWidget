@@ -1,5 +1,6 @@
 /*  Routing Configuration */
 
+
 (function (){
 
 	'use strict';
@@ -8,7 +9,6 @@
 
 		.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 
-			var delay = 350;
 
 			 $urlRouterProvider.when('', '/');
 
@@ -55,7 +55,7 @@
 
 					.state('processForm.content', {
 
-						url: '/content', //controller: 'ProcessFormCtrl',
+						url: '/content', 
 						
 						controller: 'ProcessFormCtrl',
 
@@ -63,7 +63,7 @@
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, delay);
+										return $timeout(angular.noop, 320);
 
 									}
 						}
@@ -73,7 +73,7 @@
 
 					.state('processForm.profile', {
 
-						url: '/profile', //controller: 'ProcessFormCtrl',
+						url: '/profile', 
 						
 						controller: 'ProcessFormCtrl',
 
@@ -81,7 +81,7 @@
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, delay);
+										return $timeout(angular.noop, 400);
 
 									}
 						}
@@ -89,15 +89,15 @@
 					
 					.state('processForm.payment', {
 
-						url: '/payment', //controller: 'ProcessFormCtrl',
+						url: '/payment', 
 
-							controller: 'ProcessFormCtrl',
+						controller: 'ProcessFormCtrl',
 
 						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html', resolve: {
 								
 									load: function($timeout) {
 
-										return $timeout(angular.noop, delay);
+										return $timeout(angular.noop, 400);
 
 									}
 						}

@@ -3,6 +3,7 @@
 var gulp 		= require('gulp'),
 	concat 		= require('gulp-concat'),
 	minifyCss 	= require('gulp-minify-css'),
+	concatCss = require('gulp-concat-css'),
 	rename 		= require('gulp-rename'),
 	sass 		= require('gulp-sass'),
 	uglify 		= require('gulp-uglify'),
@@ -39,7 +40,15 @@ gulp.task('dependenciesJs', function(){
 				path.bower + 'angular-foundation/mm-foundation.min.js',
 				path.bower + 'angular-foundation/mm-foundation-tpls.min.js',
 				path.bower + 'modernizr/modernizr.js',
-				path.bower + 'scrollup/dist/jquery.scrollUp.min.js'
+				path.bower + 'scrollup/dist/jquery.scrollUp.min.js',
+				path.bower + 'spin.js/spin.js',
+				path.bower + 'angular-spinner/angular-spinner.js',
+				path.bower + 'angular-ui-view-spinner/src/angular-ui-view-spinner.js',
+				path.bower + 'slick-carousel/slick/slick.min.js',
+				path.bower + 'ladda/js/spin.js',
+				path.bower + 'ladda/js/ladda.js',
+				path.bower + 'angular-ladda/dist/angular-ladda.min.js',
+				
 			])
 
 			.pipe(concat('dependenciesJs.js'))
@@ -54,8 +63,7 @@ gulp.task('scriptsJs', function(){
 	return gulp.src([
 
 				path.app + 'app.module.js',
-				path.app + 'app.mainCtrl.js', 
-				path.app + 'app.routeConfig.js', 
+				path.app + 'app.mainCtrl.js',  
 				path.app + 'services/fruitData.service.js',
 				path.app + 'services/userData.service.js', 
 				path.js +  '**/*.js'
@@ -68,6 +76,26 @@ gulp.task('scriptsJs', function(){
 
 });
 
+
+//Managing CSS dependencies 
+
+gulp.task('dependenciesCss', function(){
+
+	return gulp.src([
+
+				path.bower + 'foundation/css/foundation.css',
+				path.bower + 'components-font-awesome/css/font-awesome.min.css',
+				path.bower + 'angular-ui-view-spinner/src/angular-ui-view-spinner.css',
+				path.bower + 'slick-carousel/slick/slick.css',
+				path.bower + 'slick-carousel/slick/slick-theme.css',
+				path.bower + 'ladda/dist/ladda-themeless.min.css'
+
+			])
+
+			.pipe(concatCss("dependenciesCss.min.css"))
+			.pipe(gulp.dest('build/css'))
+
+});
 
 //Managing CSS stylesheet
 gulp.task('sass', function(){

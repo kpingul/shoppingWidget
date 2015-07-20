@@ -566,6 +566,12 @@ input.ng-valid {
   }
  
 
+}
+@media (max-width: 480px){
+  .carousels{
+    width: 100%;
+
+  }
 
 }
 
