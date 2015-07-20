@@ -25,38 +25,30 @@
 			
 			$scope.deleteAllFruit = function(fruits, fruit, id){
 			
-				$scope.deleting = true; // start loading
+		
 
-				$timeout(function() {
+			         userData.deleteUsersFruit(fruit, id);
 
-					 	 $scope.deleting = false; // stop loading
+				 $scope.subTotal = userData.getTotalPrice();
 
-						userData.deleteUsersFruit(fruit, id);
+			         $scope.totalItems = userData.getItemCount();
 
-						$scope.subTotal = userData.getTotalPrice();
-
-						$scope.totalItems = userData.getItemCount();
-
-				}, 900);
+	
 		
 			}
 
 
 			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
 				
-				$scope.updating = true; // start loading
+				
 
-				$timeout(function() {
+				userData.setNewUserData(fruit, newFruitCount, id);
 
-				    $scope.updating = false; // stop loading
+				$scope.subTotal = userData.getTotalPrice();
 
-					userData.setNewUserData(fruit, newFruitCount, id);
+			        $scope.totalItems = userData.getItemCount();
 
-				    $scope.subTotal = userData.getTotalPrice();
-
-					$scope.totalItems = userData.getItemCount();
-
-				}, 1000);
+			
 				
 
 			}
