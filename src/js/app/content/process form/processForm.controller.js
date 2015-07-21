@@ -25,6 +25,7 @@
 			// $scope.$watch('subTotal', function(){
 			// 	$scope.$apply(function(){
 			
+<<<<<<< HEAD
 
 			// 	});
 			// })
@@ -45,6 +46,17 @@
 				$scope.totalItems = userData.getItemCount();
 
 		
+=======
+		
+
+			         userData.deleteUsersFruit(fruit, id);
+
+				 $scope.subTotal = userData.getTotalPrice();
+
+			         $scope.totalItems = userData.getItemCount();
+
+	
+>>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
 		
 			}
 
@@ -52,8 +64,11 @@
 			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
 				
 				
+<<<<<<< HEAD
 
 			        $scope.updating = false; // stop loading
+=======
+>>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
 
 				userData.setNewUserData(fruit, newFruitCount, id);
 
@@ -61,7 +76,11 @@
 
 			        $scope.totalItems = userData.getItemCount();
 
+<<<<<<< HEAD
 	
+=======
+			
+>>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
 				
 
 			}
