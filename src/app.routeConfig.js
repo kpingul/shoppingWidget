@@ -9,7 +9,9 @@
 		
 
 
-		.config(routes);
+		.config(routes)
+
+	
 
 		routes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
