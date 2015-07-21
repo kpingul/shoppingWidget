@@ -2,8 +2,8 @@
 
 #Update
 
+**6/21 - start refactoring application
 
--Using <a href="https://github.com/johnpapa/angular-styleguide">John Papa's Style Guide</a> for creating a maintainable Angular codebase.
 
 #The Goal
 
