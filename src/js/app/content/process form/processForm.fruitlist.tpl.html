@@ -9,46 +9,38 @@
 
 
 <<<<<<< HEAD
+<!-- Directive injected in Content Template Users Current Items displaying all shopping items -->
+
+<div class="infoWrap"> 
+    
+
+     <a ui-sref="singleFruitEditing({id: data.id , fruitId: $index})" ng-click="enableEditing($index)">
+
+        <p class="prodTotal right">{{data.fruitPrice | currency}}</p>
+
+
+
         <div class="cartSection">
       
                 <img  id="image-removal" src="{{data.image}}" alt="{{data.fruit}}" class="itemImg left">
                 
-                  <ul class="fruitlist-content-list">
-=======
-	      <h3>{{data.fruit}}</h3>
-	    
-			<p><input type="text" ng-model="editCount" style="width: 35px; border: 1px solid #C7C7C7" updatefruit="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)"></p>
-	 
->>>>>>> 3d394458064f139b705bda5b8355c28a18a810ec
+         
+
+                <ul class="fruitlist-content-list">
 
                       <li>
 
-<<<<<<< HEAD
-                           <h3>{{data.fruit}} </h3>
-=======
-			<ul class="edit-update-fruit-list">
-				
-				<li>     
-<<<<<<< HEAD
-					 <a href="" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall"  >Update</a>
->>>>>>> 3d394458064f139b705bda5b8355c28a18a810ec
-=======
-					 <a href=""   ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall" >Update</a>
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
+                           <h3>{{data.fruit}}</h3>
+
 
                         </li>
 
                         <li>      
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                             <p>{{data.originalPrice | currency}}</p>
-=======
-      				 <a href="" ng-click="deleteAllFruit(usersData, data, $index)" class="removeSmall" >Remove</a>
->>>>>>> 3d394458064f139b705bda5b8355c28a18a810ec
-=======
-      				 <a href="" ng-click="deleteAllFruit(usersData, data, $index)" class="removeSmall" >Remove</a>
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
+
+
 
                         </li>
 
@@ -64,15 +56,12 @@
 
                         </li>
 
-<<<<<<< HEAD
                         <li style="padding-left: 110px"> 
 
                           <p>Availability: <b class="status">In stock</b></p>
-=======
-       	<button class="tiny success"   ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" >Update</button>
 
-       <a href="" class="remove" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
->>>>>>> 3d394458064f139b705bda5b8355c28a18a810ec
+  
+
 
                        </li>
 
@@ -80,13 +69,7 @@
                       
         </div><!-- end of cartSection -->
 
-<<<<<<< HEAD
 
-=======
-       	<button class="tiny success" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" >Update</button>
-
-       <a href="" class="remove" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
 
         </div><!-- end of prodTotal -->
 
@@ -95,19 +78,3 @@
     
 
 </div><!-- end of infoWrap -->
-
-
-<!--     <ul class="edit-update-fruit-list">
-        
-        <li>     
-           <a href=""  ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall"  >Update</a>
-
-        </li>
-
-        <li>
-
-               <a href="" ng-click="deleteAllFruit(usersData, data, $index)"  class="removeSmall" >Remove</a>
-
-            </li>
-
-      </ul> -->
