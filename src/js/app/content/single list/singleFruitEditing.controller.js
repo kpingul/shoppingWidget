@@ -47,21 +47,33 @@
 
    			
    						 $scope.saving = true; // start loading	
-						  $timeout(function() {
+
+						 $timeout(function() {
+
 
 						    $scope.saving = false;
+
+	 						 //update fruit using user service 
    							userData.setNewUserData($stateParams.fruitId, editCount);
-						  $state.go('processForm', {});
+
+						  	$state.go('processForm', {});
+
 						  }, 300);
    					}
    					$scope.deleteChangesToCart = function(singleFruit){
-   						 $scope.deleting = true; // start loading	
-						  $timeout(function() {
 
-						    $scope.deleting = false;
-   							userData.deleteUsersFruit(singleFruit, $stateParams.fruitId );
-   								
-						  $state.go('processForm', {});
+   						 $scope.deleting = true; // start loading
+
+							  $timeout(function() {
+
+							  $scope.deleting = false;
+
+	   						  //delete fruit using user service 
+	   						  userData.deleteUsersFruit(singleFruit, $stateParams.fruitId );
+
+	   							console.log('s')
+							  $state.go('processForm', {});
+
 						  }, 300);
 
    					

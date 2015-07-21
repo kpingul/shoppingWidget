@@ -491,6 +491,26 @@ text-transform: uppercase;
   color: #000000;
 }
 
+.singleFruit-editing-count-list {
+  list-style-type: none;
+margin-left: 0;
+  padding-top: 20px;
+    letter-spacing: 0.7em;
+    
+}
+.singleFruit-editing-count-list li {
+  display: inline;
+
+
+}
+
+
+/* Button Loader fix for positioning */
+
+.ladda-button[data-style=zoom-in] .ladda-spinner {
+  left: 40%;
+
+}
 @media only screen and (max-width: 43em) {
    .wrap {
     width: 100%;
@@ -568,7 +588,9 @@ text-transform: uppercase;
 
     } 
 
-
+  .singleFruit-editing-count-list {
+    text-align: center;
+  }
   .fa-chevron-up{
    font-size: 1.6em;
   }
@@ -606,16 +628,5 @@ text-transform: uppercase;
 
 }
 
-
-.singleFruit-editing-count-list {
-  list-style-type: none;
-  padding: 30px 0px;
-    letter-spacing: 0.7em;
-}
-.singleFruit-editing-count-list li {
-  display: inline;
-
-
-}
 
 

@@ -147,7 +147,7 @@
 
 				usersData.deleteUsersFruit = function(fruit , id){
    
-				console.log(fruit);
+				console.log(fruit, id);
 					//update total price and count after an item has been removed
 					//from the users array of fruits
 

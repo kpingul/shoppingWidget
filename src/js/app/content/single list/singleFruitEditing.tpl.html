@@ -42,7 +42,8 @@
 
 					<li>
 
-						<a href="" style="color: #404040" class="fa fa-minus-circle fa-3x" ladda="subtract" ng-click="subtractCount()"></a>
+						<a href="" style="color: #404040" class="fa fa-minus-circle fa-3x" ladda="subtract" ng-click="subtractCount()" data-spinner-size="30"></a>
+
 
 					</li>
 
@@ -54,10 +55,11 @@
 
 					<li>	
 
-						<a href="" style="color: #404040" class="fa fa-plus-circle fa-3x" ladda="add" ng-click="addCount()" >
+						<a href="" style="color: #404040" class="fa fa-plus-circle fa-3x" ladda="add" ng-click="addCount()" data-spinner-size="30">
 							
 
 						</a>
+
 
 					</li>
 
@@ -65,6 +67,7 @@
 				</ul>	
 		
 
+			
 				<button class="button small round secondary saveCartButton" ng-click="saveChangesToCart(singleFruit.fruitCount)"  ladda="saving"  data-spinner-color="#000000">Save Changes</button>
 
 				<button class="button small round alert deleteCartButton" ng-click="deleteChangesToCart(singleFruit)"  ladda="deleting"  data-spinner-color="#FFA6A6">Remove Item</button>
