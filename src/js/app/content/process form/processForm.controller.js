@@ -21,7 +21,18 @@
 			$scope.disabledForm = true;
 			$scope.profileValid = false;
 			$scope.orderSubmit = false;
-		
+			
+			// $scope.$watch('subTotal', function(){
+			// 	$scope.$apply(function(){
+			
+
+			// 	});
+			// })
+			$scope.enableEditing = function(id){
+
+				 userData.enableEditing(id);
+
+			}
 			
 			$scope.deleteAllFruit = function(fruits, fruit, id){
 			

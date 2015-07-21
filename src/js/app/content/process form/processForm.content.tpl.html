@@ -29,7 +29,6 @@
 					<userlistitems list="data"></userlistitems>
 
 				
-
 		      </li>
 
 
@@ -51,19 +50,6 @@
 		    </ul><!-- end of list -->
 			
 
-		     <center ng-hide="!checkForTotal()">
-
-				
-
-				<!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
-
-		       	<button ui-sref="processForm.profile" ng-disabled="disabledNext"  class="small">Proceed to checkout</button>
-				
-
-		  
-
-			</center>
-
 
 
 
@@ -78,6 +64,29 @@
 			<slicker-carousel></slicker-carousel>
 	
 </div><!-- end of row -->
+<footer ng-hide="!checkForTotal()">
 
+	<ul class="footer-checkout">
+		
+		<li class="left" style="margin-top: 3px">
+
+			Subtotal: {{subTotal | currency}}
+		</li>
+	
+
+
+		<li class="right" style="margin-right: 2%">
+
+
+				<!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
+
+				
+			<a href="" class="button secondary round tiny" ui-sref="processForm.profile" ng-disabled="disabledNext" >Proceed to checkout <b><i class="fa fa-chevron-right"></i></b></a>
+
+		</li>			
+
+	</ul>
+		
+</footer>
 
 

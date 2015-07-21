@@ -6,18 +6,17 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$modal', function($scope, $stateParams, userData, fruitData, $timeout, $modal) {
+			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$state', function($scope, $stateParams, userData, fruitData, $timeout,$state) {
 					
 					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
 					$scope.singleFruit.fruitCount = 'QTY'
 				
-   					$scope.isDisabled = false;
-   					$scope.alert = false;
-   					$scope.selectable = false;
+   			
+   				
    					$scope.id = $stateParams.id;
+   					$scope.editing = false;
 
-
-   		
+   				
 
    				
 					$scope.addToCart = function(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
@@ -27,20 +26,14 @@
 							return false;
 
 						}else{
-							$scope.loading = true; // start loading
+						
 							
 							 	 $timeout(function() {
-										 	   
-										$scope.loading = false; // stop loading
-
-										$scope.selectable = true;
-
-										$scope.isDisabled = true;
-								
 
 										userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
-										$('#myModal').foundation('reveal', 'open');
-							  }, 1000);
+										// $('#myModal').foundation('reveal', 'open');
+										$state.go('processForm', {});
+							  }, 900)
 
 						}
 					}

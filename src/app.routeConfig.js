@@ -43,7 +43,15 @@
 						controller: 'singleFruitCtrl'
 					})
 
-				
+					.state('singleFruitEditing', {
+						
+						url: '/editing/:id/:fruitId',
+
+						templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
+						
+						controller: 'singleFruitEditingCtrl'
+
+					})
 
 					.state('processForm' , {
 

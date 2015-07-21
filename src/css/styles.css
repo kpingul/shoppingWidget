@@ -24,18 +24,19 @@ img {
   margin: 0 auto;
   margin-bottom: 5em; }
 
-
+p{
+  margin-bottom: 0;
+}
 .fi-x {
   font-size: 1.7em;
   cursor: pointer;
   color: #CC0000; }
 
-.reveal-modal{
-  min-height: 100px;
- 
+/*.reveal-modal{
+  min-height: 80px;
 
  
-}
+}*/
 
 .container {
   padding: 80px 0; }
@@ -177,7 +178,7 @@ img {
   .cart .items {
     display: block;
     width: 100%;
-    vertical-align: middle;
+   
     padding: 1.5em;
     border-bottom: 1px solid #E4E4E4; }
     .cart .items.even {
@@ -187,7 +188,7 @@ img {
       width: 100%; }
     .cart .items .cartSection {
       display: table-cell;
-      vertical-align: middle; }
+ }
       .cart .items .cartSection .itemNumber {
         font-size: .75em;
         color: #777;
@@ -199,25 +200,20 @@ img {
     
         letter-spacing: .025em; }
       .cart .items .cartSection p {
-        display: inline-block;
+      
         font-size: .85em;
         color: #777777;
         font-family: "Montserrat", sans-serif; }
         .cart .items .cartSection p .quantity {
           font-weight: bold;
           color: #333; }
-        .cart .items .cartSection p.stockStatus {
-          color: #82CA9C;
-          font-weight: bold;
-          padding: 0.5em 0 0 1em;
-          text-transform: uppercase; }
+        
           .cart .items .cartSection p.stockStatus.out {
             color: #F69679; }
       .cart .items .cartSection .itemImg {
         width: 4em;
         float: left; }
-      .cart .items .cartSection.qtyWrap, .cart .items .cartSection.prodTotal {
-        text-align: center; }
+   
         .cart .items .cartSection.qtyWrap p, .cart .items .cartSection.prodTotal p {
           font-weight: bold;
           font-size: 1.25em; }
@@ -293,9 +289,7 @@ a.remove {
   .btn:hover:after, .btn:focus:after, .btn:active:after {
     right: -10px; }
 
-.promoCode .btn {
-  font-size: .85em;
-  paddding: 0.5em 2em; }
+
 
 /* TOTAL AND CHECKOUT  */
 .subtotal {
@@ -439,7 +433,8 @@ input.ng-valid {
   margin-top: 0;
 }
 .view-loading-spinner{
-  margin-top: 160px;
+  margin-top: 190px;
+
 }
 
 .slick-prev:before, .slick-next:before { 
@@ -457,6 +452,40 @@ input.ng-valid {
   padding-bottom: 80px;
   padding-top: 10px;
 }
+footer{
+  width: 100%;
+  background: #1B1B1B;
+  position: fixed;
+  bottom: 0;
+  color: #FFFFFF;
+  height: 45px;
+}
+.footer-checkout  {
+  list-style-type: none;
+}
+.footer-checkout li {
+  padding-top: 5px;
+}
+
+
+.fruitlist-content-list{
+  list-style: none;
+}
+
+.status {
+
+color: #82CA9C;
+font-weight: bold;
+
+text-transform: uppercase; 
+}
+.prodTotal{
+  font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: .035em;
+  color: #000000;
+}
 
 @media only screen and (max-width: 43em) {
    .wrap {
@@ -466,27 +495,9 @@ input.ng-valid {
     font-size: 1.5em;
     padding: 10% 5%; }
   .heading {
-    padding: 1em;
+   
     font-size: 90%; }
-  .cart .items .cartSection {
-     display: block;
- }
-    .cart .items .cartSection.qtyWrap {
-      width: 10%;
-      text-align: center;
-      padding: .5em 0;
-      float: right; }
-      .cart .items .cartSection.qtyWrap:before {
-        content: "QTY";
-        display: block;
-        font-family: "Montserrat", sans-serif;
-        padding: .25em;
-        font-size: .75em; }
-    .cart .items .cartSection.prodTotal, .cart .items .cartSection.removeWrap {
-      display: none; }
-    .cart .items .cartSection .itemImg {
-      width: 32%; }
-
+ 
       .subtotal {
         width: 100%;
         text-align: center;
@@ -529,6 +540,13 @@ input.ng-valid {
   display: none;
 }
 
+.saveCartButton{
+  width: 100%;
+ 
+}
+.deleteCartButton{
+ width: 100%; 
+}
     }
 
 
@@ -536,7 +554,7 @@ input.ng-valid {
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {
 
-
+  
   .has-form{
     display: none;
   }
@@ -564,7 +582,12 @@ input.ng-valid {
     width: 80%;
     margin-top: 10%;
   }
- 
+  .cart .items .cartSection {
+    display: initial;
+  }
+  .fruitlist-content-list{
+      font-size: 0.8em;    
+  }
 
 }
 @media (max-width: 480px){
@@ -572,6 +595,24 @@ input.ng-valid {
     width: 100%;
 
   }
+  .prodTotal{
+    padding-top: 2px;
+   font-size: .7em;
+  }
 
 }
 
+
+.singleFruit-editing-count-list {
+  list-style-type: none;
+  padding: 30px 0px;
+    letter-spacing: 0.7em;
+}
+.singleFruit-editing-count-list li {
+  display: inline;
+
+
+}
+.singleFruit-editing-count-list li a {
+
+}

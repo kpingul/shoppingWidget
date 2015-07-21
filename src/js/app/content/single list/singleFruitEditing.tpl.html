@@ -38,40 +38,36 @@
 				</p>
 
 			
-				<p>
-					<select ng-model="singleFruit.fruitCount" ng-disabled="selectable" >
+				<ul class="singleFruit-editing-count-list">
 
-				          <option value="QTY">QTY</option>
+					<li>
 
-				          <option value="1">1</option>
+						<a href="" style="color: #404040" class="fa fa-minus-circle fa-3x" ladda="subtract" ng-click="subtractCount()"></a>
 
-				          <option value="2">2</option>
+					</li>
 
-				          <option value="3">3</option>
-				          
-				          <option value="4">4</option>
+					<li >			
 
-				          <option value="5">5</option>
+						<h4 style="display: inline">{{singleFruit.fruitCount}}</h4>
 
-				          <option value="6">6</option>
+					</li>
 
-				          <option value="7">7</option>
+					<li>	
 
-				          <option value="8">8</option>
+						<a href="" style="color: #404040" class="fa fa-plus-circle fa-3x" ladda="add" ng-click="addCount()" >
+							
 
-				          <option value="9">9</option>
+						</a>
 
-				          <option value="10">10</option>
+					</li>
 
-				  </select>
 
-				</p>
+				</ul>	
+		
 
-			
-						
-				<button class="button small secondary addCartButton" ng-click="addToCart(singleFruit.id, singleFruit.name, singleFruit.image, singleFruit.fruitCount, singleFruit.price, singleFruit.description)" >Add to cart <i class="fa fa-cart-plus"></i>
+				<button class="button small round secondary saveCartButton" ng-click="saveChangesToCart(singleFruit.fruitCount)"  ladda="saving" data-style="expand-right" data-spinner-color="#000000">Save Changes</button>
 
-				</button>
+				<button class="button small round alert deleteCartButton" ng-click="deleteChangesToCart(singleFruit)"  ladda="deleting" data-style="expand-right" data-spinner-color="#FFA6A6">Remove Item</button>
 
 		</section><!-- end of section -->
 

@@ -1,52 +1,75 @@
 <!-- Directive injected in Content Template Users Current Items displaying all shopping items -->
 
 <div class="infoWrap"> 
-
-    <div class="cartSection">
-
-   		<a href="#{{data.id}}"><img  id="image-removal" src="{{data.image}}" alt="{{data.fruit}}" class="itemImg"></a>
-
-	      <p class="itemNumber">{{data.description}}</p>
-
-	      <h3>{{data.fruit}}</h3>
-	    
-			<p><input type="tel" ng-model="editCount" style="width: 35px; border: 1px solid #C7C7C7" updatefruit="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)"></p>
-	 
-
     
-     		 <p class="stockStatus">Available</p>
 
-			<ul class="edit-update-fruit-list">
-				
-				<li>     
-					 <a href=""  ladda="updating" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall"  data-spinner-color="#085100" >Update</a>
+     <a ui-sref="singleFruitEditing({id: data.id , fruitId: $index})" ng-click="enableEditing($index)">
 
-				</li>
+        <p class="prodTotal right">{{data.fruitPrice | currency}}</p>
 
-				<li>
 
-      				 <a href="" ng-click="deleteAllFruit(usersData, data, $index)"  ladda="deleting" class="removeSmall" data-spinner-color="#FF0000">Remove</a>
+        <div class="cartSection">
+      
+                <img  id="image-removal" src="{{data.image}}" alt="{{data.fruit}}" class="itemImg left">
+                
+                  <ul class="fruitlist-content-list">
 
-      			</li>
+                      <li>
 
-			</ul><!-- end of edit upate fruit list-->
-      		        
-    </div><!-- end of cartSection -->
+                           <h3>{{data.fruit}} </h3>
 
+                        </li>
+
+                        <li>      
+
+                            <p>{{data.originalPrice | currency}}</p>
+
+                        </li>
+
+                        <li>      
+
+                           <p>Qty: <b>{{data.fruitCount}}</b></p>
+
+                        </li>
+
+                        <li style="padding-left: 110px">      
+
+                            <p>Description: <b>{{data.description}}</b></p>
+
+                        </li>
+
+                        <li style="padding-left: 110px"> 
+
+                          <p>Availability: <b class="status">In stock</b></p>
+
+                       </li>
+
+                  </ul>
+                      
+        </div><!-- end of cartSection -->
+
+
+
+        </div><!-- end of prodTotal -->
+
+    </a>
     
-    <div class="prodTotal cartSection">
-
-      	<p>{{data.fruitPrice | currency}}</p>
-
-    </div><!-- end of prodTotal -->
-
     
-     <div class="cartSection removeWrap">
-
-       	<button class="tiny success" ladda="updating"  data-spinner-color="#085100" ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" >Update</button>
-
-       <a href="" class="remove" ladda="deleting" data-spinner-color="#FF0000" ng-click="deleteAllFruit(usersData, data, $index)">x</a>
-
-   	</div><!-- end of cartSection -->
 
 </div><!-- end of infoWrap -->
+
+
+<!--     <ul class="edit-update-fruit-list">
+        
+        <li>     
+           <a href=""  ng-click="updateEditedCheckoutOrder(data.fruit, editCount, data.fruitPrice)" class="removeSmall"  >Update</a>
+
+        </li>
+
+        <li>
+
+               <a href="" ng-click="deleteAllFruit(usersData, data, $index)"  class="removeSmall" >Remove</a>
+
+            </li>
+
+      </ul> -->
