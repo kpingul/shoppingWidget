@@ -157,7 +157,7 @@
 
 					 this.totalPrice -= (fruit.price * fruit.fruitCount);
 
-					 console.log(this.totalPrice);
+					 ;
 					 this.broadCast();
 
 					
@@ -170,67 +170,81 @@
 					//newFruitCount in input needed to be parsed to a number since it was a string
 
 
-					var parsedFruitCount = parseInt(newFruitCount);
+						var parsedFruitCount = parseInt(newFruitCount);
+						var cacheFruitCount = this.items[id].fruitCount;
+						var cachePrice = this.items[id].fruitPrice;
 
-							//checks for validation of checkout order
-
-
-							//checks if the fruitname is equal to AND if the fruitcount is equal to the curent fruit count
-							if(usersData.items[id] & usersData.items[id].fruitCount == parsedFruitCount) {
-
-								
-
-								this.broadCast();
-
-							}
+						console.log(this.items);
+						//checks for validation of checkout order
 
 
-							//checks if the fruitname is equal to AND if the current fruitcount is greater than the original fruitcount 
-							if(usersData.items[id] && parsedFruitCount > usersData.items[id].fruitCount ) {
+						if(newFruitCount === 0 ){
+
+							this.items.splice(id, 1);
+							this.totalItemCount -= (cacheFruitCount);
+							this.totalPrice -= cachePrice;
 						
-								//subtracts the current price so that the new price wont double
+							this.broadCast();
+							return;
+						}
 
-								this.totalPrice -= (usersData.items[id].fruitPrice);
-								this.totalItemCount -= usersData.items[id].fruitCount;
 
-								//updates user data or each individual fruit object and total pricing
-
-								usersData.items[id].fruitCount = parsedFruitCount;
-								usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
-
-								
-								//update total price and total amount of this user data
-								this.totalItemCount += usersData.items[id].fruitCount;
-								this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
-								
-								this.broadCast();
-							}
+						//checks if the fruitname is equal to AND if the fruitcount is equal to the curent fruit count
+						if(usersData.items[id] & usersData.items[id].fruitCount == parsedFruitCount) {
 
 							
-							//checks if the fruitname is equal to AND if the current fruitcount is less than the original fruitcount 
-							if(usersData.items[id] && parsedFruitCount < usersData.items[id].fruitCount ) {
+
+							this.broadCast();
+
+						}
+
+
+						//checks if the fruitname is equal to AND if the current fruitcount is greater than the original fruitcount 
+						if(usersData.items[id] && parsedFruitCount > usersData.items[id].fruitCount ) {
 					
-								//subtracts the current price so that the new price wont double
+							//subtracts the current price so that the new price wont double
 
-								this.totalPrice -= (usersData.items[id].fruitPrice);
-								this.totalItemCount -= usersData.items[id].fruitCount;
+							this.totalPrice -= (usersData.items[id].fruitPrice);
+							this.totalItemCount -= usersData.items[id].fruitCount;
 
-								//updates user data or each individual fruit object and total pricing
+							//updates user data or each individual fruit object and total pricing
 
-								usersData.items[id].fruitCount = parsedFruitCount;
-								usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
+							usersData.items[id].fruitCount = parsedFruitCount;
+							usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
 
-								
-								//update total price and total amount of this user data
-								this.totalItemCount += (usersData.items[id].fruitCount);
-								this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
+							
+							//update total price and total amount of this user data
+							this.totalItemCount += usersData.items[id].fruitCount;
+							this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
+							
+							this.broadCast();
+						}
 
-								this.broadCast();
-							}
-
-			
-							console.log(this.items[id])
 						
+						//checks if the fruitname is equal to AND if the current fruitcount is less than the original fruitcount 
+						if(usersData.items[id] && parsedFruitCount < usersData.items[id].fruitCount ) {
+				
+							//subtracts the current price so that the new price wont double
+
+							this.totalPrice -= (usersData.items[id].fruitPrice);
+							this.totalItemCount -= usersData.items[id].fruitCount;
+
+							//updates user data or each individual fruit object and total pricing
+
+							usersData.items[id].fruitCount = parsedFruitCount;
+							usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
+
+							
+							//update total price and total amount of this user data
+							this.totalItemCount += (usersData.items[id].fruitCount);
+							this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
+
+							this.broadCast();
+						}
+
+		
+						
+					
 
 				}
 

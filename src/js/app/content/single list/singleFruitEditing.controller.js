@@ -71,7 +71,7 @@
 	   						  //delete fruit using user service 
 	   						  userData.deleteUsersFruit(singleFruit, $stateParams.fruitId );
 
-	   							console.log('s')
+	   						
 							  $state.go('processForm', {});
 
 						  }, 300);
