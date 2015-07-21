@@ -147,7 +147,7 @@
 
 				usersData.deleteUsersFruit = function(fruit , id){
    
-			
+				console.log(fruit);
 					//update total price and count after an item has been removed
 					//from the users array of fruits
 
@@ -155,11 +155,12 @@
 					
 					 this.totalItemCount -= fruit.fruitCount;
 
-					 this.totalPrice -= fruit.fruitPrice;
+					 this.totalPrice -= (fruit.price * fruit.fruitCount);
 
+					 console.log(this.totalPrice);
 					 this.broadCast();
 
-					 console.log(this.totalItemCount);
+					
 
 				}
 

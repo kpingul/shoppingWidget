@@ -9,25 +9,37 @@
 					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
 						
    					$scope.addCount = function(){
-					 $scope.add = true; // start loading
-						  $timeout(function() {
-						    $scope.add = false; // stop loading
-						    $scope.singleFruit.fruitCount++;
-						  }, 500);
+
+						$scope.add = true; // start loading
+
+						$timeout(function() {
+
+							    $scope.add = false; // stop loading
+
+							    $scope.singleFruit.fruitCount++;
+
+						}, 500);
 
    					}
    					$scope.subtractCount = function(){
+
 						 $scope.subtract = true; // start loading
-						  $timeout(function() {
-						    $scope.subtract = false; // stop loading
 
-						    if($scope.singleFruit.fruitCount <= 0){
-						    	return;
+						 $timeout(function() {
 
-						    }
-						    	$scope.singleFruit.fruitCount--;
+							 $scope.subtract = false; // stop loading
+
+
+							 if($scope.singleFruit.fruitCount <= 0){
+
+							    	return;
+
+						      }
+
+							    	$scope.singleFruit.fruitCount--;
+
 						  
-						  }, 500);
+						}, 500);
 
    					}
 
@@ -40,17 +52,17 @@
 						    $scope.saving = false;
    							userData.setNewUserData($stateParams.fruitId, editCount);
 						  $state.go('processForm', {});
-						  }, 1300);
+						  }, 300);
    					}
    					$scope.deleteChangesToCart = function(singleFruit){
    						 $scope.deleting = true; // start loading	
 						  $timeout(function() {
 
 						    $scope.deleting = false;
-   							userData.deleteUsersFruit(singleFruit,$stateParams.fruitId );
-   							
+   							userData.deleteUsersFruit(singleFruit, $stateParams.fruitId );
+   								
 						  $state.go('processForm', {});
-						  }, 1300);
+						  }, 300);
 
    					
    					}
