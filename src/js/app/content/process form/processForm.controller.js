@@ -22,79 +22,24 @@
 			$scope.profileValid = false;
 			$scope.orderSubmit = false;
 			
-			// $scope.$watch('subTotal', function(){
-			// 	$scope.$apply(function(){
-			
-<<<<<<< HEAD
-
-			// 	});
-			// })
-			$scope.enableEditing = function(id){
-
-				 userData.enableEditing(id);
-
-			}
-			
-			$scope.deleteAllFruit = function(fruits, fruit, id){
-			
-				
-
-				userData.deleteUsersFruit(fruit, id);
-
-				$scope.subTotal = userData.getTotalPrice();
-
-				$scope.totalItems = userData.getItemCount();
-
-		
-=======
-		
-
-			         userData.deleteUsersFruit(fruit, id);
-
-				 $scope.subTotal = userData.getTotalPrice();
-
-			         $scope.totalItems = userData.getItemCount();
-
-	
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
-		
-			}
-
-
-			$scope.updateEditedCheckoutOrder = function(fruit, newFruitCount, id) {
-				
-				
-<<<<<<< HEAD
-
-			        $scope.updating = false; // stop loading
-=======
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
-
-				userData.setNewUserData(fruit, newFruitCount, id);
-
-				$scope.subTotal = userData.getTotalPrice();
-
-			        $scope.totalItems = userData.getItemCount();
-
-<<<<<<< HEAD
-	
-=======
-			
->>>>>>> 3d9841369129899b7a1db78e91a53ddb47b26318
-				
-
-			}
 
 			$scope.processForm = function(isValid){
 				
 				if(isValid){
-				
+					  
+					$scope.submitting = true;
+						
+				    $timeout(function() {
 
-					userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
+						   $scope.submitting = false; // stop loading
 
-					$scope.disabledForm = false;
+							userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
 
-					$scope.profileValid = true;
+							$scope.disabledForm = false;
+
+							$scope.profileValid = true;
+
+					}, 2000);
 				}
 				
 			}
@@ -114,13 +59,22 @@
 
 
 			$scope.submitOrder = function(fruits, name,total ){
-			
+
+				 $scope.checkout = true;
+					
+					$timeout(function() {
+
+					   $scope.checkout = false; // stop loading
+
+						$scope.orderSubmit = true;
+
+						fruits.splice(0, fruits.length - 1);
+
+						userData.clearUsersData();
+					
+
+					}, 3000);
 				
-					$scope.orderSubmit = true;
-
-					fruits.splice(0, fruits.length - 1);
-
-					userData.clearUsersData();
 
 			}
 
