@@ -2,7 +2,7 @@
 
 #Update
 
-**6/21 - start refactoring application
+**7/21 - start refactoring application
 
 
 #Build ( Here's what Im using so far )
