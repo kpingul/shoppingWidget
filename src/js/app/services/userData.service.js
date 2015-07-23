@@ -89,7 +89,7 @@
 				//creates a new fruit object and passes it into the allUsersData array
 				usersData.setCheckout = function(id, fruitName, fruitImg, fruitCount, fruitTotalPrice, fruitDescription){
 						
-					console.log(usersData.items);
+				
 						//parses fruitCount to integer because it was a string
 						var parsedFruitCount = parseInt(fruitCount);
 						
@@ -261,7 +261,7 @@
 				usersData.enableEditing = function(id){
 
 					this.items[id].editing = true;
-			
+					console.log(id);
 				}
 
 				usersData.clearUsersData = function(){
@@ -342,6 +342,95 @@
 
 					
 					$rootScope.$broadcast('handleBroadCast');
+				}
+
+				usersData.addSingleFruit = function(fruit){
+					
+
+
+
+		
+						
+						
+						if( usersData.findFruitDuplicate(fruit.name) ){
+							
+							usersData.addFruitDuplicate(fruit.name, 1, fruit.price);
+
+							
+
+						}else{
+							
+							
+							this.totalItemCount += 1;
+
+							this.totalPrice += fruit.price;
+
+							//creates a fruit object that contains the total amount requested by
+							//shopper and total price for that fruit and its total including
+							//the count requested
+
+							var newUserData = {
+								id: fruit.id,
+
+								fruit: fruit.name,
+
+								image: fruit.image,
+
+								fruitCount: 1,
+
+								fruitPrice: fruit.price,
+
+								originalPrice: fruit.price,
+
+								description: fruit.description
+
+							}
+
+						
+							usersData.items.push(newUserData);
+					
+							//broadcast updated values from usersData to controllers 	
+							this.broadCast();
+							console.log(usersData.items);
+							
+						}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 				}
 
 

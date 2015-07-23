@@ -3,7 +3,7 @@
 <div class="infoWrap"> 
     
 
-     <a ui-sref="singleFruitEditing({id: data.id , fruitId: $index})" ng-click="enableEditing($index)">
+     <a ui-sref="singleFruitEditing({id: data.id , fruitId: $index, count: data.fruitCount})" ng-click="enableEditing($index)">
 
         <p class="prodTotal right">{{data.fruitPrice | currency}}</p>
 

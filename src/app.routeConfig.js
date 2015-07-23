@@ -47,7 +47,7 @@
 
 					.state('singleFruitEditing', {
 						
-						url: '/editing/:id/:fruitId',
+						url: '/editing/:id/:fruitId/:count',
 
 						templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
 						

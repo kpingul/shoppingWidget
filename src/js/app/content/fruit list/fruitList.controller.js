@@ -7,7 +7,7 @@
 
 		angular.module('myApp')
 
-			.controller('fruitListCtrl', ['$scope', 'fruitData', function($scope, fruitData) {
+			.controller('fruitListCtrl', ['$scope', 'fruitData', 'userData', function($scope, fruitData, userData) {
 
 
 
@@ -19,6 +19,11 @@
 
 
 					$scope.fruits = fruitData.getAllFruits();
+
+					$scope.addFruit = function(fruit){
+						userData.addSingleFruit(fruit);
+
+					}
 
 			}]);
 }());

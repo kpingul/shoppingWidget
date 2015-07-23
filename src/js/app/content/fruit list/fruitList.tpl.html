@@ -11,7 +11,7 @@
 
 		<ul class="fruitList">
 
-			<li ng-repeat='fruit in fruits | filter:search:strict track by $index '>
+			<li ng-repeat='fruit in fruits | filter:search:strict track by $index ' add-fruit-icon>
 
 				<a ui-sref="singleFruit({ id: $index})">
 								
@@ -26,20 +26,23 @@
 						<div class="fruit-description clearfix">		
 
 							<ul >
+								<li style="float: right">	<i class="fa fa-cart-plus addCartIcon hides" ng-click="addFruit(fruit)"></i></li>
 
 								<li><span class="fruit-price-description">{{ fruit.price  | currency}}</span> <span class="fruit-weight-description">/ lb</span></li>
 
 								<li><b>{{ fruit.name }}	</b></li>
 
-								<li><span class="fruit-description-description">{{ fruit.description }}</span<</li>
+								<li><span class="fruit-description-description ">{{ fruit.description }}</span<</li>
 
 								<li><span class="fruit-free-shipping-description">Free shipping on orders more than <b>$15.00</b></span></li>
 
+					
 							</ul><!-- end of ul -->
-
 						  </div><!-- end of div -->
-							
+						
+						
 					</div><!-- end of div -->
+					
 					
 				</a>
 
@@ -51,7 +54,7 @@
 		<!-- checkout order -->
 		<!-- items and total are broadcasted from user data service and main controller -->
 
-		<span class="checkout"><i class="fi-shopping-cart"></i> {{items}} items<strong> {{total | currency}}</strong>	
+		<span class="checkout"> {{items}} items<strong> {{total | currency}}</strong>	
 					
 		<br/><a ui-sref="processForm"  class="button large alert round">Proceed to checkout </a></span>
 	

@@ -5,9 +5,11 @@
 		angular.module('myApp')
 
 			.controller('singleFruitEditingCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$state', function($scope, $stateParams, userData, fruitData, $timeout,$state) {
-					
+				
 					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
-						
+					$scope.singleFruit.count = $stateParams.count;
+
+
    					$scope.addCount = function(){
 
 						$scope.add = true; // start loading
@@ -16,7 +18,7 @@
 
 							    $scope.add = false; // stop loading
 
-							    $scope.singleFruit.fruitCount++;
+							    $scope.singleFruit.count++;
 
 						}, 500);
 
@@ -36,7 +38,7 @@
 
 						      }
 
-							    	$scope.singleFruit.fruitCount--;
+							    	$scope.singleFruit.count--;
 
 						  
 						}, 500);
