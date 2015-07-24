@@ -393,7 +393,7 @@ top: 10px;
   left: 249px;
 }
 .addCartIcon:hover{
-  opacity: 0.5;
+  color: #FF0707;
 }
 .hides{
   display: none;

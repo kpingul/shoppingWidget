@@ -32,7 +32,7 @@
 							 $scope.subtract = false; // stop loading
 
 
-							 if($scope.singleFruit.fruitCount <= 0){
+							 if($scope.singleFruit.count <= 0){
 
 							    	return;
 
