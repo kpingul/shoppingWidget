@@ -20,7 +20,7 @@ For the application structure itself, I started out making sure the folder struc
 
 #Build ( Here's what Im using so far )
 
-#Client
+#Task Setup
 
 1). JS Framework : <a href="http://angularjs.org">Angular JS</a> + <a href="https://github.com/angular-ui/ui-router">Angular 
 UI Router</a>

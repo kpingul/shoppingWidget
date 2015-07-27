@@ -3,9 +3,8 @@
 var gulp 		= require('gulp'),
 	concat 		= require('gulp-concat'),
 	minifyCss 	= require('gulp-minify-css'),
-	concatCss = require('gulp-concat-css'),
+	concatCss 	= require('gulp-concat-css'),
 	rename 		= require('gulp-rename'),
-	sass 		= require('gulp-sass'),
 	uglify 		= require('gulp-uglify'),
 	express  	= require('express');
 	app 		= express(), 
@@ -19,7 +18,8 @@ var path = {
 
 	bower: 'bower_components/',
 	js: 'src/js/',
-	app: 'src/js/app/'
+	app: 'src/js/app/',
+	plugins: 'src/plugins/'
 }
 
 
@@ -66,7 +66,8 @@ gulp.task('scriptsJs', function(){
 				path.app + 'app.mainCtrl.js',  
 				path.app + 'services/fruitData.service.js',
 				path.app + 'services/userData.service.js', 
-				path.js +  '**/*.js'
+				path.js +  '**/*.js',
+				path.plugins +'/*.js'
 
 			])
 
@@ -84,7 +85,7 @@ gulp.task('dependenciesCss', function(){
 	return gulp.src([
 
 				path.bower + 'foundation/css/foundation.css',
-				path.bower + 'components-font-awesome/css/font-awesome.min.css',
+				path.bower + 'components-font-awesome/css/font-awesome.css',
 				path.bower + 'angular-ui-view-spinner/src/angular-ui-view-spinner.css',
 				path.bower + 'slick-carousel/slick/slick.css',
 				path.bower + 'slick-carousel/slick/slick-theme.css',
@@ -98,24 +99,17 @@ gulp.task('dependenciesCss', function(){
 });
 
 //Managing CSS stylesheet
-gulp.task('sass', function(){
+gulp.task('stylesheets', function(){
 
-	return gulp.src('src/scss/*.scss')
+	return gulp.src('src/css/styles.css')
 
-		   .pipe(sass({
-		   		errLogToConsole: true
-		   }))
-		   .pipe(gulp.dest('src/css'));
-})
-
-
-
-
-/* Gulp Watch Tasks */
-gulp.task('watchSass', function(){
-
-	return gulp.watch('src/scss/*.scss', ['sass']);
+			.pipe(rename('stylesheets.min.css'))	
+			.pipe(minifyCss())
+			.pipe(gulp.dest('build/css'))
 });
+
+
+
 
 /* Server Configuration */
 
