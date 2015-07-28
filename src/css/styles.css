@@ -596,7 +596,9 @@ margin-left: 0;
 
 /*Media breakpoint for process form checkout because of image not resizing properly*/
 @media (max-width: 560px) {
-
+.addCartIcon{
+  display: none;
+}
   
   .has-form{
     display: none;
