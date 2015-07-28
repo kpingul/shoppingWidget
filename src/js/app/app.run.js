@@ -8,10 +8,10 @@
 		.run(["$rootScope", "$anchorScroll", function ($rootScope, $anchorScroll) {
 
 
-			$rootScope.$on("$viewContentLoaded", function() {
+			$rootScope.$on("$stateChangeSuccess", function() {
 
 				//Scroll to top as soon as the page loads
-					$('html, body').animate({scrollTop: 0}, 160)
+					$('html, body').animate({scrollTop: 0}, 0)
 
 
 			});
