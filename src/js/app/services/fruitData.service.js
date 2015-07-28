@@ -12,7 +12,7 @@
 								{
 									id: 0,
 									name: 'Orange',
-									image: 'src/images/orange.jpg',
+									image: 'build/images/orange.jpg',
 									price: 1.90,
 									description: 'High in Vitamin C',
 									rating: 4,
@@ -48,7 +48,7 @@
 								{
 									id: 1,
 									name: 'Kiwi',
-									image: 'src/images/kiwi.jpg',
+									image: 'build/images/kiwi.jpg',
 									price: 1.20,
 									description: 'High in Vitamin K',
 									rating: 3,
@@ -76,7 +76,7 @@
 								{
 									id: 2,
 									name: 'Banana',
-									image: 'src/images/bananna.jpg',
+									image: 'build/images/bananna.jpg',
 									price: 0.90,
 									description: 'High in Vitamin C and Fiber',
 									rating: 4,
@@ -109,7 +109,7 @@
 								{
 									id: 3,
 									name: 'Watermelon',
-									image: 'src/images/watermelon.jpg',
+									image: 'build/images/watermelon.jpg',
 									price: 0.98,
 									description: 'Potassium and Vitamin A',
 									rating: 4,
@@ -134,7 +134,7 @@
 								{
 									id: 4,
 									name: 'Pear',
-									image: 'src/images/pear.jpg',
+									image: 'build/images/pear.jpg',
 									price: 0.58,
 									description: 'Vitamin D and Fiber',
 									rating: 5,
@@ -163,7 +163,7 @@
 								{
 									id: 5,
 									name: 'Mango',
-									image: 'src/images/mango.jpg',
+									image: 'build/images/mango.jpg',
 									price: 1.32,
 									description: 'Calcium and Vitamin C',
 									rating: 2,
@@ -188,7 +188,7 @@
 								{
 									id: 6,
 									name: 'Pineapple',
-									image: 'src/images/pineapple.jpg',
+									image: 'build/images/pineapple.jpg',
 									price: 2.30,
 									description: 'Vitamin C and Vitamin A',
 									rating: 5,
@@ -226,7 +226,7 @@
 								{
 									id: 7,
 									name: 'Strawberry',
-									image: 'src/images/strawberry.jpg',
+									image: 'build/images/strawberry.jpg',
 									price: 4.43,
 									description: 'Vitamin A and Fiber',
 									rating: 4,
@@ -253,7 +253,7 @@
 								{
 									id: 8,
 									name: 'blackberry',
-									image: 'src/images/blackberry.jpg',
+									image: 'build/images/blackberry.jpg',
 									price: 2.24,
 									description: 'Vitamin A and Antioxidants',
 									rating: 1,
@@ -290,7 +290,7 @@
 								{
 									id: 9,
 									name: 'Coconut',
-									image: 'src/images/coconut.jpg',
+									image: 'build/images/coconut.jpg',
 									price: 3.15,
 									description: 'High in Fiber',
 									rating: 5,
@@ -314,7 +314,7 @@
 								{
 									id: 10,
 									name: 'Grapefruit',
-									image: 'src/images/grapefruit.jpg',
+									image: 'build/images/grapefruit.jpg',
 									price: 1.05,
 									description: 'Vitamin A and Vitamin C',
 									rating: 2,
@@ -339,7 +339,7 @@
 								{
 									id: 11,
 									name: 'Raspberry',
-									image: 'src/images/raspberry.jpg',
+									image: 'build/images/raspberry.jpg',
 									price: 3.05,
 									description: 'Vitamin B and Antioxidants',
 									rating: 3,
@@ -378,7 +378,7 @@
 								{
 									id: 12,
 									name: 'Papaya',
-									image: 'src/images/papaya.jpg',
+									image: 'build/images/papaya.jpg',
 									price: 3.33,
 									description: 'Vitamin B and Fiber',
 									rating: 5,
@@ -405,7 +405,7 @@
 								{
 									id: 13,
 									name: 'Cherry',
-									image: 'src/images/cherry.jpg',
+									image: 'build/images/cherry.jpg',
 									price: 2.12,
 									description: 'High in Fiber',
 									rating: 2,
@@ -435,7 +435,7 @@
 								{
 									id: 14,
 									name: 'Honeydew',
-									image: 'src/images/honeydew.jpg',
+									image: 'build/images/honeydew.jpg',
 									price: 3.25,
 									description: 'Vitamin B and Vitamin C',
 									rating: 4,
@@ -478,7 +478,7 @@
 								{
 									id: 15,
 									name: 'Peach',
-									image: 'src/images/peach.jpg',
+									image: 'build/images/peach.jpg',
 									price: 1.50,
 									description: 'Vitamin A and High Fiber',
 									rating: 5,
@@ -503,7 +503,7 @@
 								{
 									id: 16,
 									name: 'Passionfruit',
-									image: 'src/images/passionfruit.jpg',
+									image: 'build/images/passionfruit.jpg',
 									price: 3.33,
 									description: 'Vitamin B and Fiber',
 									rating: 2,

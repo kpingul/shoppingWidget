@@ -18,22 +18,30 @@
 						$('.carousels').slick({
 					
 							  centerPadding: '60px',
-							  slidesToShow: 3,
+							  slidesToShow: 4,
+							  autoplay: true,
+							  dots: true,
+							  autoplaySpeed: '3300',
+		
+
 							  responsive: [
 							    {
 							      breakpoint: 768,
 							      settings: {
-							        arrows: true,
-							        centerPadding: '40px',
-							        slidesToShow: 3
+						          arrows: true,
+						          centerPadding: '40px',
+						          slidesToShow: 3,
+				
 							      }
 							    },
 							    {
 							      breakpoint: 480,
 							      settings: {
-							        arrows: false,	       
-							        centerPadding: '40px',
-							        slidesToShow: 3
+							      arrows: false,
+							      dots: false,	       
+							      centerPadding: '40px',
+							       slidesToShow: 3,
+				
 							      }
 							    }
 							  ]

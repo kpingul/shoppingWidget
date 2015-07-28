@@ -518,6 +518,11 @@ margin-left: 0;
 
 }
 
+.carousel-fruit-description{
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
 
 /* Button Loader fix for positioning */
 

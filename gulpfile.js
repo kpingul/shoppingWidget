@@ -6,7 +6,9 @@ var gulp 		= require('gulp'),
 	concatCss 	= require('gulp-concat-css'),
 	rename 		= require('gulp-rename'),
 	uglify 		= require('gulp-uglify'),
-	express  	= require('express');
+	imagemin 	= require('gulp-imagemin'),
+ 	pngquant 	= require('imagemin-pngquant'),
+	express  	= require('express'),
 	app 		= express(), 
 	port 		= 3000;
 
@@ -106,6 +108,20 @@ gulp.task('stylesheets', function(){
 			.pipe(rename('stylesheets.min.css'))	
 			.pipe(minifyCss())
 			.pipe(gulp.dest('build/css'))
+});
+
+
+//Image Minify
+
+
+gulp.task('imageMin', function () {
+    return gulp.src('src/images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('build/images'));
 });
 
 
