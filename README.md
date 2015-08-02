@@ -1,9 +1,9 @@
 # Shopping Widget
 
-#Update
-
 
 -Using <a href="https://github.com/johnpapa/angular-styleguide">John Papa's Style Guide</a> for creating a maintainable Angular codebase.
+
+<a href="http://kirckpingul.com/shoppingWidget">Live Demo Here</a>
 
 
 #Build ( Here's what Im using so far )
