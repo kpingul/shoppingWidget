@@ -62,10 +62,7 @@ gulp.task('scriptsJs', function(){
 
 	return gulp.src([
 
-				path.app + 'app.module.js',
-				path.app + 'app.mainCtrl.js',  
-				path.app + 'services/fruitData.service.js',
-				path.app + 'services/userData.service.js', 
+				path.app + 'app.module.js', 
 				path.js +  '**/*.js',
 				path.plugins +'/*.js'
 
@@ -121,6 +118,7 @@ gulp.task('stylesheets', function(){
 //         }))
 //         .pipe(gulp.dest('build/images'));
 // });
+
 
 
 

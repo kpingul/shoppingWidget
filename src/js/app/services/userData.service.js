@@ -89,58 +89,58 @@
 				//creates a new fruit object and passes it into the allUsersData array
 				usersData.setCheckout = function(id, fruitName, fruitImg, fruitCount, fruitTotalPrice, fruitDescription){
 						
-				
-						//parses fruitCount to integer because it was a string
-						var parsedFruitCount = parseInt(fruitCount);
+			
+					//parses fruitCount to integer because it was a string
+					var parsedFruitCount = parseInt(fruitCount);
+					
+					
+					if( parsedFruitCount <= 0 || usersData.findFruitDuplicate(fruitName) ){
 						
+						usersData.addFruitDuplicate(fruitName, fruitCount, fruitTotalPrice);
+
 						
-						if( parsedFruitCount <= 0 || usersData.findFruitDuplicate(fruitName) ){
-							
-							usersData.addFruitDuplicate(fruitName, fruitCount, fruitTotalPrice);
 
-							
+					}else{
+						
+						this.totalItemCount += parsedFruitCount;
 
-						}else{
-							
-							this.totalItemCount += parsedFruitCount;
+						this.totalPrice += fruitTotalPrice * parsedFruitCount;
 
-							this.totalPrice += fruitTotalPrice * parsedFruitCount;
+						//creates a fruit object that contains the total amount requested by
+						//shopper and total price for that fruit and its total including
+						//the count requested
 
-							//creates a fruit object that contains the total amount requested by
-							//shopper and total price for that fruit and its total including
-							//the count requested
+						var newUserData = {
+							id: id,
 
-							var newUserData = {
-								id: id,
+							fruit: fruitName,
 
-								fruit: fruitName,
+							image: fruitImg,
 
-								image: fruitImg,
+							fruitCount: parsedFruitCount,
 
-								fruitCount: parsedFruitCount,
+							fruitPrice: fruitTotalPrice * parsedFruitCount,
 
-								fruitPrice: fruitTotalPrice * parsedFruitCount,
+							originalPrice: fruitTotalPrice,
 
-								originalPrice: fruitTotalPrice,
+							description: fruitDescription
 
-								description: fruitDescription
-
-							}
-
-							//pushes all requested fruits into array
-							//creating an array of fruit objects
-							allUsersData.push(newUserData);
-
-							//creates a new array property  within usersData object as 
-							//an array of requested fruit objects
-							usersData.items = allUsersData;
-
-							//broadcast updated values from usersData to controllers 	
-							this.broadCast();
-
-							console.log(usersData);
-							
 						}
+
+						//pushes all requested fruits into array
+						//creating an array of fruit objects
+						allUsersData.push(newUserData);
+
+						//creates a new array property  within usersData object as 
+						//an array of requested fruit objects
+						usersData.items = allUsersData;
+
+						//broadcast updated values from usersData to controllers 	
+						this.broadCast();
+
+						console.log(usersData);
+						
+					}
 				}
 
 
@@ -172,81 +172,77 @@
 					//newFruitCount in input needed to be parsed to a number since it was a string
 
 
-						var parsedFruitCount = parseInt(newFruitCount);
-						var cacheFruitCount = this.items[id].fruitCount;
-						var cachePrice = this.items[id].fruitPrice;
+					var parsedFruitCount = parseInt(newFruitCount);
+					var cacheFruitCount = this.items[id].fruitCount;
+					var cachePrice = this.items[id].fruitPrice;
 
-						console.log(this.items);
-						//checks for validation of checkout order
-
-
-						if(newFruitCount === 0 ){
-
-							this.items.splice(id, 1);
-							this.totalItemCount -= (cacheFruitCount);
-							this.totalPrice -= cachePrice;
-						
-							this.broadCast();
-							return;
-						}
+					console.log(this.items);
+					//checks for validation of checkout order
 
 
-						//checks if the fruitname is equal to AND if the fruitcount is equal to the curent fruit count
-						if(usersData.items[id] & usersData.items[id].fruitCount == parsedFruitCount) {
+					if(newFruitCount === 0 ){
 
-							
-
-							this.broadCast();
-
-						}
-
-
-						//checks if the fruitname is equal to AND if the current fruitcount is greater than the original fruitcount 
-						if(usersData.items[id] && parsedFruitCount > usersData.items[id].fruitCount ) {
+						this.items.splice(id, 1);
+						this.totalItemCount -= (cacheFruitCount);
+						this.totalPrice -= cachePrice;
 					
-							//subtracts the current price so that the new price wont double
+						this.broadCast();
+						return;
+					}
 
-							this.totalPrice -= (usersData.items[id].fruitPrice);
-							this.totalItemCount -= usersData.items[id].fruitCount;
 
-							//updates user data or each individual fruit object and total pricing
-
-							usersData.items[id].fruitCount = parsedFruitCount;
-							usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
-
-							
-							//update total price and total amount of this user data
-							this.totalItemCount += usersData.items[id].fruitCount;
-							this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
-							
-							this.broadCast();
-						}
+					//checks if the fruitname is equal to AND if the fruitcount is equal to the curent fruit count
+					if(usersData.items[id] & usersData.items[id].fruitCount == parsedFruitCount) {
 
 						
-						//checks if the fruitname is equal to AND if the current fruitcount is less than the original fruitcount 
-						if(usersData.items[id] && parsedFruitCount < usersData.items[id].fruitCount ) {
+
+						this.broadCast();
+
+					}
+
+
+					//checks if the fruitname is equal to AND if the current fruitcount is greater than the original fruitcount 
+					if(usersData.items[id] && parsedFruitCount > usersData.items[id].fruitCount ) {
 				
-							//subtracts the current price so that the new price wont double
+						//subtracts the current price so that the new price wont double
 
-							this.totalPrice -= (usersData.items[id].fruitPrice);
-							this.totalItemCount -= usersData.items[id].fruitCount;
+						this.totalPrice -= (usersData.items[id].fruitPrice);
+						this.totalItemCount -= usersData.items[id].fruitCount;
 
-							//updates user data or each individual fruit object and total pricing
+						//updates user data or each individual fruit object and total pricing
 
-							usersData.items[id].fruitCount = parsedFruitCount;
-							usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
+						usersData.items[id].fruitCount = parsedFruitCount;
+						usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
 
-							
-							//update total price and total amount of this user data
-							this.totalItemCount += (usersData.items[id].fruitCount);
-							this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
-
-							this.broadCast();
-						}
-
-		
 						
+						//update total price and total amount of this user data
+						this.totalItemCount += usersData.items[id].fruitCount;
+						this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
+						
+						this.broadCast();
+					}
+
 					
+					//checks if the fruitname is equal to AND if the current fruitcount is less than the original fruitcount 
+					if(usersData.items[id] && parsedFruitCount < usersData.items[id].fruitCount ) {
+			
+						//subtracts the current price so that the new price wont double
+
+						this.totalPrice -= (usersData.items[id].fruitPrice);
+						this.totalItemCount -= usersData.items[id].fruitCount;
+
+						//updates user data or each individual fruit object and total pricing
+
+						usersData.items[id].fruitCount = parsedFruitCount;
+						usersData.items[id].fruitPrice = (usersData.items[id].originalPrice * parsedFruitCount);
+
+						
+						//update total price and total amount of this user data
+						this.totalItemCount += (usersData.items[id].fruitCount);
+						this.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
+
+						this.broadCast();
+					}
 
 				}
 
@@ -347,89 +343,48 @@
 				usersData.addSingleFruit = function(fruit){
 					
 
-
-
-		
+					if( usersData.findFruitDuplicate(fruit.name) ){
 						
-						
-						if( usersData.findFruitDuplicate(fruit.name) ){
-							
-							usersData.addFruitDuplicate(fruit.name, 1, fruit.price);
-
-							
-
-						}else{
-							
-							
-							this.totalItemCount += 1;
-
-							this.totalPrice += fruit.price;
-
-							//creates a fruit object that contains the total amount requested by
-							//shopper and total price for that fruit and its total including
-							//the count requested
-
-							var newUserData = {
-								id: fruit.id,
-
-								fruit: fruit.name,
-
-								image: fruit.image,
-
-								fruitCount: 1,
-
-								fruitPrice: fruit.price,
-
-								originalPrice: fruit.price,
-
-								description: fruit.description
-
-							}
+						usersData.addFruitDuplicate(fruit.name, 1, fruit.price);
 
 						
-							usersData.items.push(newUserData);
-					
-							//broadcast updated values from usersData to controllers 	
-							this.broadCast();
-							console.log(usersData.items);
-							
+
+					}else{
+						
+						
+						this.totalItemCount += 1;
+
+						this.totalPrice += fruit.price;
+
+						//creates a fruit object that contains the total amount requested by
+						//shopper and total price for that fruit and its total including
+						//the count requested
+
+						var newUserData = {
+							id: fruit.id,
+
+							fruit: fruit.name,
+
+							image: fruit.image,
+
+							fruitCount: 1,
+
+							fruitPrice: fruit.price,
+
+							originalPrice: fruit.price,
+
+							description: fruit.description
+
 						}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+					
+						usersData.items.push(newUserData);
+				
+						//broadcast updated values from usersData to controllers 	
+						this.broadCast();
+						console.log(usersData.items);
+						
+					}
 
 				}
 
