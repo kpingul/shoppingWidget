@@ -6,37 +6,28 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$state', function($scope, $stateParams, userData, fruitData, $timeout,$state) {
+			.controller('singleFruitCtrl', ['$scope', 'SingleFruit', 'userData', 'fruitData','$timeout','$state', function($scope, SingleFruit, userData, fruitData, $timeout,$state) {
 					
-					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
-					$scope.singleFruit.fruitCount = 'QTY'
-				
-   			
-   				
-   					$scope.id = $stateParams.id;
-   					$scope.editing = false;
+					var fruit = this;
 
-   				
+					fruit.singleFruit = SingleFruit;
+					fruit.singleFruit.fruitCount = 'QTY'  				
+   					fruit.id = SingleFruit.id;
+   					fruit.editing = false;
+   					var delaySpeed = 200;
+   					var processForm = 'processForm';
+  	
+					fruit.addToCart = function(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
+						$timeout(function() {
 
-   				
-					$scope.addToCart = function(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription) {	
-
-						if(fruitCount <= 0 || isNaN(fruitCount)){
-
-							return false;
-
-						}else{
-						
+							userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
 							
-							 	 $timeout(function() {
+							$state.go(processForm, {});
 
-										userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
-										// $('#myModal').foundation('reveal', 'open');
-										$state.go('processForm', {});
-							  }, 900)
+						}, delaySpeed)
 
-						}
 					}
+				
 
 				
 			}]);

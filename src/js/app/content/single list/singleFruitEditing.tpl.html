@@ -6,7 +6,11 @@
 		
 		<div class="img-cont">
 
-			<img  class="images img-responsive " src="{{singleFruit.image}}" alt="{{singleFruit.name}}">
+			<img  
+
+				class="images img-responsive " 
+				src="{{::fruitEditing.singleFruit.image}}"
+				alt="{{::fruitEditing.singleFruit.name}}">
 			
 		</div>
 
@@ -18,22 +22,30 @@
 		
 		<header>
 			
-			<h6 class="subheader">{{singleFruit.description}}</h6>
+			<h6 class="subheader">{{::fruitEditing.description}}</h6>
 			
-			<h3>{{singleFruit.name}}</h3>
+			<h3>{{::fruitEditing.singleFruit.name}}</h3>
 
 			<p>
-				<span class="fruit-price-description">{{singleFruit.price  | currency}}</span> / <small>lb</small>
+				<span class="fruit-price-description">{{::fruitEditing.singleFruit.price  | currency}}</span>
+				<span> / <small>lb</small></span>
 
 			</p>
+
 		</header>
 
 		<section>
 				<p>
 
-					<rating value="singleFruit.rating" max="5" readonly="true" class="rating"></rating> 
+					<rating 
 
-					<a href="#">{{singleFruit.reviews.length}} reviews</a>
+							value="fruitEditing.singleFruit.rating" 
+							max="5" readonly="true" 
+							class="rating">
+
+					</rating> 
+
+					<a href="#">{{::fruitEditing.singleFruit.reviews.length}} reviews</a>
 
 				</p>
 
@@ -42,22 +54,36 @@
 
 					<li>
 
-						<a href="" style="color: #404040" class="fa fa-minus-circle fa-3x" ladda="subtract" ng-click="subtractCount()" data-spinner-size="30"></a>
+						<a 
+							href=""
+							style="color: #404040" 
+							class="fa fa-minus-circle fa-3x" 
+							ladda="fruitEditing.subtract" 
+							ng-click="fruitEditing.subtractCount()" 
+							data-spinner-size="30">
+
+						</a>
 
 
 					</li>
 
 					<li >			
 
-						<h4 style="display: inline">{{singleFruit.count}}</h4>
+						<h4 style="display: inline">{{fruitEditing.singleFruit.count}}</h4>
 
 					</li>
 
 					<li>	
 
-						<a href="" style="color: #404040" class="fa fa-plus-circle fa-3x" ladda="add" ng-click="addCount()" data-spinner-size="30">
-							
+						<a 
 
+							href="" 
+							style="color: #404040" 
+							class="fa fa-plus-circle fa-3x" 
+							ladda="fruitEditing.add" 
+							ng-click="fruitEditing.addCount()" 
+							data-spinner-size="30">
+							
 						</a>
 
 
@@ -68,20 +94,11 @@
 		
 
 			
-				<button class="button small round secondary saveCartButton" ng-click="saveChangesToCart(singleFruit.count)"  ladda="saving"  data-spinner-color="#000000">Save Changes</button>
+				<button class="button small round secondary saveCartButton" ng-click="fruitEditing.saveChangesToCart(fruitEditing.singleFruit.count)"  >Save Changes</button>
 
-				<button class="button small round alert deleteCartButton" ng-click="deleteChangesToCart(singleFruit)"  ladda="deleting"  data-spinner-color="#FFA6A6">Remove Item</button>
+				<button class="button small round alert deleteCartButton" ng-click="fruitEditing.deleteChangesToCart(fruitEditing.singleFruit)">Remove Item</button>
 
 		</section><!-- end of section -->
-
-		<!-- checkout ordercheckout template -->
-
-		<div class="heading cf" >
-
-			<!--<center><a ui-sref="home" class="continue" style="float: none">Continue Shopping</a></center> -->
-
-		</div><!-- end of heading -->
-				
 			
 	
 </div><!-- end of columns -->
@@ -95,22 +112,43 @@
 		<div class="large-12 columns large-centered">
 
 			  <accordion close-others="oneAtATime">
+
 				 <accordion-group is-open="isopen" >
 
-					<accordion-heading>Reviews <i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i> </accordion-heading>
+					<accordion-heading>Reviews 
 
+						<i class="right" ng-class="{'fa fa-chevron-down': isopen, 'fa fa-chevron-right': !isopen}"></i> 
+
+					</accordion-heading>
 
 					
 			 		<ul class="customer-review-list">
-			 			<li ng-repeat="review in singleFruit.reviews">
-			 				<h5>{{review.title}} </h5>
-			 				<h6><rating value="review.rating" max="5" readonly="true" class="rating customer-rating"></rating> <span style="font-size: 0.7em">by {{review.name}}</span></h6>
-			 				<p>{{review.review}}</p>
+
+			 			<li ng-repeat="review in ::fruitEditing.singleFruit.reviews">
+
+			 				<h5>{{::review.title}} </h5>
+
+			 				<h6>
+
+			 					<rating 
+
+				 						value="review.rating" 
+				 						max="5" readonly="true" 
+				 						class="rating customer-rating">
+
+				 				</rating> 
+
+				 				<span style="font-size: 0.7em">by {{::review.name}}</span>
+
+				 			</h6>
+
+			 				<p>{{::review.review}}</p>
 
 			 			</li>
 			 		</ul>
 
 			  	</accordion-group>
+
 			 </accordion>
 	
 		</div><!-- end of column -->
@@ -127,10 +165,8 @@
 </div><!-- end of row -->
 
 
-<a href="" data-reveal-id="myModal"></a>
-
 	
-	<shopping-cart-modal></shopping-cart-modal>
+<shopping-cart-modal></shopping-cart-modal>
 
 
 

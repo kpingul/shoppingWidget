@@ -7,7 +7,6 @@
 		angular.module('myApp')
 
 			.controller('mainCtrl', ['$scope', 'fruitData', 'userData', function($scope, fruitData, userData) {
-
 				$scope.items = 0;
 				$scope.total = 0;
 

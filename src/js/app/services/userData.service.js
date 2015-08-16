@@ -146,14 +146,14 @@
 
 
 				usersData.deleteUsersFruit = function(fruit , id){
-   
-					console.log(fruit, id);
-				
-					var cacheFruitCount = this.items[id].fruitCount;
-					var cachePrice = this.items[id].fruitPrice;
+   				
+   					var parsedFruitID = parseInt(id);
+
+					var cacheFruitCount = this.items[parsedFruitID].fruitCount;
+					var cachePrice = this.items[parsedFruitID].fruitPrice;
 
 
-					usersData.items.splice(id, 1);
+					usersData.items.splice(parsedFruitID, 1);
 					
 					this.totalItemCount -= cacheFruitCount
 
@@ -171,12 +171,12 @@
 				usersData.setNewUserData = function(id, newFruitCount) {
 					//newFruitCount in input needed to be parsed to a number since it was a string
 
-
+					console.log(id, newFruitCount);
+					
 					var parsedFruitCount = parseInt(newFruitCount);
 					var cacheFruitCount = this.items[id].fruitCount;
 					var cachePrice = this.items[id].fruitPrice;
 
-					console.log(this.items);
 					//checks for validation of checkout order
 
 
@@ -340,53 +340,7 @@
 					$rootScope.$broadcast('handleBroadCast');
 				}
 
-				usersData.addSingleFruit = function(fruit){
-					
-
-					if( usersData.findFruitDuplicate(fruit.name) ){
-						
-						usersData.addFruitDuplicate(fruit.name, 1, fruit.price);
-
-						
-
-					}else{
-						
-						
-						this.totalItemCount += 1;
-
-						this.totalPrice += fruit.price;
-
-						//creates a fruit object that contains the total amount requested by
-						//shopper and total price for that fruit and its total including
-						//the count requested
-
-						var newUserData = {
-							id: fruit.id,
-
-							fruit: fruit.name,
-
-							image: fruit.image,
-
-							fruitCount: 1,
-
-							fruitPrice: fruit.price,
-
-							originalPrice: fruit.price,
-
-							description: fruit.description
-
-						}
-
-					
-						usersData.items.push(newUserData);
 				
-						//broadcast updated values from usersData to controllers 	
-						this.broadCast();
-						console.log(usersData.items);
-						
-					}
-
-				}
 
 
 				return usersData;

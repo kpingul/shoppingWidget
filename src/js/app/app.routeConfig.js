@@ -23,7 +23,19 @@
 
 					templateUrl: 'src/js/app/content/fruit list/fruitList.tpl.html',
 
-					controller: 'fruitListCtrl'
+					controller: 'fruitListCtrl', 
+
+					controllerAs: 'fruitList',
+
+					resolve: {
+
+							FruitList: ['fruitData', function(fruitData) {
+
+								return fruitData.getAllFruits();
+
+							}]
+
+					}
 
 				})
 
@@ -33,7 +45,17 @@
 
 					templateUrl: 'src/js/app/content/single list/singleFruit.tpl.html',
 
-					controller: 'singleFruitCtrl'
+					controller: 'singleFruitCtrl',
+
+					controllerAs: 'fruit',
+
+					resolve: { 
+
+						SingleFruit: ['fruitData', '$stateParams', function(fruitData, $stateParams) {
+								return fruitData.getSingleFruit($stateParams.id);
+						}]
+
+					}
 				})
 
 				.state('singleFruitEditing', {
@@ -42,7 +64,29 @@
 
 					templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
 
-					controller: 'singleFruitEditingCtrl'
+					controller: 'singleFruitEditingCtrl',
+
+					controllerAs: 'fruitEditing',
+
+					resolve: {
+
+						EditingFruit: ['fruitData', '$stateParams', function(fruitData, $stateParams) {
+							return fruitData.getSingleFruit($stateParams.id);
+
+						}],
+
+						FruitCount: ['$stateParams', function($stateParams) {
+							var currentFruitCount = $stateParams.count;
+							return currentFruitCount;
+						
+						}],
+
+						ItemInCardId: ['$stateParams', function($stateParams) {
+							var itemId = $stateParams.fruitId;
+							return itemId;
+						}]
+
+					}
 
 				})
 
@@ -69,7 +113,7 @@
 
 							load: function($timeout) {
 
-								return $timeout(angular.noop, 320);
+								return $timeout(angular.noop, 230);
 
 							}
 						}
@@ -88,7 +132,7 @@
 
 							load: function($timeout) {
 
-								return $timeout(angular.noop, 320);
+								return $timeout(angular.noop, 230);
 
 							}
 						}
@@ -105,7 +149,7 @@
 
 							load: function($timeout) {
 
-								return $timeout(angular.noop, 320);
+								return $timeout(angular.noop, 230);
 
 							}
 						}

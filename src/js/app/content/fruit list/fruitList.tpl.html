@@ -11,7 +11,7 @@
 
 		<ul class="fruitList">
 
-			<li ng-repeat='fruit in fruits | filter:search:strict track by $index ' add-fruit-icon>
+			<li ng-repeat='fruit in ::fruitList.fruits | filter:search:strict track by $index ' add-fruit-icon>
 
 				<a ui-sref="singleFruit({ id: $index})">
 								
@@ -19,7 +19,7 @@
 
 						<div class="fruit-image">	
 
-						  <img  class="images fruit-desc img-responsive" src="{{fruit.image}}" alt="{{fruit.name}}" />
+						  <img  class="images fruit-desc img-responsive" src="{{::fruit.image}}" alt="{{::fruit.name}}" />
 
 						</div>
 						
@@ -27,11 +27,11 @@
 
 							<ul >
 
-								<li><span class="fruit-price-description">{{ fruit.price  | currency}}</span> <span class="fruit-weight-description">/ lb</span></li>
+								<li><span class="fruit-price-description">{{ ::fruit.price  | currency}}</span> <span class="fruit-weight-description">/ lb</span></li>
 
-								<li><b>{{ fruit.name }}	</b></li>
+								<li><b>{{ ::fruit.name }}	</b></li>
 
-								<li><span class="fruit-description-description ">{{ fruit.description }}</span<</li>
+								<li><span class="fruit-description-description ">{{ ::fruit.description }}</span<</li>
 
 								<li><span class="fruit-free-shipping-description">Free shipping on orders more than <b>$15.00</b></span></li>
 

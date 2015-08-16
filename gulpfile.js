@@ -106,23 +106,6 @@ gulp.task('stylesheets', function(){
 });
 
 
-//Image Minify
-
-
-// gulp.task('imageMin', function () {
-//     return gulp.src('src/images/*')
-//         .pipe(imagemin({
-//             progressive: true,
-//             svgoPlugins: [{removeViewBox: false}],
-//             use: [pngquant()]
-//         }))
-//         .pipe(gulp.dest('build/images'));
-// });
-
-
-
-
-
 /* Server Configuration */
 
 gulp.task('express', function(){
@@ -138,8 +121,26 @@ gulp.task('express', function(){
 
 });
 
+/* Gulp Watch Tasks */
+
+gulp.task('watchJs', function(){
+	return gulp
+
+		.watch('src/js/**/*.js', ['scriptsJs']);
+
+});
+
+gulp.task('watchCss', function(){
+	return gulp
+
+		.watch('src/css/*.css', ['stylesheets']);
+});
+
+
+
+
 
 //Lets BUILD!!
-gulp.task('default', ['express']);
+gulp.task('default', ['express', 'watchJs', 'watchCss']);
 
 

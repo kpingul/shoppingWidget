@@ -7,20 +7,21 @@
 
 		angular.module('myApp')
 
-			.controller('fruitListCtrl', ['$scope', 'fruitData', 'userData', function($scope, fruitData, userData) {
+			.controller('fruitListCtrl', ['$scope', 'FruitList', 'userData', function($scope, FruitList, userData) {
 
+					var fruitList = this;
 
 
 					//fruit array to hold each fruit object
-					$scope.fruits = []
+					fruitList.fruits = []
 
 					//default fruitCount model
-					$scope.fruitCount = 0;
+					fruitList.fruitCount = 0;
 
+					fruitList.fruits = FruitList;
 
-					$scope.fruits = fruitData.getAllFruits();
-
-					$scope.addFruit = function(fruit){
+					fruitList.addFruit = function(fruit){
+						
 						userData.addSingleFruit(fruit);
 
 					}

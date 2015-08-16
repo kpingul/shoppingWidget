@@ -4,84 +4,65 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitEditingCtrl', ['$scope', '$stateParams', 'userData', 'fruitData','$timeout','$state', function($scope, $stateParams, userData, fruitData, $timeout,$state) {
-				
-					$scope.singleFruit = fruitData.getSingleFruit($stateParams.id);
-					$scope.singleFruit.count = $stateParams.count;
+			.controller('singleFruitEditingCtrl', ['$scope', 'EditingFruit','FruitCount','ItemInCardId', 'userData','$timeout','$state', function($scope, EditingFruit ,FruitCount, ItemInCardId, userData, $timeout, $state) {
+					
+					var fruitEditing = this;	
 
 
-   					$scope.addCount = function(){
+					fruitEditing.singleFruit = EditingFruit;
+					fruitEditing.singleFruit.count = FruitCount;
+					var ItemId = ItemInCardId;
+					var delaySpeed = 300;
 
-						$scope.add = true; // start loading
+   					fruitEditing.addCount = function(){
+
+						fruitEditing.add = true; // start loading
 
 						$timeout(function() {
 
-							    $scope.add = false; // stop loading
+							    fruitEditing.add = false; // stop loading
 
-							    $scope.singleFruit.count++;
+							    fruitEditing.singleFruit.count++;
 
-						}, 500);
+						}, delaySpeed);
 
    					}
-   					$scope.subtractCount = function(){
+   					fruitEditing.subtractCount = function(){
 
-						 $scope.subtract = true; // start loading
+						 fruitEditing.subtract = true; // start loading
 
 						 $timeout(function() {
 
-							 $scope.subtract = false; // stop loading
+							 fruitEditing.subtract = false; // stop loading
 
 
-							 if($scope.singleFruit.count <= 0){
+							 if(fruitEditing.singleFruit.count <= 0){
 
 							    	return;
 
 						      }
 
-							    	$scope.singleFruit.count--;
+							 fruitEditing.singleFruit.count--;
 
 						  
-						}, 500);
+						}, delaySpeed);
 
    					}
 
-   					$scope.saveChangesToCart = function(editCount){
+					fruitEditing.saveChangesToCart = function(editCount) {
+						//update fruit using user service 
+						userData.setNewUserData(ItemId, editCount);
 
-   			
-   						 $scope.saving = true; // start loading	
+						$state.go('processForm', {});
 
-						 $timeout(function() {
+					}
+					fruitEditing.deleteChangesToCart = function(singleFruit) {
+						//delete fruit using user service 
+						userData.deleteUsersFruit(singleFruit, ItemId);
 
+						$state.go('processForm', {});
 
-						    $scope.saving = false;
-
-	 						 //update fruit using user service 
-   							userData.setNewUserData($stateParams.fruitId, editCount);
-
-						  	$state.go('processForm', {});
-
-						  }, 300);
-   					}
-   					$scope.deleteChangesToCart = function(singleFruit){
-
-   						 $scope.deleting = true; // start loading
-
-							  $timeout(function() {
-
-							  $scope.deleting = false;
-
-	   						  //delete fruit using user service 
-	   						  userData.deleteUsersFruit(singleFruit, $stateParams.fruitId );
-
-	   						
-							  $state.go('processForm', {});
-
-						  }, 300);
-
-   					
-   					}
-
-   			
+					}
 				
 			}]);
 
