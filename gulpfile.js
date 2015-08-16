@@ -17,7 +17,6 @@ var gulp 		= require('gulp'),
 var path = {
 
 	bower: 'bower_components/',
-	js: 'src/js/',
 	app: 'src/js/app/',
 	plugins: 'src/plugins/'
 }
@@ -63,7 +62,8 @@ gulp.task('scriptsJs', function(){
 	return gulp.src([
 
 				path.app + 'app.module.js', 
-				path.js +  '**/*.js',
+				path.app +  '**/*.js',
+				'!' + path.app + 'app.routeConfig.js',
 				path.plugins +'/*.js'
 
 			])

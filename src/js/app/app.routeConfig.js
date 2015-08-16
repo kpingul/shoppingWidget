@@ -7,118 +7,116 @@
 
 	angular.module('myApp')
 
-	.config(routes);
 
-	routes.$inject = ['$stateProvider', '$urlRouterProvider'];
-
-
-	function routes($stateProvider, $urlRouterProvider) {
+		.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {			
+			
+			$urlRouterProvider.when('', '/');
 
 
-		$urlRouterProvider.when('', '/');
+			$urlRouterProvider.when('/processForm', '/processForm/content');
 
+			$stateProvider
 
-		$urlRouterProvider.when('/processForm', '/processForm/content');
+				.state('home', {
 
-		$stateProvider
+					url: '/',
 
-			.state('home', {
+					templateUrl: 'src/js/app/content/fruit list/fruitList.tpl.html',
 
-				url: '/',
+					controller: 'fruitListCtrl'
 
-				templateUrl: 'src/js/app/content/fruit list/fruitList.tpl.html',
+				})
 
-				controller: 'fruitListCtrl'
+				.state('singleFruit', {
 
-			})
+					url: '/:id',
 
-			.state('singleFruit', {
+					templateUrl: 'src/js/app/content/single list/singleFruit.tpl.html',
 
-				url: '/:id',
+					controller: 'singleFruitCtrl'
+				})
 
-				templateUrl: 'src/js/app/content/single list/singleFruit.tpl.html',
+				.state('singleFruitEditing', {
 
-				controller: 'singleFruitCtrl'
-			})
+					url: '/editing/:id/:fruitId/:count',
 
-			.state('singleFruitEditing', {
+					templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
 
-				url: '/editing/:id/:fruitId/:count',
+					controller: 'singleFruitEditingCtrl'
 
-				templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
+				})
 
-				controller: 'singleFruitEditingCtrl'
+				.state('processForm', {
 
-			})
-
-			.state('processForm', {
-
-				url: '/processForm',
-
-				controller: 'ProcessFormCtrl',
-
-				templateUrl: 'src/js/app/content/process form/processForm.tpl.html',
-
-
-			})
-
-
-				.state('processForm.content', {
-
-					url: '/content',
+					url: '/processForm',
 
 					controller: 'ProcessFormCtrl',
 
-					templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html',
-					resolve: {
-
-						load: function($timeout) {
-
-							return $timeout(angular.noop, 320);
-
-						}
-					}
+					templateUrl: 'src/js/app/content/process form/processForm.tpl.html',
 
 
 				})
 
-				.state('processForm.profile', {
 
-					url: '/profile',
+					.state('processForm.content', {
 
-					controller: 'ProcessFormCtrl',
+						url: '/content',
 
-					templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html',
-					resolve: {
+						controller: 'ProcessFormCtrl',
 
-						load: function($timeout) {
+						templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html',
+						resolve: {
 
-							return $timeout(angular.noop, 320);
+							load: function($timeout) {
 
+								return $timeout(angular.noop, 320);
+
+							}
 						}
-					}
-				})
 
-				.state('processForm.payment', {
 
-					url: '/payment',
+					})
 
-					controller: 'ProcessFormCtrl',
+					.state('processForm.profile', {
 
-					templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html',
-					resolve: {
+						url: '/profile',
 
-						load: function($timeout) {
+						controller: 'ProcessFormCtrl',
 
-							return $timeout(angular.noop, 320);
+						templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html',
+						resolve: {
 
+							load: function($timeout) {
+
+								return $timeout(angular.noop, 320);
+
+							}
 						}
-					}
+					})
 
-				});
+					.state('processForm.payment', {
+
+						url: '/payment',
+
+						controller: 'ProcessFormCtrl',
+
+						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html',
+						resolve: {
+
+							load: function($timeout) {
+
+								return $timeout(angular.noop, 320);
+
+							}
+						}
+
+					});
 
 
-	};
+
+		}])
+
+
 
 
 
