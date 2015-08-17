@@ -59,14 +59,14 @@ Once you've installed the dependencies, you can:
  
 #Features
 
+<b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a>
+ 
 <ul> 
 <li>Navigate from state to state with loading spinner.</li>
-<li>Scrolling mechanism.</li>
-<li>Loading buttons.</li>
+<li>Scrolling mechanism that allows user to scroll up to the top.</li>
+<li>Loading buttons that show the give the user instant feedback.</li>
 </ul>
 
-<b>The application relies heavily on the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a>
- 
 Here are the dependencies that I'm using: 
 <pre>
 angular.module('myApp', [
