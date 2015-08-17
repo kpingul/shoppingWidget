@@ -20,14 +20,16 @@
 				setUserInformation: setUserInformation,
 				enableEditing: enableEditing,
 				getTotalPrice: getTotalPrice,
+				getTotalCalculatedPrice: getTotalCalculatedPrice,
 				getItemCount: getItemCount,
 				getAllUsersData: getAllUsersData,
 				getListItems: getListItems,
 				getName: getName,
 				getEmail: getEmail,
 				getCity: getCity,
+				getShipping: getShipping,
 				getFormValidation: getFormValidation,
-				broadCast:  broadCast
+				clearData: clearData
 
 			};
 
@@ -43,21 +45,27 @@
 
 				validatedForm: false,
 
+				freeShipping: false,
+
 				totalItemCount: 0,
 
 				totalPrice: 0,
+
+				calculatedTotalPrice: 0,
 
 				items: []
 
 			}
 
 			//holds an array of fruit objects added to users shopping cart
-			var allUsersData = [];
+			var allUsersData = [],
+				tax 		 = 3,
+				shippingRate = 7;
 
 			//checks for duplicates 
 
 			function findFruitDuplicate (fruitName) {
-				console.log('dup')
+		
 				for (var i = 0; i < usersData.items.length; i++) {
 
 					if (fruitName === usersData.items[i].fruit) {
@@ -89,7 +97,7 @@
 						usersData.totalPrice += (usersData.items[i].originalPrice * parsedFruitCount)
 
 
-						this.broadCast();
+						broadCast();
 
 					}
 
@@ -161,9 +169,9 @@
 					usersData.items = allUsersData;
 
 					//broadcast updated values from usersData to controllers 	
-					this.broadCast();
+					broadCast();
 
-					console.log(usersData);
+			
 
 				}
 			}
@@ -180,12 +188,12 @@
 
 				usersData.items.splice(parsedFruitID, 1);
 
-				usersData.totalItemCount -= cacheFruitCount
+				usersData.totalItemCount -= cacheFruitCount;
 
 				usersData.totalPrice -= cachePrice;
 
 
-				this.broadCast();
+				broadCast();
 
 
 			}
@@ -194,8 +202,6 @@
 
 			function setNewUserData(id, newFruitCount) {
 				//newFruitCount in input needed to be parsed to a number since it was a string
-
-				console.log(id, newFruitCount);
 
 				var parsedFruitCount = parseInt(newFruitCount);
 				var cacheFruitCount = usersData.items[id].fruitCount;
@@ -210,7 +216,7 @@
 					usersData.totalItemCount -= (cacheFruitCount);
 					usersData.totalPrice -= cachePrice;
 
-					this.broadCast();
+					broadCast();
 					return;
 				}
 
@@ -220,7 +226,7 @@
 
 
 
-					this.broadCast();
+					broadCast();
 
 				}
 
@@ -243,7 +249,7 @@
 					usersData.totalItemCount += usersData.items[id].fruitCount;
 					usersData.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
 
-					this.broadCast();
+					broadCast();
 				}
 
 
@@ -265,7 +271,7 @@
 					usersData.totalItemCount += (usersData.items[id].fruitCount);
 					usersData.totalPrice += (usersData.items[id].originalPrice * parsedFruitCount);
 
-					this.broadCast();
+					broadCast();
 				}
 
 			}
@@ -297,7 +303,7 @@
 				usersData.name = '';
 				usersData.email = '';
 				usersData.city = '';
-				this.broadCast();
+				broadCast();
 
 			}
 
@@ -307,6 +313,19 @@
 			function getTotalPrice() {
 
 				return usersData.totalPrice;
+
+			}
+
+			function getTotalCalculatedPrice(){
+
+				if(usersData.totalPrice < 15) {
+
+					return usersData.totalPrice + (tax + shippingRate);
+
+				}
+
+				usersData.freeShipping = true;
+				return ((usersData.totalPrice - shippingRate) + tax);
 
 			}
 
@@ -344,16 +363,33 @@
 				return usersData.city;
 			}
 
+			function getShipping() {
+				return usersData.freeShipping;
+			}
+
 			function getFormValidation() {
 
 				return usersData.validatedForm;
+			}
+
+			function clearData() {
+				usersData.name = "";
+				usersData.email = "";
+				usersData.city = "";
+				usersData.validatedForm = false;
+				usersData.freeShipping = false;
+				usersData.totalItemCount = 0;
+				usersData.totalPrice = 0;
+				usersData.calculatedTotalPrice = 0;
+				usersData.items.splice(0, usersData.items.length);
+				broadCast();
+
 			}
 
 			function broadCast() {
 
 				$rootScope.$broadcast('handleBroadCast');
 			}
-
 
 
 			return service;

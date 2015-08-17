@@ -3,7 +3,7 @@
 
 <div class="row">
   
-    <div class="heading cf" ng-if="!orderSubmit" >
+    <div class="heading cf"  >
 
       <h1 class="projTitle" ><span>Your personal information </span></h1>
 
@@ -12,7 +12,7 @@
       <form 
             id="signup-form" 
             name="myForm" 
-            ng-submit="processForm(myForm.$valid)" 
+            ng-submit="processForm.processForm(myForm.$valid)" 
             novalidate>
        
               <label  for="name">Name</label>
@@ -21,7 +21,7 @@
 
                   type="text" 
                   name="name"  
-                  ng-model="formData.userName" 
+                  ng-model="processForm.formData.userName" 
                   placeholder="type in full name here..." 
                   required >
 
@@ -35,7 +35,7 @@
                   type="email" 
                   class="form-control input-sm" 
                   name="email" 
-                  ng-model="formData.userEmail" 
+                  ng-model="processForm.formData.userEmail" 
                   placeholder="type in email address here..." 
                   required>
 
@@ -44,7 +44,7 @@
 
               <label  for="phone">City</label>
 
-            	<select name="city" ng-model="formData.userCity" required >
+            	<select name="city" ng-model="processForm.formData.userCity" required >
 
             		<option value="San Francisco">San Francisco</option>
 
@@ -60,11 +60,11 @@
                 <span 
 
                     style="color: green" 
-                    ng-show="formData.submittedForm">
+                    ng-show="processForm.formData.submittedForm">
 
                     <b>Information submitted!</b>
 
-                    <span style="color: #6A6A6A"> Click next to advance to checkout {{formData.userName}}</span>
+                    <span style="color: #6A6A6A"> Click next to advance to checkout {{processForm.formData.userName}}</span>
 
                   </span>
 
@@ -76,10 +76,10 @@
 
                     class="success tiny" 
                     type="submit" 
-                    ladda="submitting" 
+                    ladda="processForm.submitinfo"
                     data-style="expand-right" 
                     data-spinner-color="#045C00"
-                    ng-hide="formData.submittedForm" >
+                    ng-hide="processForm.formData.submittedForm" >
         
                     Submit
 
@@ -105,7 +105,7 @@
 
                   ui-sref="processForm.payment"
                   class="small" 
-                  ng-disabled="!formData.submittedForm">
+                  ng-disabled="!processForm.formData.submittedForm">
 
                   Next
 
@@ -116,13 +116,13 @@
 
 </div><!-- end of row -->
 
-<footer ng-hide="!checkForTotal()">
+<footer>
 
   <ul class="footer-checkout">
     
     <li class="left" style="margin-top: 3px">
 
-      Subtotal: {{subTotal | currency}}
+      Subtotal: {{processForm.subTotal | currency}}
     </li>
   
 
@@ -135,8 +135,7 @@
 
             href="" 
             class="button secondary round tiny" 
-            ui-sref="processForm.profile" 
-            ng-disabled="disabledNext" >
+            ui-sref="processForm.profile">
 
             Proceed to checkout 
             <b><i class="fa fa-chevron-right"></i></b>

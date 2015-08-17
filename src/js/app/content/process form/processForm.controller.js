@@ -7,31 +7,35 @@
 	angular.module('myApp')
 
 		.controller('ProcessFormCtrl', ['$scope','userData','$timeout', function($scope, userData, $timeout) {
+			var processForm = this;
+
 			/*User Personal Information */
 			
-			$scope.formData = {}
-			$scope.formData.userName = userData.getName();
-			$scope.formData.userEmail = userData.getEmail();
-			$scope.formData.userCity = userData.getCity();
-			$scope.formData.submittedForm = userData.getFormValidation();
-			$scope.subTotal = userData.getTotalPrice();
-			$scope.totalItems = userData.getItemCount();
-			$scope.usersData = userData.getListItems();
-			$scope.submitting = false;
-			$scope.finalCheckoutOrder = false;
+			processForm.formData = {}
+			processForm.formData.userName = userData.getName();
+			processForm.formData.userEmail = userData.getEmail();
+			processForm.formData.userCity = userData.getCity();
+			processForm.formData.shipping = userData.getShipping();
+			processForm.formData.submittedForm = userData.getFormValidation();
+			processForm.subTotal = userData.getTotalPrice();
+			processForm.totalCalculated = userData.getTotalCalculatedPrice();
+			processForm.totalItems = userData.getItemCount();
+			processForm.usersData = userData.getListItems();
+			processForm.submitinfo = false;
+			processForm.checkout = false;
+			processForm.finalCheckoutOrder = false;
 
 
-			$scope.processForm = function(isValid){
+			processForm.processForm = function(isValid){
 				
 				if(isValid){
-					  
-					$scope.submitting = true;
-				    
+	
+				    processForm.submitinfo = true;
 				    $timeout(function() {
-				    	$scope.submitting = false;;
-
-						userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
-						$scope.formData.submittedForm = userData.getFormValidation();
+				    	
+				    	processForm.submitinfo = false;
+						userData.setUserInformation(processForm.formData.userName, processForm.formData.userEmail, processForm.formData.userCity);
+						processForm.formData.submittedForm = userData.getFormValidation();
 
 					}, 1200);
 				}
@@ -39,27 +43,35 @@
 			}
 
 
-			$scope.submitOrder = function(fruits, name,total ){
+			processForm.submitOrder = function(){
 
-				 $scope.checkout = true;
-					
-					$timeout(function() {
+				processForm.checkout = true;
 
-					   $scope.checkout = false; // stop loading
+				$timeout(function() {
 
-						$scope.orderSubmit = true;
+					processForm.checkout = false;
+					processForm.finalCheckoutOrder = true;
 
-						fruits.splice(0, fruits.length - 1);
+					//CLEAR DATA
 
-						userData.clearUsersData();
-					
+					userData.clearData();
 
-					}, 3000);
-				
+
+				}, 3000);
+
 
 			}
 
 
+
+			$scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){
+				if(toState.url === '/payment') {
+
+					processForm.totalCalculated  = userData.getTotalCalculatedPrice();
+					
+				}
+			});
+		
 
 		}]);
 

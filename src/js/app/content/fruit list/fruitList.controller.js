@@ -11,15 +11,8 @@
 
 					var fruitList = this;
 
-
-					//fruit array to hold each fruit object
-					fruitList.fruits = []
-
-					//default fruitCount model
-					fruitList.fruitCount = 0;
-
 					fruitList.fruits = FruitList;
-
+				
 				
 			}]);
 }());

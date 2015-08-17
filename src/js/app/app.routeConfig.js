@@ -96,6 +96,8 @@
 
 					controller: 'ProcessFormCtrl',
 
+					controllerAs: 'processForm',
+
 					templateUrl: 'src/js/app/content/process form/processForm.tpl.html',
 
 
@@ -107,6 +109,8 @@
 						url: '/content',
 
 						controller: 'ProcessFormCtrl',
+
+						controllerAs: 'processForm',
 
 						templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html',
 						resolve: {
@@ -127,6 +131,9 @@
 
 						controller: 'ProcessFormCtrl',
 
+						controllerAs: 'processForm',
+
+
 						templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html',
 						resolve: {
 
@@ -143,6 +150,9 @@
 						url: '/payment',
 
 						controller: 'ProcessFormCtrl',
+
+						controllerAs: 'processForm',
+
 
 						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html',
 						resolve: {
