@@ -24,7 +24,6 @@ The folder structure for this application is sorted by features rather by type. 
 
 <pre>
 "express": "^4.12.4",
-"foundation": "^4.2.1-1",
 "gulp-minify-css": "^1.2.0",
 "gulp-rename": "^1.2.2",
 "gulp": "^3.9.0",
