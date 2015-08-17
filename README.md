@@ -8,7 +8,7 @@ Shopping widget is an application I created aimed to serve the users with a very
 <a href="http://kirckpingul.com/shoppingWidget">Live Demo Here</a>
 
 #Application Folder Structure
-<a href="http://s84.photobucket.com/user/kdiggz415/media/shoppingWidgetFolderStructure.png.html" target="_blank"><img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure.png" border="0" alt="Shopping Widget Folder Structure photo shoppingWidgetFolderStructure.png"/></a>
+<a href="http://s84.photobucket.com/user/kdiggz415/media/shoppingWidgetFolderStructure_1.png.html" target="_blank"><img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure_1.png" border="0" alt=" photo shoppingWidgetFolderStructure_1.png"/></a>
 
 The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
 
@@ -19,6 +19,20 @@ The folder structure for this application is sorted by features rather by type. 
 -<a href="http://bower.io">bower</a>
 
 #Dependencies
+
+<b>Package.json</b>
+
+<pre>
+"express": "^4.12.4",
+"foundation": "^4.2.1-1",
+"gulp-minify-css": "^1.2.0",
+"gulp-rename": "^1.2.2",
+"gulp": "^3.9.0",
+"gulp-concat": "^2.6.0",
+"gulp-concat-css": "^2.2.0",
+"gulp-sass": "^2.0.3",
+"gulp-uglify": "^1.2.0"
+</pre>
 
 <b>Bower.json</b>
 
@@ -37,20 +51,6 @@ The folder structure for this application is sorted by features rather by type. 
 
 </pre>
 
-<b>Package.json</b>
-
-<pre>
-"express": "^4.12.4",
-"foundation": "^4.2.1-1",
-"gulp-minify-css": "^1.2.0",
-"gulp-rename": "^1.2.2",
-"gulp": "^3.9.0",
-"gulp-concat": "^2.6.0",
-"gulp-concat-css": "^2.2.0",
-"gulp-sass": "^2.0.3",
-"gulp-uglify": "^1.2.0"
-</pre>
-
 #Installation
 
 Shopping Widget can be installed simply by:
@@ -64,7 +64,10 @@ Shopping Widget can be installed simply by:
 
 #Features
 
-<b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a></b>
+<b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!) and <a href="http://http://foundation.zurb.com/">Foundation</a> CSS Framework(The most advanced responsive 
+front-end framework in the world)</b>
+
+Features include:
  
 <ul> 
 <li>Navigate from state to state with the loading spinner for a better user experience.</li>
@@ -94,7 +97,7 @@ angular.module('myApp', [
 
 <li><a href="https://github.com/urish/angular-spinner">angularSpinner</a> & <a href="https://github.com/rpocklin/angular-ui-view-spinner">angular-ui-view-spinner</a> by <a href="https://github.com/rpocklin"> Robert Pocklington</a> and <a href="https://github.com/urish">Uri Shaked</a> </li>
 
-<li><a href="http://pineconellc.github.io/angular-foundation/#/accordion">mm Foundation</a> which is used for the accordion drop down in the display page of each item</li>
+<li><a href="http://pineconellc.github.io/angular-foundation/#/accordion">mm Foundation</a> which is used for the accordion drop down for the comment area displayed in each item page.</li>
 </ul>
 
 <b>jQuery Plugins</b>
