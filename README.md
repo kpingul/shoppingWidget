@@ -8,7 +8,7 @@ Shopping widget is an application I created aimed to serve the users with a very
 <a href="http://kirckpingul.com/shoppingWidget">Live Demo Here</a>
 
 #Application Folder Structure
-<img src="http://s84.photobucket.com/user/kdiggz415/media/shoppingWidgetFolderStructure_1.png.html" target="_blank"><img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure_1.png" border="0" alt=" photo shoppingWidgetFolderStructure_1.png"/>
+<img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure_1.png" />
 
 The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
 
