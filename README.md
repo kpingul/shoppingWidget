@@ -59,7 +59,7 @@ Once you've installed the dependencies, you can:
  
 #Features
 
-<b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a>
+<b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a></b>
  
 <ul> 
 <li>Navigate from state to state with loading spinner.</li>
