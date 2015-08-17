@@ -14,8 +14,8 @@
 				//when data is changed for two way binding across controllers
 				 $scope.$on('handleBroadCast', function(){
 
-					$scope.items = userData.totalItemCount;
-					$scope.total = userData.totalPrice;
+					$scope.items = userData.getItemCount();
+					$scope.total = userData.getTotalPrice();
 
 				})
 

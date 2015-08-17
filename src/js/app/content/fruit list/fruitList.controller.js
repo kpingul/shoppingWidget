@@ -20,11 +20,6 @@
 
 					fruitList.fruits = FruitList;
 
-					fruitList.addFruit = function(fruit){
-						
-						userData.addSingleFruit(fruit);
-
-					}
-
+				
 			}]);
 }());

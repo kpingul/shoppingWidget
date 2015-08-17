@@ -3,7 +3,9 @@
 <div class="infoWrap"> 
     
 
-     <a ui-sref="singleFruitEditing({id: data.id , fruitId: $index, count: data.fruitCount})" ng-click="enableEditing($index)">
+      <a 
+        ui-sref="singleFruitEditing({id: data.id, fruitId: $index, count: data.fruitCount})"
+        ng-click="enableEditing($index)">
 
         <p class="prodTotal right">{{data.fruitPrice | currency}}</p>
 
@@ -11,59 +13,50 @@
 
         <div class="cartSection">
       
-                <img  id="image-removal" src="{{data.image}}" alt="{{data.fruit}}" class="itemImg left">
+          <img  
+               id="image-removal" 
+               src="{{data.image}}" 
+               alt="{{data.fruit}}" 
+               class="itemImg left">
                 
-         
+          <ul class="fruitlist-content-list">
+            
+              <li>
 
-                <ul class="fruitlist-content-list">
+                   <h3>{{data.fruit}}</h3>
 
-                      <li>
+                </li>
 
-	                         <h3>{{data.fruit}}</h3>
+                <li>      
 
+                    <p>{{data.originalPrice | currency}}</p>
 
-                        </li>
+                </li>
 
-                        <li>      
+                <li>      
+                   <p>Qty: <b>{{data.fruitCount}}</b></p>
 
+                </li>
 
-                            <p>{{data.originalPrice | currency}}</p>
+                <li style="padding-left: 110px">      
 
+                    <p>Description: <b>{{data.description}}</b></p>
 
+                </li>
 
-                        </li>
+                <li style="padding-left: 110px"> 
 
-                        <li>      
+                  <p>Availability: <b class="status">In stock</b></p>
 
-                           <p>Qty: <b>{{data.fruitCount}}</b></p>
+               </li>
 
-                        </li>
-
-                        <li style="padding-left: 110px">      
-
-                            <p>Description: <b>{{data.description}}</b></p>
-
-                        </li>
-
-                        <li style="padding-left: 110px"> 
-
-                          <p>Availability: <b class="status">In stock</b></p>
-
-  
-
-
-                       </li>
-
-                  </ul>
+            </ul>
                       
         </div><!-- end of cartSection -->
-
-
 
         </div><!-- end of prodTotal -->
 
     </a>
-    
     
 
 </div><!-- end of infoWrap -->

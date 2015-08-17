@@ -13,49 +13,30 @@
 			$scope.formData.userName = userData.getName();
 			$scope.formData.userEmail = userData.getEmail();
 			$scope.formData.userCity = userData.getCity();
-			
+			$scope.formData.submittedForm = userData.getFormValidation();
 			$scope.subTotal = userData.getTotalPrice();
 			$scope.totalItems = userData.getItemCount();
 			$scope.usersData = userData.getListItems();
-			$scope.disabledNext = true;
-			$scope.disabledForm = true;
-			$scope.profileValid = false;
-			$scope.orderSubmit = false;
-			
+			$scope.submitting = false;
+			$scope.finalCheckoutOrder = false;
+
 
 			$scope.processForm = function(isValid){
 				
 				if(isValid){
 					  
 					$scope.submitting = true;
-						
+				    
 				    $timeout(function() {
+				    	$scope.submitting = false;;
 
-						   $scope.submitting = false; // stop loading
+						userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
+						$scope.formData.submittedForm = userData.getFormValidation();
 
-							userData.setUserInformation($scope.formData.userName, $scope.formData.userEmail, $scope.formData.userCity);
-
-							$scope.disabledForm = false;
-
-							$scope.profileValid = true;
-
-					}, 2000);
+					}, 1200);
 				}
 				
 			}
-
-
-			$scope.checkForTotal = function(){
-
-				if( userData.checkTotalPriceAndCount() ) {
-
-					$scope.disabledNext = false;
-
-					return true; 
-
-				}
-			}
-
 
 
 			$scope.submitOrder = function(fruits, name,total ){

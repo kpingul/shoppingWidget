@@ -1,70 +1,72 @@
 <!-- Content Template / Users Current Items -->
 <div class="row">
 	
+	<div class="heading cf" ng-if="!orderSubmit" >
 
-		<div class="heading cf" ng-if="!orderSubmit" >
+	  <h1 class="projTitle" ><span>Your Groceries </span></h1>
 
-		  <h1 class="projTitle" ><span>Your Groceries </span></h1>
+	  <h6>Items in cart: {{totalItems}} </h6>
 
-		  <h6>Items in cart: {{totalItems}} </h6>
-		  <h5>Subtotal: {{subTotal | currency}}</h5>
+	  <h5>Subtotal: {{subTotal | currency}}</h5>
 
 
-		  <a ui-sref="home" class="continue">Continue Shopping</a>
+	  <a ui-sref="home" class="continue">Continue Shopping</a>
 
-		</div><!-- end of heading -->
-	
-		<div class="wrap cf">
+	</div><!-- end of heading -->
 
-		  <div class="cart">
+	<div class="wrap cf">
+
+	  <div class="cart">
+		
+	    <ul class="cartWrap">
+
+
+		<!-- Checks to see if total is not empty and if it's not, then it shows the fruit list items-->
+
+	     	<li 
+	      		class="items odd" 
+	      		ng-repeat="data in usersData track by $index"   
+	      		ng-init="editCount = data.fruitCount"
+	      		ng-if="totalItems" >
+			   
+				<userlistitems list="data"></userlistitems>
+
 			
-		    <ul class="cartWrap">
+	    	</li>
 
+			<!-- Checks to see if total is  empty and if it is, then it shows the empty cart sign to user-->
 
-			<!-- Checks to see if total is not empty and if it's not, then it shows the fruit list items-->
-
-		      <li class="items odd" ng-repeat="data in usersData track by $index"   ng-init="editCount = data.fruitCount" ng-if="checkForTotal()">
-				    
-					
-					<userlistitems list="data"></userlistitems>
-
+			<li class="items even" ng-if="totalItems <= 0">
 				
-		      </li>
 
+	            <div class="wrap cf">
 
-			
-				<!-- Checks to see if total is  empty and if it is, then it shows the empty cart sign to user-->
+	              <h1 class="projTitle" style="border-bottom: 0">Your shopping cart is<span style="color: red;text-transform: uppercase"> empty </span> </h1>              
+	         
 
-				<li class="items even" ng-if="!checkForTotal()">
-					
+	            </div>
 
-		            <div class="wrap cf">
+			</li>
+	    	
+	    </ul><!-- end of list -->
+		
+	  </div><!-- end of cart -->
 
-		              <h1 class="projTitle" style="border-bottom: 0">Your shopping cart is<span style="color: red;text-transform: uppercase"> empty </span> </h1>              
-		         
+	</div><!-- end of wrapper -->
 
-		            </div>
-
-				</li>
-		    	
-		    </ul><!-- end of list -->
-			
-
-
-
-
-		    
-		  </div><!-- end of cart -->
-
-		</div><!-- end of wrapper -->
-
-			<h5 >You may also like</h5>
-	<hr>
-			
-			<slicker-carousel></slicker-carousel>
+		<h5 >You may also like</h5>
+		<hr>
+		
+		<slicker-carousel></slicker-carousel>
 	
 </div><!-- end of row -->
-<footer ng-hide="!checkForTotal()">
+
+<!-- 
+	Footer and Checkout button will only show
+	if there are any total items
+
+-->
+<footer ng-if="totalItems > 0">
 
 	<ul class="footer-checkout">
 		
@@ -81,7 +83,15 @@
 				<!-- processForm.payment directs the nested form to the next page (processForm.payment) in the routes which renders another template within the ui-view in the main process form template-->
 
 				
-			<a href="" class="button secondary round tiny" ui-sref="processForm.profile" ng-disabled="disabledNext" >Proceed to checkout <b><i class="fa fa-chevron-right"></i></b></a>
+			<a 
+				href="" 
+				class="button secondary round tiny" 
+				ui-sref="processForm.profile" 
+				ng-disabled="disabledNext">
+
+				Proceed to checkout 
+				<b><i class="fa fa-chevron-right"></i></b>
+			</a>
 
 		</li>			
 
