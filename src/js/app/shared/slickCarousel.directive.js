@@ -10,10 +10,11 @@
 
 				restrict: 'E',
 
-				templateUrl: 'src/plugins/slickCarousel.tpl.html',
+				templateUrl: 'src/js/app/shared/slickCarousel.tpl.html',
 
-				link: function(scope, el, attrs){
+				link: function(scope, elem, attrs){
 
+						//Activate slick carousell
 					
 						$('.carousels').slick({
 					

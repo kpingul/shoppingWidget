@@ -11,16 +11,19 @@
 
 			/*User Personal Information */
 			
-			processForm.formData = {}
-			processForm.formData.userName = userData.getName();
-			processForm.formData.userEmail = userData.getEmail();
-			processForm.formData.userCity = userData.getCity();
-			processForm.formData.shipping = userData.getShipping();
-			processForm.formData.submittedForm = userData.getFormValidation();
+			processForm.formData = {
+
+				userName: userData.getName(),
+				userEmail: userData.getEmail(),
+				userCity: userData.getCity(),
+				shipping: userData.getShipping(),
+				submittedForm: userData.getFormValidation()
+			}
+
+			processForm.usersData = userData.getListItems();
+			processForm.totalItems = userData.getItemCount();
 			processForm.subTotal = userData.getTotalPrice();
 			processForm.totalCalculated = userData.getTotalCalculatedPrice();
-			processForm.totalItems = userData.getItemCount();
-			processForm.usersData = userData.getListItems();
 			processForm.submitinfo = false;
 			processForm.checkout = false;
 			processForm.finalCheckoutOrder = false;

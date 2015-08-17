@@ -12,7 +12,7 @@
 
 					restrict: 'E',
 
-					templateUrl: 'src/js/app/content/navigation/navigation.tpl.html'
+					templateUrl: 'src/js/app/navigation/navigation.tpl.html'
 
 
 				}

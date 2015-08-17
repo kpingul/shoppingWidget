@@ -21,7 +21,7 @@
 
 					url: '/',
 
-					templateUrl: 'src/js/app/content/fruit list/fruitList.tpl.html',
+					templateUrl: 'src/js/app/fruit list/fruitList.tpl.html',
 
 					controller: 'fruitListCtrl', 
 
@@ -43,7 +43,7 @@
 
 					url: '/:id',
 
-					templateUrl: 'src/js/app/content/single list/singleFruit.tpl.html',
+					templateUrl: 'src/js/app/single list/singleFruit.tpl.html',
 
 					controller: 'singleFruitCtrl',
 
@@ -62,7 +62,7 @@
 
 					url: '/editing/:id/:fruitId/:count',
 
-					templateUrl: 'src/js/app/content/single list/singleFruitEditing.tpl.html',
+					templateUrl: 'src/js/app/single list/singleFruitEditing.tpl.html',
 
 					controller: 'singleFruitEditingCtrl',
 
@@ -98,7 +98,7 @@
 
 					controllerAs: 'processForm',
 
-					templateUrl: 'src/js/app/content/process form/processForm.tpl.html',
+					templateUrl: 'src/js/app/process form/processForm.tpl.html',
 
 
 				})
@@ -112,7 +112,7 @@
 
 						controllerAs: 'processForm',
 
-						templateUrl: 'src/js/app/content/process form/processForm.content.tpl.html',
+						templateUrl: 'src/js/app/process form/processForm.content.tpl.html',
 						resolve: {
 
 							load: function($timeout) {
@@ -134,7 +134,7 @@
 						controllerAs: 'processForm',
 
 
-						templateUrl: 'src/js/app/content/process form/processForm.profile.tpl.html',
+						templateUrl: 'src/js/app/process form/processForm.profile.tpl.html',
 						resolve: {
 
 							load: function($timeout) {
@@ -154,7 +154,7 @@
 						controllerAs: 'processForm',
 
 
-						templateUrl: 'src/js/app/content/process form/processForm.payment.tpl.html',
+						templateUrl: 'src/js/app/process form/processForm.payment.tpl.html',
 						resolve: {
 
 							load: function($timeout) {

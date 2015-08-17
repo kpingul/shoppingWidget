@@ -14,7 +14,7 @@
 
 				
 
-					templateUrl: 'src/js/app/content/process form/processForm.fruitlist.tpl.html'
+					templateUrl: 'src/js/app/process form/processForm.fruitlist.tpl.html'
 
 
 				}
