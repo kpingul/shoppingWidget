@@ -64,7 +64,10 @@ Shopping Widget can be installed simply by:
 
 #Features
 
-<b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a></b>
+<b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!) and <a href="http://http://foundation.zurb.com/">Foundation</a> CSS Framework(The most advanced responsive 
+front-end framework in the world)</b>
+
+Features include:
  
 <ul> 
 <li>Navigate from state to state with the loading spinner for a better user experience.</li>
