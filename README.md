@@ -52,16 +52,44 @@ Shopping Widget can be installed simply by:
   <li><a href="http://bower.io">bower</a> - <code>bower install for bower dependencies</code></li>
 </ul>
 
-#Run
+#Getting Up and Running
 
-Once you've installed the dependencies, you can run:
+Once you've installed the dependencies, you can:
 
+<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host at port 3000
+ 
+#Features
+
+The application relies heavily on the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)
+ 
+Here are the dependencies that I'm using: 
 <pre>
- <code><a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host at port 3000
+angular.module('myApp', [
+
+	'ui.router', 
+	'slickSlider',
+	'angular-ladda',
+	'angularSpinner', 
+	'angular-ui-view-spinner',
+]);
+
 </pre>
+<ul>
+
+<li><a href="https://github.com/angular-ui/ui-router">angular-ui-router</a> to allow the dyamic routing and SPA experience.</li>
+
+<li><a href="http://kenwheeler.github.io/slick/">slickSlider</a> by <a href="https://github.com/Ken Wheeler">Ken Wheeler</a> for the image carousel provided throughout the application.</li>
+
+<li><a href="https://github.com/remotty/angular-ladda">angular-ladda</a> which is An angular directive wrapper for <a href="https://github.com/hakimel/Ladda">Ladda</a>.(Buttons with built-in loading indicators, effectively bridging the gap between action and feedback -hakimel)</li>
+
+<li><a href="https://github.com/urish/angular-spinner">angularSpinner</a> & <a href="https://github.com/rpocklin/angular-ui-view-spinner">angular-ui-view-spinner</a> by <a href="https://github.com/rpocklin"> Robert Pocklington and <a href="https://github.com/urish">Uri Shaked</a> </li>
 
 
+</ul>
 
+<b>jQuery Plugins</b>
 
-
+<ul>
+  <li><a href="https://github.com/markgoodyear/scrollup">scrollUp</a> created by <a href="https://github.com/markgoodyear">Mark Goodyear</a>(a jQuery plugin to create a customisable 'Scroll to top' feature that will work with any website)</li>
+</ul>
 
