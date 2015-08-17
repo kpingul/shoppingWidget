@@ -67,7 +67,7 @@ Once you've installed the dependencies, you can:
 <li>Loading buttons that give the user instant feedback when customizing their carts.</li>
 </ul>
 
-Here are the dependencies that I'm using: 
+Here are the dependencies that I'm using to make those features come alive: 
 <pre>
 angular.module('myApp', [
 	'ui.router', 
