@@ -12,6 +12,12 @@ Shopping widget is an application I created aimed to serve the users with a very
 
 The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
 
+#Requirements
+
+-<a href="https://www.npmjs.com">npm</a>
+
+-<a href="http://bower.io">bower</a>
+
 #Dependencies
 
 <b>Bower.json</b>
@@ -56,12 +62,6 @@ Shopping Widget can be installed simply by:
   <li><a href="http://bower.io">bower</a> - <code>bower install for front end dependencies</code></li>
 </ul>
 
-#Getting Up and Running
-
-Once you've installed the dependencies, you can:
-
-<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
- 
 #Features
 
 <b>The application is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a></b>
@@ -102,4 +102,11 @@ angular.module('myApp', [
 <ul>
   <li><a href="https://github.com/markgoodyear/scrollup">scrollUp</a> created by <a href="https://github.com/markgoodyear">Mark Goodyear</a>(a jQuery plugin to create a customisable 'Scroll to top' feature that will work with any website)</li>
 </ul>
+
+#Getting Up and Running
+
+Once you've installed the dependencies, you can:
+
+<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
+ 
 
