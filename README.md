@@ -20,6 +20,20 @@ The folder structure for this application is sorted by features rather by type. 
 
 #Dependencies
 
+<b>Package.json</b>
+
+<pre>
+"express": "^4.12.4",
+"foundation": "^4.2.1-1",
+"gulp-minify-css": "^1.2.0",
+"gulp-rename": "^1.2.2",
+"gulp": "^3.9.0",
+"gulp-concat": "^2.6.0",
+"gulp-concat-css": "^2.2.0",
+"gulp-sass": "^2.0.3",
+"gulp-uglify": "^1.2.0"
+</pre>
+
 <b>Bower.json</b>
 
 <pre>
@@ -35,20 +49,6 @@ The folder structure for this application is sorted by features rather by type. 
 "angular-ladda": "~0.3.1",
 "components-font-awesome": "~4.3.0"
 
-</pre>
-
-<b>Package.json</b>
-
-<pre>
-"express": "^4.12.4",
-"foundation": "^4.2.1-1",
-"gulp-minify-css": "^1.2.0",
-"gulp-rename": "^1.2.2",
-"gulp": "^3.9.0",
-"gulp-concat": "^2.6.0",
-"gulp-concat-css": "^2.2.0",
-"gulp-sass": "^2.0.3",
-"gulp-uglify": "^1.2.0"
 </pre>
 
 #Installation
