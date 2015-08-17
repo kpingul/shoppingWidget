@@ -12,13 +12,12 @@ Shopping widget is an application I created aimed to serve the users with a very
 <b>Bower.json</b>
 
 <pre>
-"foundation": "~5.5.2",
 "jquery": "~2.1.4",
-"scrollup": "~2.4.1",
-"angular-foundation": "~0.6.0",
-"angular-ui-router": "~0.2.15",
-"angular-animate": "~1.4.3",
 "angular": "~1.4.3",
+"scrollup": "~2.4.1",
+"angular-ui-router": "~0.2.15",
+"angular-foundation": "~0.6.0",
+"foundation": "~5.5.2",
 "angular-ui-view-spinner": "~1.0.0",
 "spin": "~1.1.6",
 "slick-carousel": "~1.5.6",
@@ -56,21 +55,27 @@ Shopping Widget can be installed simply by:
 
 Once you've installed the dependencies, you can:
 
-<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host at port 3000
+<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
  
 #Features
 
-The application relies heavily on the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)
+<ul> 
+<li>Navigate from state to state with loading spinner.</li>
+<li>Scrolling mechanism.</li>
+<li>Loading buttons.</li>
+</ul>
+
+<b>The application relies heavily on the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)</a>
  
 Here are the dependencies that I'm using: 
 <pre>
 angular.module('myApp', [
-
 	'ui.router', 
 	'slickSlider',
 	'angular-ladda',
 	'angularSpinner', 
 	'angular-ui-view-spinner',
+	'mm.foundation'
 ]);
 
 </pre>
@@ -84,7 +89,7 @@ angular.module('myApp', [
 
 <li><a href="https://github.com/urish/angular-spinner">angularSpinner</a> & <a href="https://github.com/rpocklin/angular-ui-view-spinner">angular-ui-view-spinner</a> by <a href="https://github.com/rpocklin"> Robert Pocklington</a> and <a href="https://github.com/urish">Uri Shaked</a> </li>
 
-
+<li><a href="http://pineconellc.github.io/angular-foundation/#/accordion">mm Foundation</a> which is used for the accordion drop down in the display page of each item</li>
 </ul>
 
 <b>jQuery Plugins</b>
