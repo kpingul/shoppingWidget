@@ -94,7 +94,7 @@ angular.module('myApp', [
 
 <li><a href="https://github.com/urish/angular-spinner">angularSpinner</a> & <a href="https://github.com/rpocklin/angular-ui-view-spinner">angular-ui-view-spinner</a> by <a href="https://github.com/rpocklin"> Robert Pocklington</a> and <a href="https://github.com/urish">Uri Shaked</a> </li>
 
-<li><a href="http://pineconellc.github.io/angular-foundation/#/accordion">mm Foundation</a> which is used for the accordion drop down in the display page of each item</li>
+<li><a href="http://pineconellc.github.io/angular-foundation/#/accordion">mm Foundation</a> which is used for the accordion drop down for the comment area displayed in each item page.</li>
 </ul>
 
 <b>jQuery Plugins</b>
