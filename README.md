@@ -110,6 +110,6 @@ angular.module('myApp', [
 
 Once you've installed the dependencies, you can:
 
-<code>Run : <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
+<code>Run <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
  
 
