@@ -48,7 +48,7 @@ Shopping Widget can be installed simply by:
   <li>Cloning this repo</li>
   <li>change directory to shoppingWidget</li>
   <li><a href="https://www.npmjs.com">npm</a> - <code>npm install for dev dependencies</code></li>
-  <li><a href="http://bower.io">bower</a> - <code>bower install for bower dependencies</code></li>
+  <li><a href="http://bower.io">bower</a> - <code>bower install for front end dependencies</code></li>
 </ul>
 
 #Getting Up and Running
