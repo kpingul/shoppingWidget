@@ -57,8 +57,10 @@ Shopping Widget can be installed simply by:
 Once you've installed the dependencies, you can run:
 
 <pre>
- <a href="http://www.gulpjs.com">gulp</a>
+ <code><a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host at port 3000
 </pre>
+
+
 
 
 
