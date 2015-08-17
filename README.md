@@ -64,7 +64,7 @@ Once you've installed the dependencies, you can:
 <ul> 
 <li>Navigate from state to state with the loading spinner for a better user experience.</li>
 <li>Scrolling mechanism that allows the user to quickly scroll to the top of the main page.</li>
-<li>Loading buttons/bars that give the user instant feedback when customizing their carts and form validation.</li>
+<li>Loading buttons/bars that give the user instant feedback when customizing their carts and checkout form.</li>
 </ul>
 
 Here are the dependencies that I'm using to make those features come alive: 
