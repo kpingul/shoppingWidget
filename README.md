@@ -4,7 +4,7 @@
 
 ##Purpose
 
-The idea is to build an application <b>to serve the users with a very simple shopping experience using AngularJS</b>. It was designed to allow users to customize their own personal shopping carts and even allowed to checkout their items and place an order. The application tries to show best practices when it comes to: <b>folders structure</b>, </b>using modules, </b></b>organizing navigation</b>, and building <b>a simple interface</b>.
+The idea is to build an application <b>to serve the users with a very simple shopping experience using AngularJS</b>. It was designed to allow users to customize their own personal shopping carts and even allowed to checkout their items and place an order. The application tries to show best practices when it comes to: <b>folders structure</b>, <b>using modules</b>, <b>organizing navigation</b>, and building <b>a simple interface</b>.
 
 The sample demo can be found <a href="http://kirckpingul.com/shoppingWidget"><b>here</b></a>
 
@@ -83,7 +83,7 @@ Since our client application is built using AnulgarJS and other 3rd party librar
 * Once it brings up the server, you can start browsing through the application at http://localhost:3000
  
  
- ##Browser Support
+##Browser Support
  
 AngularJS and Foundation will work with the latest versions of Chrome, Firefox, Safari, and Opera, as well as Internet Explorer version 9, 10, and 11. As for IE8 and below, you might have to work some magic.
 
