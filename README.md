@@ -38,7 +38,7 @@ cd shoppingWidget
 
 ### Dependencies
 
-Since our client application is built using AnulgarJS and other 3rd party libraries, we need to install our local dependencies using [Bower](http://bower.io/) and [npm](http://npmjs.org).
+Since the client application is built using AnulgarJS and other 3rd party libraries, we need to install the local dependencies using [Bower](http://bower.io/) and [npm](http://npmjs.org).
 
 <b>Package.json</b>
 <pre>
