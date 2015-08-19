@@ -24,7 +24,7 @@ front-end framework in the world)
 
 ###Platform & Tools
 
-You need to install Node.js and then the development tools. Node.js comes with a package manager called [npm](http://npmjs.org) for installing NodeJS applications and libraries.
+You need to install [Node.js](http://nodejs.org/) and then the development tools. Node.js comes with a package manager called [npm](http://npmjs.org) for installing NodeJS applications and libraries.
 * [Install node.js](http://nodejs.org/download/) (requires node.js => v0.12.7)
 * [Install bower](http://bower.io/), a depedency package manager.
 
@@ -42,7 +42,7 @@ Either clone this repository or fork it on GitHub
 
 Since the client application is built using AngularJS and other 3rd party libraries, we need to install the local dependencies using [Bower](http://bower.io/) and [npm](http://npmjs.org).
 
-<b>Package.json</b>
+<b>Bower.json</b>
 <pre>
 "jquery": "~2.1.4",
 "angular": "~1.4.3",
@@ -61,7 +61,7 @@ Since the client application is built using AngularJS and other 3rd party librar
 
 (This will install the dependencies declared in the /bower.json file)
 
-<b>Bower.json</b>
+<b>Package.json</b>
 <pre>
 "express": "^4.12.4",
 "gulp-minify-css": "^1.2.0",
