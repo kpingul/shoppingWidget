@@ -80,7 +80,7 @@ Since our client application is built using AnulgarJS and other 3rd party librar
 
 <pre><a href="http://www.gulpjs.com">gulp</a></pre>
 
-*Once it brings up the server, you can start browsing through the application at http://localhost:3000
+* Once it brings up the server, you can start browsing through the application at http://localhost:3000
  
  
  ##Browser Support
