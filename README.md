@@ -1,40 +1,46 @@
+#<a href="http://angularjs.org">AngularJS</a> Application
 
-# What is Shopping Widget?
+***
 
-Shopping widget is an application I created aimed to serve the users with a very simple shopping experience. It was designed to allow users to customize their own personal shopping carts and even allowed to checkout for their desired orders.
+##Purpose
 
--Using <a href="https://github.com/johnpapa/angular-styleguide">John Papa's Style Guide</a> for creating a maintainable Angular codebase.
+The idea is to build an application <b>to serve the users with a very simple shopping experience using AngularJS</b>. It was designed to allow users to customize their own personal shopping carts and even allowed to checkout their items and place an order. The application tries to show best practices when it comes to: folders structure, using modules, organizing navigation, and building a simple interface.
 
-<a href="http://kirckpingul.com/shoppingWidget">Live Demo Here</a>
+The sample demo can be found <a href="http://kirckpingul.com/shoppingWidget"><b>here</b></a>
 
-#Application Folder Structure
-<img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure_1.png" />
+##Stack
 
-The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
+* Client: <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!)
+* CSS: <a href="http://foundation.zurb.com/">Foundation</a> (The most advanced responsive 
+front-end framework in the world)
+* Backend: none, just mock data.
 
-#Requirements
+###Build
 
--<a href="https://www.npmjs.com">npm</a>
+* powered by [Gulp.js](http://www.gulpjs.com/)
+* build supporting JavaScript and CSS  minification.
 
--<a href="http://bower.io">bower</a>
+##Installation
 
-#Dependencies
+###Platform & Tools
 
-<b>Package.json</b>
+You need to install Node.js and then the development tools. Node.js comes with a package manager called [npm](http://npmjs.org) for installing NodeJS applications and libraries.
+* [Install node.js](http://nodejs.org/download/) (requires node.js => v0.12.7)
+* [Install bower](http://bower.io/), a depedency package manager.
 
-<pre>
-"express": "^4.12.4",
-"gulp-minify-css": "^1.2.0",
-"gulp-rename": "^1.2.2",
-"gulp": "^3.9.0",
-"gulp-concat": "^2.6.0",
-"gulp-concat-css": "^2.2.0",
-"gulp-sass": "^2.0.3",
-"gulp-uglify": "^1.2.0"
+###Grabbing the code
+
+Either clone this repository or fork it on GitHub
+
+<pre>git clone https://github.com/kpingul/shoppingWidget.git
+cd shoppingWidget
 </pre>
 
-<b>Bower.json</b>
+### Dependencies
 
+Since our client application is built using AnulgarJS and other 3rd party libraries, we need to install our local dependencies using [Bower](http://bower.io/) and [npm](http://npmjs.org).
+
+<b>Package.json</b>
 <pre>
 "jquery": "~2.1.4",
 "angular": "~1.4.3",
@@ -47,24 +53,49 @@ The folder structure for this application is sorted by features rather by type. 
 "slick-carousel": "~1.5.6",
 "angular-ladda": "~0.3.1",
 "components-font-awesome": "~4.3.0"
+</pre>
+* To Install the front end dependencies run:
+<pre> <a href="http://bower.io">bower</a> install</pre>
 
+(This will install the dependencies declared in the /bower.json file)
+
+<b>Bower.json</b>
+<pre>
+"express": "^4.12.4",
+"gulp-minify-css": "^1.2.0",
+"gulp-rename": "^1.2.2",
+"gulp": "^3.9.0",
+"gulp-concat": "^2.6.0",
+"gulp-uglify": "^1.2.0"
 </pre>
 
-#Installation
+* To install our npm dependencies for our build system and server, run: 
+<pre><a href="https://www.npmjs.com">npm</a> install </pre>
 
-Shopping Widget can be installed simply by:
+(This will install the dependencies declared in the /package.json file)
 
-<ul>
-  <li>Cloning this repo</li>
-  <li>change directory to shoppingWidget</li>
-  <li><a href="https://www.npmjs.com">npm</a> - <code>npm install for dev dependencies</code></li>
-  <li><a href="http://bower.io">bower</a> - <code>bower install for front end dependencies</code></li>
-</ul>
+##Running the server
 
-#Features
+* Once you've installed the dependencies, you can start the server by running the gulp default task: 
 
-<b>The application and UI is built entirely with the <a href="http://angularjs.org">AngularJS</a> Framework (HTML enhanced for web apps!) and <a href="http://foundation.zurb.com/">Foundation</a> CSS Framework(The most advanced responsive 
-front-end framework in the world)</b>
+<pre><a href="http://www.gulpjs.com">gulp</a></pre>
+
+*Once it brings up the server, you can start browsing through the application at http://localhost:3000
+ 
+ 
+ ##Browser Support
+ 
+AngularJS and Foundation will work with the latest versions of Chrome, Firefox, Safari, and Opera, as well as Internet Explorer version 9, 10, and 11. As for IE8 and below, you might have to work some magic.
+
+##Development
+
+###Folders Structure
+
+<img src="http://i84.photobucket.com/albums/k34/kdiggz415/shoppingWidgetFolderStructure_1.png" />
+
+The folder structure for this application is sorted by features rather by type. This way, it makes it a lot easier to navigate through each file as the application starts to grow so that members on the team can work on their own component without figuring out what is what.
+
+###Features
 
 Features include:
  
@@ -105,10 +136,4 @@ angular.module('myApp', [
   <li><a href="https://github.com/markgoodyear/scrollup">scrollUp</a> created by <a href="https://github.com/markgoodyear">Mark Goodyear</a>(a jQuery plugin to create a customisable 'Scroll to top' feature that will work with any website)</li>
 </ul>
 
-#Getting Up and Running
-
-Once you've installed the dependencies, you can:
-
-<code>Run <a href="http://www.gulpjs.com">gulp</a></code> and locate to your local host on port 3000 <code>localhost:3000</code>
- 
 
