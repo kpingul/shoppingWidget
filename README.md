@@ -138,4 +138,6 @@ angular.module('myApp', [
   <li><a href="https://github.com/markgoodyear/scrollup">scrollUp</a> created by <a href="https://github.com/markgoodyear">Mark Goodyear</a>(a jQuery plugin to create a customisable 'Scroll to top' feature that will work with any website)</li>
 </ul>
 
+##License 
 
+MIT
