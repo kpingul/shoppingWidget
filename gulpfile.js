@@ -18,7 +18,7 @@ var path = {
 
 	bower: 'bower_components/',
 	app: 'src/js/app/',
-	plugins: 'src/plugins/'
+	plugins: 'src/js/plugins/'
 }
 
 
@@ -63,8 +63,8 @@ gulp.task('scriptsJs', function() {
 
 		path.app + 'app.module.js',
 		path.app + '**/*.js',
+		path.plugins + '/*.js',
 		'!' + path.app + 'app.routeConfig.js',
-		path.plugins + '/*.js'
 
 	])
 
