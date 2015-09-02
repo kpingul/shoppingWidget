@@ -6,7 +6,7 @@
 
 		angular.module('myApp')
 
-			.controller('singleFruitCtrl', ['$scope', 'SingleFruit', 'userData', 'fruitData','$timeout','$state', function($scope, SingleFruit, userData, fruitData, $timeout,$state) {
+			.controller('singleFruitCtrl', ['$scope', 'SingleFruit', 'userData','$timeout','$state', function($scope, SingleFruit, userData, $timeout,$state) {
 					
 					var fruit = this;
    					var delaySpeed = 200;
@@ -23,7 +23,7 @@
 						$timeout(function() {
 							userData.setCheckout(id, fruitName, fruitImg, fruitCount, fruitPrice, fruitDescription);
 							
-							$state.go(processForm, {});
+							$state.go(processForm);
 
 						}, delaySpeed)
 

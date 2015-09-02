@@ -13,7 +13,6 @@
 
 				findFruitDuplicate: findFruitDuplicate,
 				addFruitDuplicate: addFruitDuplicate,
-				getFruitDuplicate: getFruitDuplicate,
 				setCheckout : setCheckout,
 				deleteUsersFruit: deleteUsersFruit,
 				setNewUserData: setNewUserData,
@@ -62,62 +61,7 @@
 				tax 		 = 3,
 				shippingRate = 7;
 
-			//checks for duplicates 
 
-			function findFruitDuplicate (fruitName) {
-		
-				for (var i = 0; i < usersData.items.length; i++) {
-
-					if (fruitName === usersData.items[i].fruit) {
-
-						console.log('duplicate found');
-
-						return true;
-					}
-
-				}
-				return false;
-			}
-
-			function addFruitDuplicate (name, count, price) {
-
-				var parsedFruitCount = parseInt(count);
-
-				var parsedFruitPrice = parseInt(price);
-
-				for (var i = 0; i < usersData.items.length; i++) {
-
-					if (name === usersData.items[i].fruit) {
-
-						usersData.items[i].fruitCount += parsedFruitCount;
-						usersData.items[i].fruitPrice += (usersData.items[i].originalPrice * parsedFruitCount);
-
-						usersData.totalItemCount += parsedFruitCount;
-
-						usersData.totalPrice += (usersData.items[i].originalPrice * parsedFruitCount)
-
-
-						broadCast();
-
-					}
-
-				}
-
-			}
-
-			function getFruitDuplicate(fruitName) {
-
-				for (var i = 0; i < usersData.items.length; i++) {
-
-					if (name === usersData.items[i].fruit) {
-
-						return userData.items[i];
-
-					}
-
-				}
-
-			}
 
 			//creates a new fruit object and passes it into the allUsersData array
 			function setCheckout(id, fruitName, fruitImg, fruitCount, fruitTotalPrice, fruitDescription) {
@@ -127,7 +71,7 @@
 				var parsedFruitCount = parseInt(fruitCount);
 
 
-				if (parsedFruitCount <= 0 ||	findFruitDuplicate(fruitName)) {
+				if (parsedFruitCount <= 0 || findFruitDuplicate(fruitName)) {
 
 					addFruitDuplicate(fruitName, fruitCount, fruitTotalPrice);
 
@@ -174,6 +118,50 @@
 			
 
 				}
+			}
+
+			//checks for duplicates 
+
+			function findFruitDuplicate (fruitName) {
+		
+				for (var i = 0; i < usersData.items.length; i++) {
+
+					if (fruitName === usersData.items[i].fruit) {
+
+						//returns true if duplicate found
+
+						return true;
+					}
+
+				}
+				//returns false if there is no duplicate
+				return false;
+			}
+
+			function addFruitDuplicate (name, count, price) {
+
+				var parsedFruitCount = parseInt(count);
+
+				var parsedFruitPrice = parseInt(price);
+
+				for (var i = 0; i < usersData.items.length; i++) {
+
+					if (name === usersData.items[i].fruit) {
+
+						usersData.items[i].fruitCount += parsedFruitCount;
+						usersData.items[i].fruitPrice += (usersData.items[i].originalPrice * parsedFruitCount);
+
+						usersData.totalItemCount += parsedFruitCount;
+
+						usersData.totalPrice += (usersData.items[i].originalPrice * parsedFruitCount)
+
+
+						broadCast();
+
+					}
+
+				}
+
 			}
 
 

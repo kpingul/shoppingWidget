@@ -7,9 +7,10 @@
 
 		angular.module('myApp')
 
-			.controller('fruitListCtrl', ['$scope', 'FruitList', 'userData', function($scope, FruitList, userData) {
+			.controller('fruitListCtrl', ['$scope', 'FruitList', function($scope, FruitList) {
 
 					var fruitList = this;
+					
 
 					fruitList.fruits = FruitList;
 				

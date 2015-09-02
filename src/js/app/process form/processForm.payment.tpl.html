@@ -28,21 +28,17 @@
 
 
               <ul class="subtotal-total">
-
-                <li class="totalRow"><span class="label">Tax:</span><span class="value">$3.00</span></li>
                 
+
                 <li class="totalRow">
 
-                  <span class="label">Shipping:</span>
-                  
-                  <span class="value"  ng-if="!processForm.formData.shipping">$7.00</span>
+                  <span class="label">Subtotal:</span><span class="value">{{processForm.subTotal | currency}}</span><br/>
+                  <span class="label">Tax:</span><span class="value">+ $3.00</span><br/>
+                      <span class="label"  ng-if="!processForm.formData.shipping" >Shipping:</span><span class="label" ng-if="processForm.formData.shipping" style="text-decoration: line-through">Shipping:</span><span class="value"  ng-if="!processForm.formData.shipping">+ $7.00</span>
 
-                  <span class="value"  ng-if="processForm.formData.shipping" >Free</span>
+                  <span class="value"  ng-if="processForm.formData.shipping" >- $7.00</span>
 
                 </li>
-                
-
-                <li class="totalRow"><span class="label">Subtotal:</span><span class="value">{{processForm.subTotal | currency}}</span></li>
 
                 <li class="totalRow final"><span class="label">Total:</span>
                       
