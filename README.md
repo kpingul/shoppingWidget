@@ -2,11 +2,12 @@
 
 ***
 
+####The sample demo can be found <a href="http://kirckpingul.com/shoppingWidget"><b>here</b></a>
+
 ##Purpose
 
 The idea is to build an application <b>to serve the users with a very simple shopping experience using AngularJS</b>. It was designed to allow users to customize their own personal shopping carts and even allowed to checkout their items and place an order. The application tries to show best practices when it comes to: <b>folders structure</b>, <b>using modules</b>, <b>organizing navigation</b>, and building <b>a simple interface</b>.
 
-The sample demo can be found <a href="http://kirckpingul.com/shoppingWidget"><b>here</b></a>
 
 ##Stack
 
